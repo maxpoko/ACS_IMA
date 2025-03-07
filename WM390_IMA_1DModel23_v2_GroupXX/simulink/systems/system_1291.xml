@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">83</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Constant" Name="Ambient Temperature [C]" SID="1292">
+    <P Name="Position">[580, 239, 635, 261]</P>
+    <P Name="ZOrder">1582</P>
+    <P Name="Value">AmbTemp</P>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="1293">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[740, 231, 745, 309]</P>
+    <P Name="ZOrder">1717</P>
+    <P Name="Inputs">2</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="OutDataTypeStr">Bus: AmbCondBus</P>
+    <P Name="InheritFromInputs">off</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="4837">
+    <P Name="Position">[575, 277, 655, 303]</P>
+    <P Name="ZOrder">50114</P>
+    <P Name="GotoTag">RoadCond</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="4667">
+    <P Name="Position">[810, 362, 890, 388]</P>
+    <P Name="ZOrder">50112</P>
+    <P Name="GotoTag">RoadCond</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="1294">
+    <P Name="Position">[765, 262, 890, 278]</P>
+    <P Name="ZOrder">1714</P>
+    <P Name="BackgroundColor">[0.333333, 1.000000, 0.498039]</P>
+    <P Name="GotoTag">AmbientConditions</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="RadioButtonGroup" Name="Radio Button3" SID="4685">
+    <P Name="Position">[570, 325, 660, 425]</P>
+    <P Name="ZOrder">50113</P>
+    <P Name="ShowName">off</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="LabelPosition">Hide</P>
+    <P Name="BindingPersistence" Ref="bdmxdata:BindingPersistence_4685"/>
+    <P Name="Values" Ref="bdmxdata:Values_4685"/>
+    <P Name="SelectedLabel">Dry</P>
+    <P Name="ButtonGroupName">Road Cond</P>
+  </Block>
+  <Block BlockType="Constant" Name="Road Condition" SID="4666">
+    <P Name="Position">[705, 365, 725, 385]</P>
+    <P Name="ZOrder">50111</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">1292#out:1</P>
+    <P Name="Dst">1293#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">4837#out:1</P>
+    <P Name="Dst">1293#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">1293#out:1</P>
+    <P Name="Dst">1294#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">4666#out:1</P>
+    <P Name="Dst">4667#in:1</P>
+  </Line>
+</System>

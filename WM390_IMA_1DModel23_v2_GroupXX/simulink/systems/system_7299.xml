@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[2520, -817, 4387, 534]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">148</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="BusToVector" Name="Bus to Vector" SID="7300">
+    <P Name="Position">[295, -5, 320, 15]</P>
+    <P Name="ZOrder">49100</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="7301">
+    <P Name="Position">[-245, -70, -215, -40]</P>
+    <P Name="ZOrder">49107</P>
+    <P Name="Value">10</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="7302">
+    <P Name="Position">[-245, -40, -215, -10]</P>
+    <P Name="ZOrder">49108</P>
+    <P Name="Value">1.9</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant10" SID="7303">
+    <P Name="Position">[-80, 145, -50, 175]</P>
+    <P Name="ZOrder">50120</P>
+    <P Name="Value">0.3</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant11" SID="7304">
+    <P Name="Position">[-80, 170, -50, 200]</P>
+    <P Name="ZOrder">50121</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant12" SID="7305">
+    <P Name="Position">[10, 205, 40, 235]</P>
+    <P Name="ZOrder">50125</P>
+    <P Name="Value">0.1</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant13" SID="7306">
+    <P Name="Position">[10, 230, 40, 260]</P>
+    <P Name="ZOrder">50126</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant14" SID="7307">
+    <P Name="Position">[10, 145, 40, 175]</P>
+    <P Name="ZOrder">50123</P>
+    <P Name="Value">4</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant15" SID="7308">
+    <P Name="Position">[10, 175, 40, 205]</P>
+    <P Name="ZOrder">50124</P>
+    <P Name="Value">2</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="7309">
+    <P Name="Position">[-245, -10, -215, 20]</P>
+    <P Name="ZOrder">49109</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="7310">
+    <P Name="Position">[-245, 15, -215, 45]</P>
+    <P Name="ZOrder">49110</P>
+    <P Name="Value">0.97</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant4" SID="7311">
+    <P Name="Position">[-175, 15, -145, 45]</P>
+    <P Name="ZOrder">50113</P>
+    <P Name="Value">12</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant5" SID="7312">
+    <P Name="Position">[-175, 45, -145, 75]</P>
+    <P Name="ZOrder">50114</P>
+    <P Name="Value">2.3</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant6" SID="7313">
+    <P Name="Position">[-175, 75, -145, 105]</P>
+    <P Name="ZOrder">50115</P>
+    <P Name="Value">0.82</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant7" SID="7314">
+    <P Name="Position">[-175, 100, -145, 130]</P>
+    <P Name="ZOrder">50116</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant8" SID="7315">
+    <P Name="Position">[-80, 85, -50, 115]</P>
+    <P Name="ZOrder">50118</P>
+    <P Name="Value">5</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant9" SID="7316">
+    <P Name="Position">[-80, 115, -50, 145]</P>
+    <P Name="ZOrder">50119</P>
+    <P Name="Value">2</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="7317">
+    <P Name="Position">[-105, -58, -50, -32]</P>
+    <P Name="ZOrder">50110</P>
+    <P Name="GotoTag">RoadCond</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="MultiPortSwitch" Name="Multiport&#xA;Switch" SID="7318">
+    <P Name="Ports">[5, 1]</P>
+    <P Name="Position">[125, -62, 165, 72]</P>
+    <P Name="ZOrder">50111</P>
+    <P Name="Inputs">4</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux1" SID="7319">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[-175, -39, -170, -1]</P>
+    <P Name="ZOrder">49101</P>
+    <P Name="DisplayOption">bar</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Normal (Dry)</P>
+    </Port>
+  </Block>
+  <Block BlockType="Mux" Name="Mux2" SID="7320">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[-105, 46, -100, 84]</P>
+    <P Name="ZOrder">50112</P>
+    <P Name="DisplayOption">bar</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Wet</P>
+    </Port>
+  </Block>
+  <Block BlockType="Mux" Name="Mux3" SID="7321">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[-10, 116, -5, 154]</P>
+    <P Name="ZOrder">50117</P>
+    <P Name="DisplayOption">bar</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Snow</P>
+    </Port>
+  </Block>
+  <Block BlockType="Mux" Name="Mux4" SID="7322">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[80, 176, 85, 214]</P>
+    <P Name="ZOrder">50122</P>
+    <P Name="DisplayOption">bar</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Ice</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="B,C,D,E" SID="7323">
+    <P Name="Position">[390, -2, 420, 12]</P>
+    <P Name="ZOrder">49093</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7300#out:1</P>
+    <P Name="Dst">7323#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7302#out:1</P>
+    <P Name="Dst">7319#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">7301#out:1</P>
+    <P Name="Points">[10, 0; 0, 20]</P>
+    <P Name="Dst">7319#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">7310#out:1</P>
+    <P Name="Points">[16, 0; 0, -35]</P>
+    <P Name="Dst">7319#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">7309#out:1</P>
+    <P Name="Points">[10, 0; 0, -20]</P>
+    <P Name="Dst">7319#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">Normal (Dry)</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7319#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">7318#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">7318#out:1</P>
+    <P Name="Dst">7300#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">7317#out:1</P>
+    <P Name="Dst">7318#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Wet</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7320#out:1</P>
+    <P Name="Points">[108, 0; 0, -60]</P>
+    <P Name="Dst">7318#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">7313#out:1</P>
+    <P Name="Points">[10, 0; 0, -20]</P>
+    <P Name="Dst">7320#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">7314#out:1</P>
+    <P Name="Points">[16, 0; 0, -35]</P>
+    <P Name="Dst">7320#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">7311#out:1</P>
+    <P Name="Points">[10, 0; 0, 20]</P>
+    <P Name="Dst">7320#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">7312#out:1</P>
+    <P Name="Dst">7320#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">7316#out:1</P>
+    <P Name="Dst">7321#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">7315#out:1</P>
+    <P Name="Points">[10, 0; 0, 20]</P>
+    <P Name="Dst">7321#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">7304#out:1</P>
+    <P Name="Points">[16, 0; 0, -35]</P>
+    <P Name="Dst">7321#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">7303#out:1</P>
+    <P Name="Points">[10, 0; 0, -20]</P>
+    <P Name="Dst">7321#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">Snow</P>
+    <P Name="ZOrder">18</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7321#out:1</P>
+    <P Name="Points">[40, 0; 0, -105]</P>
+    <P Name="Dst">7318#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">Ice</P>
+    <P Name="ZOrder">19</P>
+    <P Name="Labels">[3, 1]</P>
+    <P Name="Src">7322#out:1</P>
+    <P Name="Points">[2, 0; 0, -140]</P>
+    <P Name="Dst">7318#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">7305#out:1</P>
+    <P Name="Points">[10, 0; 0, -20]</P>
+    <P Name="Dst">7322#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">7306#out:1</P>
+    <P Name="Points">[16, 0; 0, -35]</P>
+    <P Name="Dst">7322#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">7307#out:1</P>
+    <P Name="Points">[10, 0; 0, 20]</P>
+    <P Name="Dst">7322#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">7308#out:1</P>
+    <P Name="Dst">7322#in:2</P>
+  </Line>
+</System>

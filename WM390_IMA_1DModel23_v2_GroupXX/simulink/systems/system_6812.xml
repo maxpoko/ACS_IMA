@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[1912, -1075, 5768, 1053]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SIDHighWatermark">119</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="T3" SID="6812::106">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">86</P>
+  </Block>
+  <Block BlockType="Inport" Name="ShiftInd" SID="6812::107">
+    <P Name="Position">[20, 136, 40, 154]</P>
+    <P Name="ZOrder">87</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="6812::118">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[270, 230, 320, 270]</P>
+    <P Name="ZOrder">98</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="6812::117">
+    <P Name="Tag">Stateflow S-Function 3</P>
+    <P Name="Ports">[2, 2]</P>
+    <P Name="Position">[180, 100, 230, 160]</P>
+    <P Name="ZOrder">97</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="PortCounts">[2 2]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">on</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">TqMod</P>
+    </Port>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="6812::119">
+    <P Name="Position">[460, 241, 480, 259]</P>
+    <P Name="ZOrder">99</P>
+  </Block>
+  <Block BlockType="Outport" Name="TqMod" SID="6812::105">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">85</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">6812::117#out:1</P>
+    <P Name="Dst">6812::118#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">6812::118#out:1</P>
+    <P Name="Dst">6812::119#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">TqMod</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6812::117#out:2</P>
+    <P Name="Dst">6812::105#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">6812::107#out:1</P>
+    <P Name="Dst">6812::117#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">6812::106#out:1</P>
+    <P Name="Points">[120, 0]</P>
+    <P Name="Dst">6812::117#in:1</P>
+  </Line>
+</System>

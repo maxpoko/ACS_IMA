@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[3187, -1049, 5145, 472]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">151</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Abs" Name="Abs1" SID="6582">
+    <P Name="Position">[30, 25, 60, 55]</P>
+    <P Name="ZOrder">49117</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="6583">
+    <P Name="Position">[65, 5, 95, 35]</P>
+    <P Name="ZOrder">49116</P>
+    <P Name="Value">2</P>
+  </Block>
+  <Block BlockType="DataTypeConversion" Name="Data Type Conversion" SID="6594">
+    <P Name="Position">[160, 20, 205, 40]</P>
+    <P Name="ZOrder">49120</P>
+    <P Name="RndMeth">Floor</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="6584">
+    <P Name="Position">[-45, 27, 10, 53]</P>
+    <P Name="ZOrder">49118</P>
+    <P Name="GotoTag">GearInd</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="RelationalOperator" Name="Relational&#xA;Operator" SID="6585">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[115, 9, 140, 51]</P>
+    <P Name="ZOrder">49115</P>
+    <P Name="Operator">==</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="6586">
+    <P Name="Position">[290, -25, 330, 85]</P>
+    <P Name="ZOrder">49112</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Transmission1" SID="6587">
+    <P Name="Position">[220, 52, 265, 78]</P>
+    <P Name="ZOrder">49114</P>
+    <P Name="Value">1*2.4*15/45</P>
+  </Block>
+  <Block BlockType="Constant" Name="Transmission2" SID="6588">
+    <P Name="Position">[220, -20, 265, 10]</P>
+    <P Name="ZOrder">49113</P>
+    <P Name="Value">1*1.5*15/45</P>
+  </Block>
+  <Block BlockType="Outport" Name="Transmission" SID="6589">
+    <P Name="Position">[420, 23, 450, 37]</P>
+    <P Name="ZOrder">49119</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">6584#out:1</P>
+    <P Name="Dst">6582#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">6585#out:1</P>
+    <P Name="Dst">6594#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">6588#out:1</P>
+    <P Name="Dst">6586#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">6582#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">6585#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">6586#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">6589#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">6583#out:1</P>
+    <P Name="Dst">6585#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">6587#out:1</P>
+    <P Name="Dst">6586#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">6594#out:1</P>
+    <P Name="Dst">6586#in:2</P>
+  </Line>
+</System>

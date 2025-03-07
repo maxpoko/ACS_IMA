@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">238</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="MainBus" SID="3731">
+    <P Name="Position">[-365, 203, -335, 217]</P>
+    <P Name="ZOrder">48991</P>
+  </Block>
+  <Block BlockType="Abs" Name="Abs2" SID="4841">
+    <P Name="Position">[35, 170, 65, 200]</P>
+    <P Name="ZOrder">49109</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Reference" Name="Battery Current" SID="3732">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[640, 75, 760, 155]</P>
+    <P Name="ZOrder">49086</P>
+    <P Name="LibraryVersion">6.0</P>
+    <P Name="SourceBlock">autolibmappedmotorcommon/Electrical Current</P>
+    <P Name="SourceType">SubSystem</P>
+    <P Name="SourceProductBaseCode">PW,DR,MT,UV,VE</P>
+    <InstanceData>
+      <P Name="ShowPortLabels">FromPortIcon</P>
+      <P Name="SystemSampleTime">-1</P>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="VariantActivationTime">update diagram</P>
+      <P Name="AllowZeroVariantControls">off</P>
+      <P Name="PropagateVariantConditions">off</P>
+      <P Name="ContentPreviewEnabled">off</P>
+      <P Name="Latency">0</P>
+      <P Name="AutoFrameSizeCalculation">off</P>
+    </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Battery Current [A]</P>
+    </Port>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector1" SID="3733">
+    <P Name="Ports">[1, 4]</P>
+    <P Name="Position">[-285, 51, -270, 369]</P>
+    <P Name="ZOrder">49085</P>
+    <P Name="OutputSignals">BatteryStates.BattVolt,RWheelSpd,InvBus.InvPlossW,InvBus.InvOut</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">&lt;BattVolt&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">&lt;RWheelSpd&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">&lt;InvPlossW&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">4</P>
+      <P Name="Name">&lt;InvOut&gt;</P>
+    </Port>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="3734">
+    <P Name="Position">[855, 54, 990, 76]</P>
+    <P Name="ZOrder">49090</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">MechMotorP</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="3735">
+    <P Name="Position">[855, 104, 990, 126]</P>
+    <P Name="ZOrder">49087</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">BatteryCurrentDemand</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="3736">
+    <P Name="Position">[855, 204, 990, 226]</P>
+    <P Name="ZOrder">49088</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">MotorTorque</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="4656">
+    <P Name="Position">[855, 9, 990, 31]</P>
+    <P Name="ZOrder">49104</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">MotSpd</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="6272">
+    <P Name="Position">[-200, 242, -75, 258]</P>
+    <P Name="ZOrder">49130</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">InvP_loss_W</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto5" SID="1608">
+    <P Name="Position">[850, 144, 990, 166]</P>
+    <P Name="ZOrder">49133</P>
+    <P Name="BackgroundColor">[0.000000, 0.666667, 0.498039]</P>
+    <P Name="GotoTag">BMSControlledBatteryCurent</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Motor Efficiency" SID="3737">
+    <P Name="Ports">[2, 2]</P>
+    <P Name="Position">[465, 102, 590, 153]</P>
+    <P Name="ZOrder">49089</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_3737"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Motor Time Constant&#xA;(Response Smoothing)" SID="3750">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[330, 159, 430, 266]</P>
+    <P Name="ZOrder">49091</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Motor Torque [Nm]</P>
+    </Port>
+    <System Ref="system_3750"/>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="Peak Motor Torque [Nm]" SID="3760">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[150, 160, 210, 210]</P>
+    <P Name="ZOrder">49082</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">[0 2000 5000 7000]</P>
+    <P Name="Table">[120 115 95 70]</P>
+    <P Name="ExtrapMethod">Clip</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Product" Name="Product" SID="3762">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[280, 213, 300, 262]</P>
+    <P Name="ZOrder">49083</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="4243">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[-20, 156, 0, 214]</P>
+    <P Name="ZOrder">49096</P>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation2" SID="7702">
+    <P Name="Position">[90, 170, 120, 200]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Commented">through</P>
+    <P Name="UpperLimit">7000</P>
+    <P Name="LowerLimit">-7000</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Transmission" SID="6581">
+    <P Name="Ports">[0, 1]</P>
+    <P Name="Position">[-185, 175, -55, 225]</P>
+    <P Name="ZOrder">49131</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_6581"/>
+  </Block>
+  <Block BlockType="Gain" Name="pc2num" SID="3761">
+    <P Name="Position">[155, 315, 210, 345]</P>
+    <P Name="ZOrder">49084</P>
+    <P Name="ShowName">off</P>
+    <P Name="Gain">0.01</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">3762#out:1</P>
+    <P Name="Dst">3750#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;RWheelSpd&gt;</P>
+    <P Name="ZOrder">130</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3733#out:2</P>
+    <P Name="Dst">4243#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Battery Current [A]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3732#out:1</P>
+    <P Name="Points">[50, 0]</P>
+    <Branch>
+      <P Name="ZOrder">251</P>
+      <P Name="Points">[0, 40]</P>
+      <P Name="Dst">1608#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">250</P>
+      <P Name="Labels">[-1, 0]</P>
+      <P Name="Dst">3735#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BattVolt&gt;</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3733#out:1</P>
+    <P Name="Dst">3732#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3731#out:1</P>
+    <P Name="Dst">3733#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">3737#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <Branch>
+      <P Name="ZOrder">127</P>
+      <P Name="Points">[0, -50]</P>
+      <P Name="Dst">3734#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">9</P>
+      <P Name="Dst">3732#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">Motor Torque [Nm]</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">3750#out:1</P>
+    <P Name="Points">[15, 0]</P>
+    <Branch>
+      <P Name="ZOrder">234</P>
+      <P Name="Labels">[-1, 1]</P>
+      <P Name="Dst">3736#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">202</P>
+      <P Name="Dst">3737#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">3761#out:1</P>
+    <P Name="Points">[30, 0; 0, -80]</P>
+    <P Name="Dst">3762#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">3737#out:2</P>
+    <P Name="Dst">3732#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">229</P>
+    <P Name="Src">6581#out:1</P>
+    <P Name="Dst">4243#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;InvPlossW&gt;</P>
+    <P Name="ZOrder">188</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3733#out:3</P>
+    <P Name="Dst">6272#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;InvOut&gt;</P>
+    <P Name="ZOrder">90</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3733#out:4</P>
+    <P Name="Dst">3761#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">128</P>
+    <P Name="Src">4243#out:1</P>
+    <P Name="Points">[9, 0]</P>
+    <Branch>
+      <P Name="ZOrder">232</P>
+      <P Name="Dst">4841#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">231</P>
+      <P Name="Points">[0, -165; 317, 0]</P>
+      <Branch>
+        <P Name="ZOrder">136</P>
+        <P Name="Points">[0, 95]</P>
+        <P Name="Dst">3737#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">135</P>
+        <P Name="Dst">4656#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">225</P>
+    <P Name="Src">4841#out:1</P>
+    <P Name="Dst">7702#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">3760#out:1</P>
+    <P Name="Points">[31, 0]</P>
+    <Branch>
+      <P Name="ZOrder">233</P>
+      <P Name="Points">[0, 40]</P>
+      <P Name="Dst">3762#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">227</P>
+      <P Name="Dst">3750#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">275</P>
+    <P Name="Src">7702#out:1</P>
+    <P Name="Dst">3760#in:1</P>
+  </Line>
+  <Annotation SID="6685">
+    <P Name="Name">Assumption: BMS has 100% efficiency 
+(same current demand)</P>
+    <P Name="Position">[839, 166, 1014, 192]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

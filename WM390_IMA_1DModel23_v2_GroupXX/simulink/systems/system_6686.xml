@@ -1,0 +1,1743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Ride Mode&#xA;(Manually selected by Rider)" SID="6689">
+    <P Name="Position">[435, 548, 465, 562]</P>
+    <P Name="ZOrder">51114</P>
+    <P Name="NameLocation">top</P>
+  </Block>
+  <Block BlockType="Inport" Name="ThrottlePos" SID="6690">
+    <P Name="Position">[435, 708, 465, 722]</P>
+    <P Name="ZOrder">51115</P>
+    <P Name="Port">2</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">AccPedPos</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="BikeSpd" SID="6691">
+    <P Name="Position">[435, 773, 465, 787]</P>
+    <P Name="ZOrder">51116</P>
+    <P Name="Port">3</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">BikeSpd</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="MotorSpd" SID="6693">
+    <P Name="Position">[435, 808, 465, 822]</P>
+    <P Name="ZOrder">51139</P>
+    <P Name="Port">4</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+      <P Name="PropagatedSignals">MotorSpeed</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="MotorTorque" SID="7121">
+    <P Name="Position">[435, 843, 465, 857]</P>
+    <P Name="ZOrder">51173</P>
+    <P Name="Port">5</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+      <P Name="PropagatedSignals">MotorTorque</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="RearWheelSpd" SID="6694">
+    <P Name="Position">[435, 918, 465, 932]</P>
+    <P Name="ZOrder">51118</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Inport" Name="FrontWheelSpd" SID="6695">
+    <P Name="Position">[435, 878, 465, 892]</P>
+    <P Name="ZOrder">51143</P>
+    <P Name="Port">7</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattSoC" SID="6696">
+    <P Name="Position">[435, 958, 465, 972]</P>
+    <P Name="ZOrder">51119</P>
+    <P Name="Port">8</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotorTemp" SID="6698">
+    <P Name="Position">[435, 993, 465, 1007]</P>
+    <P Name="ZOrder">51121</P>
+    <P Name="Port">9</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattTemp" SID="6699">
+    <P Name="Position">[435, 1028, 465, 1042]</P>
+    <P Name="ZOrder">51154</P>
+    <P Name="Port">10</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattPowerLim" SID="6700">
+    <P Name="Position">[435, 1063, 465, 1077]</P>
+    <P Name="ZOrder">51122</P>
+    <P Name="Port">11</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">W</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="MotorPowerLim" SID="6701">
+    <P Name="Position">[435, 1093, 465, 1107]</P>
+    <P Name="ZOrder">51158</P>
+    <P Name="Port">12</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">W</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="VSC_FuncControl" SID="6702">
+    <P Name="Position">[435, 1323, 465, 1337]</P>
+    <P Name="ZOrder">51123</P>
+    <P Name="Port">13</P>
+  </Block>
+  <Block BlockType="Inport" Name="Curr" SID="6703">
+    <P Name="Position">[435, 1153, 465, 1167]</P>
+    <P Name="ZOrder">51124</P>
+    <P Name="Port">14</P>
+  </Block>
+  <Block BlockType="Inport" Name="WakeUp" SID="6705">
+    <P Name="Position">[435, 1188, 465, 1202]</P>
+    <P Name="ZOrder">51135</P>
+    <P Name="Port">15</P>
+  </Block>
+  <Block BlockType="Inport" Name="GearShiftActive" SID="6706">
+    <P Name="Position">[435, 1223, 465, 1237]</P>
+    <P Name="ZOrder">51126</P>
+    <P Name="Port">16</P>
+  </Block>
+  <Block BlockType="Gain" Name="%2Nm" SID="6708">
+    <P Name="Position">[1240, 527, 1285, 553]</P>
+    <P Name="ZOrder">51160</P>
+    <P Name="Gain">TMaxMotor/100</P>
+    <P Name="OutDataTypeStr">Inherit: Same as input</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Goto" Name="(1=Enable;  0=Disable)" SID="7571">
+    <P Name="Position">[1405, 1452, 1480, 1478]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">BrakeTrqEnable</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="(1=Enable; 0=Disable)" SID="7533">
+    <P Name="Position">[2235, 1468, 2330, 1492]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">RegenEnable</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="(Limit to 0 - 1)" SID="7168">
+    <P Name="Position">[1405, 1552, 1480, 1578]</P>
+    <P Name="ZOrder">51179</P>
+    <P Name="GotoTag">RearBrkTrq</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="(Limit to 0-1)" SID="7167">
+    <P Name="Position">[1405, 1502, 1480, 1528]</P>
+    <P Name="ZOrder">51178</P>
+    <P Name="GotoTag">FrontBrkTrq</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="(RealTrqRegen - Negative)" SID="7532">
+    <P Name="Position">[2235, 1548, 2330, 1572]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">TrqRegen</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Auto-Ride Mode Selection" SID="7604">
+    <P Name="Ports">[7, 1]</P>
+    <P Name="Position">[545, 535, 650, 695]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.000000, 1.000000, 1.000000]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_7604"/>
+  </Block>
+  <Block BlockType="From" Name="Battery Current&#xA;(-ve = discharge)" SID="6709">
+    <P Name="Position">[2145, 830, 2190, 850]</P>
+    <P Name="ZOrder">51152</P>
+    <P Name="GotoTag">Curr</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">A</P>
+      <P Name="PropagatedSignals">BattCurrDmd</P>
+    </Port>
+  </Block>
+  <Block BlockType="SubSystem" Name="Battery State-of-Charge Estimation" SID="7094">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[1935, 1195, 2175, 1365]</P>
+    <P Name="ZOrder">51161</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+    </Port>
+    <System Ref="system_7094"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Brake Torque Distribution" SID="7162">
+    <P Name="Ports">[4, 3]</P>
+    <P Name="Position">[1095, 1438, 1335, 1592]</P>
+    <P Name="ZOrder">51177</P>
+    <P Name="BackgroundColor">gray</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[-]</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">0~1</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">0~1</P>
+    </Port>
+    <System Ref="system_7162"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Bypass Strategy" SID="6710">
+    <P Name="Ports">[1, 3]</P>
+    <P Name="Position">[575, 1289, 695, 1371]</P>
+    <P Name="ZOrder">51101</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="SFBlockType">MATLAB Function</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_6710"/>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="7099">
+    <P Name="Position">[1835, 1210, 1890, 1240]</P>
+    <P Name="ZOrder">51164</P>
+    <P Name="Value">Init_SoC</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="7641">
+    <P Name="Position">[1765, 1540, 1815, 1570]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">AmbTemp</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">oC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From" SID="6711">
+    <P Name="Position">[1725, 820, 1765, 840]</P>
+    <P Name="ZOrder">51156</P>
+    <P Name="BackgroundColor">[0.807843, 1.000000, 0.984314]</P>
+    <P Name="GotoTag">BT</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">oC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="6712">
+    <P Name="Position">[2100, 672, 2170, 698]</P>
+    <P Name="ZOrder">51134</P>
+    <P Name="GotoTag">GearShiftActive</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="From" Name="From10" SID="6713">
+    <P Name="Position">[1725, 760, 1765, 780]</P>
+    <P Name="ZOrder">51100</P>
+    <P Name="BackgroundColor">[1.000000, 0.780392, 0.780392]</P>
+    <P Name="GotoTag">BPL</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">W</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From11" SID="7631">
+    <P Name="Position">[970, 1485, 1010, 1505]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.890196, 0.780392, 1.000000]</P>
+    <P Name="GotoTag">BS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From12" SID="7155">
+    <P Name="Position">[1840, 1270, 1880, 1290]</P>
+    <P Name="ZOrder">51176</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">SoC</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">BattSOC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From13" SID="6715">
+    <P Name="Position">[2145, 865, 2195, 885]</P>
+    <P Name="ZOrder">51153</P>
+    <P Name="GotoTag">WakeUp</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[-]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From14" SID="7633">
+    <P Name="Position">[970, 1525, 1010, 1545]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">FWS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From15" SID="6717">
+    <P Name="Position">[2145, 760, 2185, 780]</P>
+    <P Name="ZOrder">51150</P>
+    <P Name="BackgroundColor">[0.890196, 0.780392, 1.000000]</P>
+    <P Name="GotoTag">BS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From16" SID="6718">
+    <P Name="Position">[2145, 795, 2185, 815]</P>
+    <P Name="ZOrder">51151</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">SoC</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">BattSOC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From17" SID="7170">
+    <P Name="Position">[950, 1442, 1060, 1468]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">magenta</P>
+    <P Name="GotoTag">BrakePedalPosition</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From18" SID="6719">
+    <P Name="Position">[1725, 790, 1775, 810]</P>
+    <P Name="ZOrder">51142</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTSpd</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From19" SID="7176">
+    <P Name="Position">[1765, 1467, 1875, 1493]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">magenta</P>
+    <P Name="GotoTag">BrakePedalPosition</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="7622">
+    <P Name="Position">[1340, 675, 1380, 695]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.890196, 0.780392, 1.000000]</P>
+    <P Name="GotoTag">BS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From21" SID="7550">
+    <P Name="Position">[1765, 1445, 1840, 1465]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTSpd</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+      <P Name="PropagatedSignals">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From22" SID="7601">
+    <P Name="Position">[960, 750, 1000, 770]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">RM</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[-]</P>
+      <P Name="PropagatedSignals">[-]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From23" SID="7602">
+    <P Name="Position">[960, 795, 1000, 815]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.890196, 0.780392, 1.000000]</P>
+    <P Name="GotoTag">BS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From24" SID="7634">
+    <P Name="Position">[970, 1565, 1010, 1585]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">RWS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From25" SID="7638">
+    <P Name="Position">[1765, 1570, 1805, 1590]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.890196, 0.780392, 1.000000]</P>
+    <P Name="GotoTag">BS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From26" SID="7640">
+    <P Name="Position">[1765, 1520, 1805, 1540]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">SoC</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">BattSOC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From27" SID="7642">
+    <P Name="Position">[995, 1255, 1055, 1275]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTSpd</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+      <P Name="PropagatedSignals">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From28" SID="7643">
+    <P Name="Position">[995, 1295, 1055, 1315]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTTrq</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+      <P Name="PropagatedSignals">Nm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From29" SID="7650">
+    <P Name="Position">[455, 565, 495, 585]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.890196, 0.780392, 1.000000]</P>
+    <P Name="GotoTag">BS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="6721">
+    <P Name="Position">[1725, 700, 1765, 720]</P>
+    <P Name="ZOrder">51098</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">SoC</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">BattSOC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From30" SID="7651">
+    <P Name="Position">[455, 585, 495, 605]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">FWS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From31" SID="7652">
+    <P Name="Position">[455, 605, 495, 625]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">RWS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From32" SID="7653">
+    <P Name="Position">[455, 625, 495, 645]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">SoC</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">BattSOC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From33" SID="7654">
+    <P Name="Position">[445, 665, 505, 685]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTTrq</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+      <P Name="PropagatedSignals">Nm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From34" SID="7656">
+    <P Name="Position">[445, 647, 505, 663]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">AccelCmd</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">AcceleratorPedalPosition[%]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From35" SID="7657">
+    <P Name="Position">[995, 1337, 1055, 1353]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="GotoTag">AccelCmd</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">AcceleratorPedalPosition[%]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From36" SID="7693">
+    <P Name="Position">[1765, 1494, 1830, 1516]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">ThrottlePos</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">AccPedPos</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="6722">
+    <P Name="Position">[1725, 850, 1765, 870]</P>
+    <P Name="ZOrder">51159</P>
+    <P Name="BackgroundColor">[1.000000, 0.780392, 0.780392]</P>
+    <P Name="GotoTag">MPL</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">W</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="7098">
+    <P Name="Position">[1840, 1322, 1885, 1348]</P>
+    <P Name="ZOrder">51163</P>
+    <P Name="GotoTag">Curr</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">A</P>
+      <P Name="PropagatedSignals">BattCurrDmd</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="6723">
+    <P Name="Position">[1725, 730, 1765, 750]</P>
+    <P Name="ZOrder">51099</P>
+    <P Name="BackgroundColor">[0.807843, 1.000000, 0.984314]</P>
+    <P Name="GotoTag">MT</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">oC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From7" SID="6724">
+    <P Name="Position">[1340, 815, 1380, 835]</P>
+    <P Name="ZOrder">51092</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">RWS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From8" SID="7102">
+    <P Name="Position">[505, 1490, 545, 1510]</P>
+    <P Name="ZOrder">51169</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">SoC</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+      <P Name="PropagatedSignals">BattSOC</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From9" SID="7123">
+    <P Name="Position">[690, 780, 750, 800]</P>
+    <P Name="ZOrder">51175</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTTrq</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+      <P Name="PropagatedSignals">Nm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Gear Selection&#xA;[Manually selected by Rider]" SID="6665">
+    <P Name="Position">[1005, 1212, 1030, 1238]</P>
+    <P Name="ZOrder">51171</P>
+    <P Name="NameLocation">top</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[-]</P>
+    </Port>
+  </Block>
+  <Block BlockType="SubSystem" Name="Gear Shift Logic" SID="6793">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[2185, 633, 2330, 702]</P>
+    <P Name="ZOrder">51090</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+    </Port>
+    <System Ref="system_6793"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Gear shift Strategy" SID="7115">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[1095, 1208, 1335, 1362]</P>
+    <P Name="ZOrder">51172</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">1 or 2</P>
+      <P Name="PropagatedSignals">[-]</P>
+    </Port>
+    <System Ref="system_7115"/>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="6726">
+    <P Name="Position">[590, 1145, 695, 1175]</P>
+    <P Name="ZOrder">51108</P>
+    <P Name="GotoTag">Curr</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="6727">
+    <P Name="Position">[730, 605, 770, 625]</P>
+    <P Name="ZOrder">51097</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">RM</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto10" SID="6728">
+    <P Name="Position">[740, 1295, 780, 1315]</P>
+    <P Name="ZOrder">51102</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">BP1</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto11" SID="6729">
+    <P Name="Position">[740, 1320, 780, 1340]</P>
+    <P Name="ZOrder">51103</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">BP2</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto12" SID="6730">
+    <P Name="Position">[740, 1345, 780, 1365]</P>
+    <P Name="ZOrder">51104</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">BP3</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto13" SID="7692">
+    <P Name="Position">[615, 729, 680, 751]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">ThrottlePos</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto15" SID="6731">
+    <P Name="Position">[590, 1215, 695, 1245]</P>
+    <P Name="ZOrder">51113</P>
+    <P Name="GotoTag">GearShiftActive</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto16" SID="6732">
+    <P Name="Position">[590, 1180, 695, 1210]</P>
+    <P Name="ZOrder">51136</P>
+    <P Name="GotoTag">WakeUp</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto17" SID="6733">
+    <P Name="Position">[640, 1090, 680, 1110]</P>
+    <P Name="ZOrder">51157</P>
+    <P Name="BackgroundColor">[1.000000, 0.780392, 0.780392]</P>
+    <P Name="GotoTag">MPL</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto18" SID="6734">
+    <P Name="Position">[620, 805, 680, 825]</P>
+    <P Name="ZOrder">51140</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTSpd</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto19" SID="6735">
+    <P Name="Position">[640, 875, 680, 895]</P>
+    <P Name="ZOrder">51145</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">FWS</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="6736">
+    <P Name="Position">[640, 770, 680, 790]</P>
+    <P Name="ZOrder">51082</P>
+    <P Name="BackgroundColor">[0.890196, 0.780392, 1.000000]</P>
+    <P Name="GotoTag">BS</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto3" SID="6737">
+    <P Name="Position">[640, 990, 680, 1010]</P>
+    <P Name="ZOrder">51085</P>
+    <P Name="BackgroundColor">[0.807843, 1.000000, 0.984314]</P>
+    <P Name="GotoTag">MT</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto4" SID="4235">
+    <P Name="Position">[1375, 1272, 1450, 1298]</P>
+    <P Name="ZOrder">51170</P>
+    <P Name="GotoTag">GearInd</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto5" SID="6739">
+    <P Name="Position">[640, 915, 680, 935]</P>
+    <P Name="ZOrder">51083</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">RWS</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto6" SID="6740">
+    <P Name="Position">[640, 1060, 680, 1080]</P>
+    <P Name="ZOrder">51086</P>
+    <P Name="BackgroundColor">[1.000000, 0.780392, 0.780392]</P>
+    <P Name="GotoTag">BPL</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto7" SID="7122">
+    <P Name="Position">[620, 840, 680, 860]</P>
+    <P Name="ZOrder">51174</P>
+    <P Name="BackgroundColor">[0.682353, 1.000000, 0.784314]</P>
+    <P Name="GotoTag">MOTTrq</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto8" SID="6742">
+    <P Name="Position">[640, 1025, 680, 1045]</P>
+    <P Name="ZOrder">51155</P>
+    <P Name="BackgroundColor">[0.807843, 1.000000, 0.984314]</P>
+    <P Name="GotoTag">BT</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto9" SID="6743">
+    <P Name="Position">[640, 955, 680, 975]</P>
+    <P Name="ZOrder">51088</P>
+    <P Name="BackgroundColor">[1.000000, 0.909804, 0.631373]</P>
+    <P Name="GotoTag">SoC</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="6744">
+    <P Name="Position">[2090, 210, 2110, 230]</P>
+    <P Name="ZOrder">51081</P>
+  </Block>
+  <Block BlockType="Constant" Name="Minimum SoC [%]" SID="6648">
+    <P Name="Position">[580, 1515, 625, 1535]</P>
+    <P Name="ZOrder">51165</P>
+    <P Name="ShowName">off</P>
+    <P Name="Value">SoCmin</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+    </Port>
+  </Block>
+  <Block BlockType="SubSystem" Name="Power management" SID="6745">
+    <P Name="Ports">[7, 1]</P>
+    <P Name="Position">[1815, 659, 1970, 881]</P>
+    <P Name="ZOrder">51089</P>
+    <P Name="BackgroundColor">orange</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+    </Port>
+    <System Ref="system_6745"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Range Estimation" SID="7661">
+    <P Name="Ports">[4, 1]</P>
+    <P Name="Position">[2240, 748, 2365, 897]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[0.333333, 0.666667, 0.000000]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km</P>
+    </Port>
+    <System Ref="system_7661"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Regen Braking (Rear Wheel Only)" SID="7171">
+    <P Name="Ports">[6, 2]</P>
+    <P Name="Position">[1935, 1439, 2175, 1596]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">[1.000000, 1.000000, 0.498039]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[-]</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">Nm</P>
+    </Port>
+    <System Ref="system_7171"/>
+  </Block>
+  <Block BlockType="RelationalOperator" Name="Relational&#xA;Operator1" SID="6649">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[650, 1488, 670, 1537]</P>
+    <P Name="ZOrder">51167</P>
+    <P Name="NameLocation">top</P>
+    <P Name="Operator">&lt;=</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Fcn" Name="RideModeInit" SID="7658">
+    <P Name="Position">[675, 605, 705, 625]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="NameLocation">top</P>
+    <P Name="Expr">(u==0)*3 + (u!=0)*u</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[-]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="Selector 1&#xA;(1=Bypass; 0=Include)" SID="6897">
+    <P Name="Position">[1580, 595, 1620, 615]</P>
+    <P Name="ZOrder">51105</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">BP1</P>
+  </Block>
+  <Block BlockType="From" Name="Selector 2&#xA;(1=Bypass; 0=Include)" SID="6898">
+    <P Name="Position">[1965, 595, 2005, 615]</P>
+    <P Name="ZOrder">51106</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">BP2</P>
+  </Block>
+  <Block BlockType="From" Name="Selector 3&#xA;(1=Bypass; 0=Include)" SID="6899">
+    <P Name="Position">[2300, 595, 2340, 615]</P>
+    <P Name="ZOrder">51107</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">BP3</P>
+  </Block>
+  <Block BlockType="Fcn" Name="SoCcheck" SID="6651">
+    <P Name="Position">[585, 1492, 625, 1508]</P>
+    <P Name="ZOrder">51168</P>
+    <P Name="ShowName">off</P>
+    <P Name="Expr">(u&lt;=0)*Init_SoC + (u&gt;0)*u</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Speed Limiter" SID="7574">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[1030, 690, 1155, 830]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">T0d (%)</P>
+      <P Name="PropagatedSignals">T0d</P>
+    </Port>
+    <System Ref="system_7574"/>
+  </Block>
+  <Block BlockType="Stop" Name="Stop Simulation1" SID="6650">
+    <P Name="Position">[705, 1504, 740, 1526]</P>
+    <P Name="ZOrder">51166</P>
+    <P Name="BackgroundColor">red</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="7598">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1200, 530, 1220, 550]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Inputs">|+-</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="6900">
+    <P Name="Position">[1660, 510, 1700, 700]</P>
+    <P Name="ZOrder">51094</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Switch" Name="Switch1" SID="6901">
+    <P Name="Position">[2045, 510, 2085, 700]</P>
+    <P Name="ZOrder">51095</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Switch" Name="Switch2" SID="6902">
+    <P Name="Position">[2395, 510, 2435, 700]</P>
+    <P Name="ZOrder">51096</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Tf (Nm)</P>
+    </Port>
+  </Block>
+  <Block BlockType="SubSystem" Name="Torque Management" SID="7018">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[780, 605, 930, 825]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="BackgroundColor">magenta</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">T0 (%)</P>
+    </Port>
+    <System Ref="system_7018"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Traction Control" SID="6903">
+    <P Name="Ports">[3, 2]</P>
+    <P Name="Position">[1435, 648, 1555, 862]</P>
+    <P Name="ZOrder">51111</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">Estimated Slip Ratio</P>
+    </Port>
+    <System Ref="system_6903"/>
+  </Block>
+  <Block BlockType="Gain" Name="kph2rpmFW" SID="7083">
+    <P Name="Position">[545, 870, 575, 900]</P>
+    <P Name="ZOrder">51144</P>
+    <P Name="Gain">25/3/pi/0.32</P>
+  </Block>
+  <Block BlockType="Gain" Name="kph2rpmRW" SID="7084">
+    <P Name="Position">[545, 910, 575, 940]</P>
+    <P Name="ZOrder">51112</P>
+    <P Name="Gain">25/3/pi/0.32</P>
+  </Block>
+  <Block BlockType="Outport" Name="ChrgCurrReq" SID="7085">
+    <P Name="Position">[2370, 213, 2400, 227]</P>
+    <P Name="ZOrder">51127</P>
+  </Block>
+  <Block BlockType="Outport" Name="VSCtorque" SID="7086">
+    <P Name="Position">[2495, 598, 2525, 612]</P>
+    <P Name="ZOrder">51128</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="PMS Torque Out" SID="7087">
+    <P Name="Position">[2495, 918, 2525, 932]</P>
+    <P Name="ZOrder">51129</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Outport" Name="TCS Torque Out" SID="7088">
+    <P Name="Position">[2495, 968, 2525, 982]</P>
+    <P Name="ZOrder">51130</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Outport" Name="SlipRatio" SID="7089">
+    <P Name="Position">[2495, 1013, 2525, 1027]</P>
+    <P Name="ZOrder">51131</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="Outport" Name="Torque Management Out " SID="7090">
+    <P Name="Position">[2495, 1058, 2525, 1072]</P>
+    <P Name="ZOrder">51132</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Outport" Name="EstRange" SID="7091">
+    <P Name="Position">[2495, 818, 2525, 832]</P>
+    <P Name="ZOrder">51133</P>
+    <P Name="Port">7</P>
+  </Block>
+  <Block BlockType="Outport" Name="Torque Derate" SID="7092">
+    <P Name="Position">[2495, 1128, 2525, 1142]</P>
+    <P Name="ZOrder">51137</P>
+    <P Name="Port">8</P>
+  </Block>
+  <Block BlockType="Outport" Name="SoC_Est" SID="7097">
+    <P Name="Position">[2270, 1273, 2300, 1287]</P>
+    <P Name="ZOrder">51162</P>
+    <P Name="Port">9</P>
+  </Block>
+  <Line>
+    <P Name="Name">Tf (Nm)</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6902#out:1</P>
+    <P Name="Points">[55, 0]</P>
+    <P Name="Dst">7086#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6719#out:1</P>
+    <P Name="Dst">6745#in:5</P>
+  </Line>
+  <Line>
+    <P Name="Name">W</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">6700#out:1</P>
+    <P Name="Dst">6740#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">6898#out:1</P>
+    <P Name="Dst">6901#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">6696#out:1</P>
+    <P Name="Dst">6743#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">6710#out:1</P>
+    <P Name="Dst">6728#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">6744#out:1</P>
+    <P Name="Dst">7085#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">6694#out:1</P>
+    <P Name="Dst">7084#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">6899#out:1</P>
+    <P Name="Dst">6902#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">6695#out:1</P>
+    <P Name="Dst">7083#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">6712#out:1</P>
+    <P Name="Dst">6793#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">W</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6722#out:1</P>
+    <P Name="Dst">6745#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">6699#out:1</P>
+    <P Name="Dst">6742#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">oC</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6723#out:1</P>
+    <P Name="Dst">6745#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">km</P>
+    <P Name="ZOrder">444</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7661#out:1</P>
+    <P Name="Dst">7091#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">6897#out:1</P>
+    <P Name="Dst">6900#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">W</P>
+    <P Name="ZOrder">19</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">6701#out:1</P>
+    <P Name="Dst">6733#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Estimated Slip Ratio</P>
+    <P Name="ZOrder">20</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6903#out:2</P>
+    <P Name="Points">[31, 0; 0, 210]</P>
+    <P Name="Dst">7089#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">[-]</P>
+    <P Name="ZOrder">441</P>
+    <P Name="Labels">[2, 1]</P>
+    <P Name="Src">6715#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">7661#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">25</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6903#out:1</P>
+    <P Name="Points">[69, 0]</P>
+    <Branch>
+      <P Name="ZOrder">283</P>
+      <P Name="Points">[0, -35]</P>
+      <P Name="Dst">6900#in:3</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">23</P>
+      <P Name="Points">[0, 270; 866, 0]</P>
+      <P Name="Dst">7088#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">A</P>
+    <P Name="ZOrder">440</P>
+    <P Name="Labels">[2, 1]</P>
+    <P Name="Src">6709#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">7661#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">oC</P>
+    <P Name="ZOrder">32</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6711#out:1</P>
+    <P Name="Dst">6745#in:6</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">33</P>
+    <P Name="Src">6706#out:1</P>
+    <P Name="Dst">6731#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">34</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6691#out:1</P>
+    <P Name="Dst">6736#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">215</P>
+    <P Name="Src">6690#out:1</P>
+    <P Name="Points">[125, 0]</P>
+    <Branch>
+      <P Name="ZOrder">446</P>
+      <P Name="Points">[0, 25]</P>
+      <P Name="Dst">7692#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">445</P>
+      <P Name="Labels">[-1, 0]</P>
+      <P Name="Dst">7018#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">40</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6745#out:1</P>
+    <P Name="Points">[40, 0]</P>
+    <Branch>
+      <P Name="ZOrder">39</P>
+      <P Name="Points">[0, 155]</P>
+      <P Name="Dst">7087#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">38</P>
+      <P Name="Points">[0, -100]</P>
+      <P Name="Dst">6901#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">442</P>
+    <P Name="Labels">[2, 1]</P>
+    <P Name="Src">6717#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">7661#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">43</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6721#out:1</P>
+    <P Name="Dst">6745#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">44</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6724#out:1</P>
+    <P Name="Dst">6903#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">45</P>
+    <P Name="Src">7084#out:1</P>
+    <P Name="Dst">6739#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">47</P>
+    <P Name="Src">7083#out:1</P>
+    <P Name="Dst">6735#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">50</P>
+    <P Name="Src">6900#out:1</P>
+    <P Name="Points">[5, 0]</P>
+    <Branch>
+      <P Name="ZOrder">49</P>
+      <P Name="Points">[0, -65]</P>
+      <P Name="Dst">6901#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">48</P>
+      <P Name="Labels">[0, 1]</P>
+      <P Name="Points">[0, 75]</P>
+      <P Name="Dst">6745#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">443</P>
+    <P Name="Labels">[2, 1]</P>
+    <P Name="Src">6718#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">7661#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">52</P>
+    <P Name="Src">6702#out:1</P>
+    <P Name="Dst">6710#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">55</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6901#out:1</P>
+    <P Name="Points">[58, 0]</P>
+    <Branch>
+      <P Name="ZOrder">54</P>
+      <P Name="Points">[0, -65]</P>
+      <P Name="Dst">6902#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">53</P>
+      <P Name="Points">[0, 45]</P>
+      <P Name="Dst">6793#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">80</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6693#out:1</P>
+    <P Name="Dst">6734#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">W</P>
+    <P Name="ZOrder">57</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6713#out:1</P>
+    <P Name="Dst">6745#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">58</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6793#out:1</P>
+    <P Name="Dst">6902#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">59</P>
+    <P Name="Src">6703#out:1</P>
+    <P Name="Dst">6726#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">[-]</P>
+    <P Name="ZOrder">312</P>
+    <P Name="Src">7658#out:1</P>
+    <P Name="Points">[4, 0]</P>
+    <Branch>
+      <P Name="ZOrder">317</P>
+      <P Name="Dst">6727#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">313</P>
+      <P Name="Labels">[-1, 0]</P>
+      <P Name="Points">[0, 25]</P>
+      <P Name="Dst">7018#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">65</P>
+    <P Name="Src">6710#out:2</P>
+    <P Name="Dst">6729#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">66</P>
+    <P Name="Src">6705#out:1</P>
+    <P Name="Dst">6732#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">67</P>
+    <P Name="Src">6710#out:3</P>
+    <P Name="Dst">6730#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">72</P>
+    <P Name="Src">6708#out:1</P>
+    <P Name="Points">[16, 0]</P>
+    <Branch>
+      <P Name="ZOrder">437</P>
+      <P Name="Dst">6900#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">379</P>
+      <P Name="Points">[0, 215]</P>
+      <Branch>
+        <P Name="ZOrder">438</P>
+        <P Name="Labels">[-1, 0]</P>
+        <P Name="Dst">6903#in:2</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">211</P>
+        <P Name="Points">[0, 310]</P>
+        <P Name="Dst">7090#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">74</P>
+    <P Name="Src">6698#out:1</P>
+    <P Name="Dst">6737#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">75</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7094#out:1</P>
+    <P Name="Dst">7097#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">A</P>
+    <P Name="ZOrder">76</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7098#out:1</P>
+    <P Name="Dst">7094#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">79</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7099#out:1</P>
+    <P Name="Dst">7094#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">81</P>
+    <P Name="Src">6651#out:1</P>
+    <P Name="Dst">6649#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">82</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6648#out:1</P>
+    <P Name="Dst">6649#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">83</P>
+    <P Name="Src">6649#out:1</P>
+    <P Name="Dst">6650#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">84</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7102#out:1</P>
+    <P Name="Dst">6651#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">[-]</P>
+    <P Name="ZOrder">108</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6665#out:1</P>
+    <P Name="Dst">7115#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">1 or 2</P>
+    <P Name="ZOrder">109</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7115#out:1</P>
+    <P Name="Dst">4235#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">110</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7121#out:1</P>
+    <P Name="Dst">7122#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">217</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7123#out:1</P>
+    <P Name="Dst">7018#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">114</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7155#out:1</P>
+    <P Name="Dst">7094#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">0~1</P>
+    <P Name="ZOrder">115</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7162#out:2</P>
+    <P Name="Dst">7167#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">0~1</P>
+    <P Name="ZOrder">116</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7162#out:3</P>
+    <P Name="Dst">7168#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">117</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7170#out:1</P>
+    <P Name="Dst">7162#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">118</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7176#out:1</P>
+    <P Name="Dst">7171#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">447</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7693#out:1</P>
+    <P Name="Dst">7171#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">[-]</P>
+    <P Name="ZOrder">191</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7171#out:1</P>
+    <P Name="Dst">7533#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">192</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7171#out:2</P>
+    <P Name="Dst">7532#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">193</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7550#out:1</P>
+    <P Name="Dst">7171#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">[-]</P>
+    <P Name="ZOrder">194</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7162#out:1</P>
+    <P Name="Dst">7571#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">199</P>
+    <P Name="Src">7598#out:1</P>
+    <P Name="Dst">6708#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">T0 (%)</P>
+    <P Name="ZOrder">218</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7018#out:1</P>
+    <P Name="Points">[32, 0]</P>
+    <Branch>
+      <P Name="ZOrder">220</P>
+      <P Name="Points">[0, -175]</P>
+      <P Name="Dst">7598#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">207</P>
+      <P Name="Dst">7574#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">T0d (%)</P>
+    <P Name="ZOrder">198</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7574#out:1</P>
+    <P Name="Points">[50, 0]</P>
+    <Branch>
+      <P Name="ZOrder">436</P>
+      <P Name="Points">[0, 375]</P>
+      <P Name="Dst">7092#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">219</P>
+      <P Name="Dst">7598#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">[-]</P>
+    <P Name="ZOrder">209</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7601#out:1</P>
+    <P Name="Dst">7574#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">210</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7602#out:1</P>
+    <P Name="Dst">7574#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">542</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7622#out:1</P>
+    <P Name="Dst">6903#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">546</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7631#out:1</P>
+    <P Name="Dst">7162#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">289</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7633#out:1</P>
+    <P Name="Dst">7162#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">290</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7634#out:1</P>
+    <P Name="Dst">7162#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">547</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7638#out:1</P>
+    <P Name="Dst">7171#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">293</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7640#out:1</P>
+    <P Name="Dst">7171#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">oC</P>
+    <P Name="ZOrder">294</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7641#out:1</P>
+    <P Name="Dst">7171#in:5</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">295</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7642#out:1</P>
+    <P Name="Dst">7115#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">296</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7643#out:1</P>
+    <P Name="Dst">7115#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">300</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7650#out:1</P>
+    <P Name="Dst">7604#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">301</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7651#out:1</P>
+    <P Name="Dst">7604#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">302</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7652#out:1</P>
+    <P Name="Dst">7604#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">303</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7653#out:1</P>
+    <P Name="Dst">7604#in:5</P>
+  </Line>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">304</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7654#out:1</P>
+    <P Name="Dst">7604#in:7</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">305</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7656#out:1</P>
+    <P Name="Dst">7604#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">306</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7657#out:1</P>
+    <P Name="Dst">7115#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">309</P>
+    <P Name="Src">6689#out:1</P>
+    <P Name="Dst">7604#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">314</P>
+    <P Name="Src">7604#out:1</P>
+    <P Name="Dst">7658#in:1</P>
+  </Line>
+  <Annotation SID="7103">
+    <P Name="Name">Low SoC Stop Check - DO NOT CHANGE</P>
+    <P Name="Position">[489, 1465, 764, 1545]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">359</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7603">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18px; font-weight:600;&quot;&gt;1D Model for Electric Motorcycle (VSC development)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Symbol&apos;; font-size:17px; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Vehicle dynamic control (different modes can be considered)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Auto-mode selection strategy (normal, eco, sport, rain)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Torque management&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px;&quot;&gt;		&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Traction control&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Speed limiter&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Gear-shift strategy&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Brake torque distribution strategy (front-rear)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Symbol&apos;; font-size:17px; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Vehicle energy management (different modes can be considered)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Power management (battery and motor power limit, thermal derating)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Range estimation&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Regen-braking via brake blending (rear only)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Battery State-of-Charge Estimation&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:22px; color:#c00000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[974, 221, 1579, 518]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-11</P>
+  </Annotation>
+  <Annotation SID="7646">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Important note: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Only modify within/inside your selected block according to your selected control function from the IMA list&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[740, 972, 1185, 1134]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-14</P>
+  </Annotation>
+</System>

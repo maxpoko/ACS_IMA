@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">107</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Rider Command" SID="1172">
+    <P Name="Position">[285, 193, 315, 207]</P>
+    <P Name="ZOrder">5753</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">RiderCommand</P>
+    </Port>
+  </Block>
+  <Block BlockType="TransferFcn" Name="Accelerator Dynamics" SID="1173">
+    <P Name="Position">[755, 182, 875, 218]</P>
+    <P Name="ZOrder">5750</P>
+    <P Name="Denominator">[0.15 1]</P>
+  </Block>
+  <Block BlockType="Saturate" Name="Accelerator Limitter" SID="1175">
+    <P Name="Position">[605, 185, 635, 215]</P>
+    <P Name="ZOrder">1731</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="UpperLimit">100</P>
+    <P Name="LowerLimit">0</P>
+    <P Name="ZeroCross">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">AcceleratorPedalPosition[%]</P>
+    </Port>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector" SID="1174">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[485, 173, 490, 227]</P>
+    <P Name="ZOrder">5751</P>
+    <P Name="OutputSignals">RiderCmd.AccCmd</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">&lt;AccCmd&gt;</P>
+    </Port>
+  </Block>
+  <Block BlockType="Goto" Name="Goto" SID="7655">
+    <P Name="Position">[730, 97, 805, 123]</P>
+    <P Name="ZOrder">5754</P>
+    <P Name="GotoTag">AccelCmd</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="[%] Accelerator Pedal Position" SID="1176">
+    <P Name="Position">[1080, 187, 1235, 213]</P>
+    <P Name="ZOrder">1730</P>
+    <P Name="BackgroundColor">orange</P>
+    <P Name="GotoTag">AcceleratorPedalPosition</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Line>
+    <P Name="Name">AcceleratorPedalPosition[%]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1175#out:1</P>
+    <P Name="Points">[54, 0]</P>
+    <Branch>
+      <P Name="ZOrder">19</P>
+      <P Name="Points">[0, -90]</P>
+      <P Name="Dst">7655#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">18</P>
+      <P Name="Dst">1173#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;AccCmd&gt;</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1174#out:1</P>
+    <P Name="Dst">1175#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">RiderCommand</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1172#out:1</P>
+    <P Name="Dst">1174#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">1173#out:1</P>
+    <P Name="Dst">1176#in:1</P>
+  </Line>
+</System>

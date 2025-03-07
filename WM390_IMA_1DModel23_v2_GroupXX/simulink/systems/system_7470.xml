@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">91</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="GearSel" SID="7471">
+    <P Name="Position">[-185, 78, -155, 92]</P>
+    <P Name="ZOrder">49053</P>
+  </Block>
+  <Block BlockType="Abs" Name="Abs1" SID="7472">
+    <P Name="Position">[-100, 70, -70, 100]</P>
+    <P Name="ZOrder">49123</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="7473">
+    <P Name="Position">[-65, 50, -35, 80]</P>
+    <P Name="ZOrder">49122</P>
+    <P Name="Value">2</P>
+  </Block>
+  <Block BlockType="DataTypeConversion" Name="Data Type Conversion" SID="7474">
+    <P Name="Position">[30, 65, 75, 85]</P>
+    <P Name="ZOrder">49124</P>
+    <P Name="RndMeth">Floor</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Gear1" SID="7475">
+    <P Name="Position">[90, 97, 135, 123]</P>
+    <P Name="ZOrder">48964</P>
+    <P Name="Value">2.4</P>
+  </Block>
+  <Block BlockType="Constant" Name="Gear2" SID="7476">
+    <P Name="Position">[90, 25, 135, 55]</P>
+    <P Name="ZOrder">48963</P>
+    <P Name="Value">1.5</P>
+  </Block>
+  <Block BlockType="Reference" Name="Inertia3" SID="7477">
+    <P Name="Ports">[0, 0, 0, 0, 0, 1]</P>
+    <P Name="Position">[535, 90, 575, 130]</P>
+    <P Name="ZOrder">49009</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="LibraryVersion">10004000.1</P>
+    <P Name="SourceBlock">fl_lib/Mechanical/Rotational Elements/Inertia</P>
+    <P Name="SourceType">Inertia</P>
+    <P Name="SourceProductBaseCode">SS</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SourceFile">foundation.mechanical.rotational.inertia</P>
+      <P Name="InternalSimscapePortConfiguration">{&quot;Bottom&quot;:[],&quot;Left&quot;:[{&quot;id&quot;:&quot;I&quot;,&quot;label&quot;:&quot;&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;}],&quot;Right&quot;:[],&quot;Top&quot;:[]}</P>
+      <P Name="ComponentPath">foundation.mechanical.rotational.inertia</P>
+      <P Name="ComponentVariants">foundation.mechanical.rotational.inertia</P>
+      <P Name="ComponentVariantNames">inertia</P>
+      <P Name="ClassName">inertia</P>
+      <P Name="SchemaVersion">1</P>
+      <P Name="inertia">0.001</P>
+      <P Name="inertia_unit">kg*m^2</P>
+      <P Name="inertia_conf">compiletime</P>
+      <P Name="num_ports">foundation.enum.numPorts2.one</P>
+      <P Name="num_ports_unit">1</P>
+      <P Name="num_ports_conf">compiletime</P>
+      <P Name="w_specify">off</P>
+      <P Name="w_priority">High</P>
+      <P Name="w">0</P>
+      <P Name="w_unit">rad/s</P>
+      <P Name="w_nominal_specify">off</P>
+      <P Name="w_nominal_unit">rad/s</P>
+      <P Name="w_nominal_value">1</P>
+      <P Name="t_specify">off</P>
+      <P Name="t_priority">None</P>
+      <P Name="t">0</P>
+      <P Name="t_unit">N*m</P>
+      <P Name="t_nominal_specify">off</P>
+      <P Name="t_nominal_unit">N*m</P>
+      <P Name="t_nominal_value">1</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="RelationalOperator" Name="Relational&#xA;Operator" SID="7478">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[-15, 54, 10, 96]</P>
+    <P Name="ZOrder">49121</P>
+    <P Name="Operator">==</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Reference" Name="Simulink-PS&#xA;Converter1" SID="7479">
+    <P Name="Ports">[1, 0, 0, 0, 0, 0, 1]</P>
+    <P Name="Position">[260, 67, 275, 83]</P>
+    <P Name="ZOrder">48971</P>
+    <P Name="LibraryVersion">5.0</P>
+    <P Name="SourceBlock">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="SourceType">Simulink-PS
+Converter</P>
+    <P Name="SourceProductBaseCode">PW,SS</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_input</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="NoiseDistribution">none</P>
+      <P Name="NoiseParameters">[]</P>
+      <P Name="Unit">1</P>
+      <P Name="AffineConversion">off</P>
+      <P Name="FilteringAndDerivatives">provide</P>
+      <P Name="SimscapeFilterOrder">1</P>
+      <P Name="InputFilterTimeConstant">0.001</P>
+      <P Name="UdotUserProvided">0</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="SubSystem" Name="Subsystem1" SID="7480">
+    <P Name="Ports">[0, 2, 0, 0, 0, 1, 1]</P>
+    <P Name="Position">[465, 39, 520, 91]</P>
+    <P Name="ZOrder">49007</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Mask>
+      <Display RunInitForIconRedraw="off">disp(&apos;Rotational\nSensor 3&apos;)</Display>
+    </Mask>
+    <System Ref="system_7480"/>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="7492">
+    <P Name="Position">[170, 20, 210, 130]</P>
+    <P Name="ZOrder">48962</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator3" SID="7493">
+    <P Name="Position">[545, 40, 565, 60]</P>
+    <P Name="ZOrder">49051</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator4" SID="7494">
+    <P Name="Position">[545, 55, 565, 75]</P>
+    <P Name="ZOrder">49052</P>
+  </Block>
+  <Block BlockType="Reference" Name="Variable Ratio&#xA;Transmission" SID="7495">
+    <P Name="Ports">[0, 0, 0, 0, 0, 2, 1]</P>
+    <P Name="Position">[355, 35, 410, 90]</P>
+    <P Name="ZOrder">48972</P>
+    <P Name="BlockRotation">180</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="LibraryVersion">10004000.1</P>
+    <P Name="SourceBlock">sdl_lib/Couplings &amp; Drives/Variable Ratio
+Transmission</P>
+    <P Name="SourceType">Variable Ratio
+Transmission</P>
+    <P Name="SourceProductBaseCode">LD</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SourceFile">sdl.couplings.variable_ratio_transmission</P>
+      <P Name="InternalSimscapePortConfiguration">{&quot;Bottom&quot;:[],&quot;Left&quot;:[{&quot;id&quot;:&quot;ratio&quot;,&quot;label&quot;:&quot;r&quot;,&quot;type&quot;:&quot;input&quot;},{&quot;id&quot;:&quot;B&quot;,&quot;label&quot;:&quot;B&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;}],&quot;Right&quot;:[{&quot;id&quot;:&quot;F&quot;,&quot;label&quot;:&quot;F&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;}],&quot;Top&quot;:[]}</P>
+      <P Name="ComponentPath">sdl.couplings.variable_ratio_transmission</P>
+      <P Name="ComponentVariants">[&quot;sdl.couplings.variable_ratio_transmission&quot;]</P>
+      <P Name="ComponentVariantNames">[&quot;variable_ratio_transmission&quot;]</P>
+      <P Name="ClassName">variable_ratio_transmission</P>
+      <P Name="SchemaVersion">1</P>
+      <P Name="rotation_direction">3-2*(2)</P>
+      <P Name="rotation_direction_unit">1</P>
+      <P Name="rotation_direction_conf">compiletime</P>
+      <P Name="kp">3e5</P>
+      <P Name="kp_unit">N*m/rad</P>
+      <P Name="kp_conf">compiletime</P>
+      <P Name="kv">0.0005</P>
+      <P Name="kv_unit">N*m/(rad/s)</P>
+      <P Name="kv_conf">compiletime</P>
+      <P Name="initial_torque">0</P>
+      <P Name="initial_torque_unit">N*m</P>
+      <P Name="initial_torque_conf">compiletime</P>
+      <P Name="losses_model">(1)-1</P>
+      <P Name="losses_model_unit">1</P>
+      <P Name="losses_model_conf">compiletime</P>
+      <P Name="efficiency">RatioEfficiency</P>
+      <P Name="efficiency_unit">1</P>
+      <P Name="efficiency_conf">compiletime</P>
+      <P Name="w_thr">0.0001</P>
+      <P Name="w_thr_unit">rad/s</P>
+      <P Name="w_thr_conf">compiletime</P>
+      <P Name="mu_visc">[0, 0]</P>
+      <P Name="mu_visc_unit">N*m/(rad/s)</P>
+      <P Name="mu_visc_conf">compiletime</P>
+      <P Name="R_specify">off</P>
+      <P Name="R_priority">None</P>
+      <P Name="R">1</P>
+      <P Name="R_unit">1</P>
+      <P Name="R_nominal_specify">off</P>
+      <P Name="R_nominal_unit">1</P>
+      <P Name="R_nominal_value">1</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="PMIOPort" Name="R" SID="7496">
+    <P Name="Position">[260, 43, 290, 57]</P>
+    <P Name="ZOrder">49054</P>
+    <P Name="Side">Left</P>
+  </Block>
+  <Block BlockType="PMIOPort" Name="S" SID="7497">
+    <P Name="Position">[615, 73, 645, 87]</P>
+    <P Name="ZOrder">49055</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Port">2</P>
+    <P Name="Side">Right</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7475#out:1</P>
+    <P Name="Dst">7492#in:3</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7495#lconn:2</P>
+    <P Name="Dst">7496#rconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">7480#out:2</P>
+    <P Name="Dst">7494#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">7476#out:1</P>
+    <P Name="Dst">7492#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">7492#out:1</P>
+    <P Name="Dst">7479#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">7480#out:1</P>
+    <P Name="Dst">7493#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">7</P>
+    <P Name="Src">7480#lconn:1</P>
+    <P Name="Dst">7495#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">8</P>
+    <P Name="Src">7477#lconn:1</P>
+    <P Name="Points">[0, 5]</P>
+    <Branch ConnectType="DEST_DEST">
+      <P Name="Src">7497#rconn:1</P>
+      <P Name="Points">[-45, 0]</P>
+    </Branch>
+    <Branch ConnectType="DEST_SRC">
+      <P Name="Dst">7480#rconn:1</P>
+    </Branch>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">11</P>
+    <P Name="Src">7495#lconn:1</P>
+    <P Name="Dst">7479#rconn:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">7478#out:1</P>
+    <P Name="Dst">7474#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">7472#out:1</P>
+    <P Name="Dst">7478#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">7473#out:1</P>
+    <P Name="Dst">7478#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">7474#out:1</P>
+    <P Name="Dst">7492#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">7471#out:1</P>
+    <P Name="Dst">7472#in:1</P>
+  </Line>
+</System>

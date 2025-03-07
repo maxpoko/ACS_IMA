@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">124</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="MotorSpd" SID="3738">
+    <P Name="Position">[-65, 63, -35, 77]</P>
+    <P Name="ZOrder">48941</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotorTrq" SID="3739">
+    <P Name="Position">[-65, 103, -35, 117]</P>
+    <P Name="ZOrder">48942</P>
+    <P Name="Port">2</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">TMotor [Nm]</P>
+      <P Name="PropagatedSignals">Motor Torque [Nm]</P>
+    </Port>
+  </Block>
+  <Block BlockType="Sum" Name="Add" SID="4739">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[580, 157, 610, 188]</P>
+    <P Name="ZOrder">49024</P>
+    <P Name="IconShape">rectangular</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="3740">
+    <P Name="Position">[240, 170, 265, 190]</P>
+    <P Name="ZOrder">48954</P>
+    <P Name="Value">70</P>
+  </Block>
+  <Block BlockType="Product" Name="Divide" SID="3741">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[445, 147, 475, 178]</P>
+    <P Name="ZOrder">48957</P>
+    <P Name="Inputs">*/</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="4738">
+    <P Name="Position">[400, 202, 525, 218]</P>
+    <P Name="ZOrder">49096</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">InvP_loss_W</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="MinMax" Name="Max" SID="3742">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[290, 151, 325, 189]</P>
+    <P Name="ZOrder">48953</P>
+    <P Name="Function">max</P>
+    <P Name="Inputs">2</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="Motor Efficiency&#xA;1-Torque (row #)&#xA;2-Speed (column #)" SID="4701">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[135, 121, 225, 199]</P>
+    <P Name="ZOrder">49021</P>
+    <P Name="InputPortMap">u0,u1</P>
+    <P Name="BreakpointsForDimension1">[-TMaxMotor TMaxMotor]</P>
+    <P Name="BreakpointsForDimension2">[-7000 7000]</P>
+    <P Name="Table">[90 95; 90 95]</P>
+    <P Name="InterpMethod">Cubic spline</P>
+    <P Name="ExtrapMethod">Cubic spline</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="3745">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[85, 52, 105, 128]</P>
+    <P Name="ZOrder">48934</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="3746">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[525, 155, 545, 175]</P>
+    <P Name="ZOrder">48959</P>
+    <P Name="Inputs">-+|</P>
+  </Block>
+  <Block BlockType="Gain" Name="pc2num" SID="3744">
+    <P Name="Position">[355, 152, 395, 188]</P>
+    <P Name="ZOrder">48958</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="Gain">0.01</P>
+  </Block>
+  <Block BlockType="Gain" Name="rpm2rad/s" SID="3747">
+    <P Name="Position">[25, 55, 55, 85]</P>
+    <P Name="ZOrder">49014</P>
+    <P Name="ShowName">off</P>
+    <P Name="Gain">(2*pi)/60</P>
+  </Block>
+  <Block BlockType="Outport" Name="MechPwr" SID="3748">
+    <P Name="Position">[680, 83, 710, 97]</P>
+    <P Name="ZOrder">48943</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Block BlockType="Outport" Name="Mot_Inv_PwrLoss" SID="3749">
+    <P Name="Position">[680, 168, 710, 182]</P>
+    <P Name="ZOrder">48944</P>
+    <P Name="Port">2</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">3745#out:1</P>
+    <P Name="Points">[318, 0]</P>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Points">[107, 0]</P>
+      <Branch>
+        <P Name="ZOrder">3</P>
+        <P Name="Dst">3748#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">4</P>
+        <P Name="Dst">3746#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Points">[0, 65]</P>
+      <P Name="Dst">3741#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">TMotor [Nm]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3739#out:1</P>
+    <P Name="Points">[44, 0]</P>
+    <Branch>
+      <P Name="ZOrder">19</P>
+      <P Name="Points">[0, 30]</P>
+      <P Name="Dst">4701#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Labels">[-1, 0]</P>
+      <P Name="Dst">3745#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">3740#out:1</P>
+    <P Name="Dst">3742#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">3742#out:1</P>
+    <P Name="Dst">3744#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">3741#out:1</P>
+    <P Name="Dst">3746#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">3747#out:1</P>
+    <P Name="Dst">3745#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">3738#out:1</P>
+    <P Name="Points">[31, 0]</P>
+    <Branch>
+      <P Name="ZOrder">20</P>
+      <P Name="Points">[0, 110]</P>
+      <P Name="Dst">4701#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">17</P>
+      <P Name="Dst">3747#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">4701#out:1</P>
+    <P Name="Dst">3742#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">3746#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">4739#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">4739#out:1</P>
+    <P Name="Dst">3749#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">4738#out:1</P>
+    <P Name="Points">[23, 0; 0, -30]</P>
+    <P Name="Dst">4739#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">35</P>
+    <P Name="Src">3744#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <P Name="Dst">3741#in:2</P>
+  </Line>
+</System>

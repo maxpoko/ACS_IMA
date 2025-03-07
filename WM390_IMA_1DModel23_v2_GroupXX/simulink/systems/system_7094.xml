@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">392</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="InitSoC" SID="7100">
+    <P Name="Position">[110, 58, 140, 72]</P>
+    <P Name="ZOrder">1</P>
+  </Block>
+  <Block BlockType="Inport" Name="RefSoC &#xA;(to compare with your estimated SoC)" SID="7156">
+    <P Name="Position">[110, 148, 140, 162]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattCurrent" SID="7095">
+    <P Name="Position">[110, 103, 140, 117]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Outport" Name="EstSoC" SID="7096">
+    <P Name="Position">[415, 88, 445, 102]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Annotation SID="7118">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Create a &lt;/span&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;logic to estimate the State of Charge of the battery:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Use any input from the MainBus&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Build an Equivalent Circuit Model (ECM) using Simulink blocks (not using battery components in Simulink)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Limit the SoC within 0 - 100%&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Employ the InitSoC input as the initial SoC of the battery (can be used to interpolate the Initial remained Capacity)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Note: can get ECM parameters from the &amp;quot;Battery Pack&amp;quot; block&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[67, -135, 467, 25]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

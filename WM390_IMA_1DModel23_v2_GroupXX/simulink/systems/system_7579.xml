@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[1912, -1075, 5768, 1053]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="RideMode" SID="7580">
+    <P Name="Position">[20, 83, 50, 97]</P>
+    <P Name="ZOrder">49059</P>
+  </Block>
+  <Block BlockType="Inport" Name="BikeSpeed" SID="7581">
+    <P Name="Position">[20, 228, 50, 242]</P>
+    <P Name="ZOrder">49060</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="1-D Lookup&#xA;Table" SID="7582">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[360, 213, 425, 257]</P>
+    <P Name="ZOrder">49040</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">[0,112,114,116,119,120,120.5,121,150]</P>
+    <P Name="Table">[0,0,0,2,15,25,35,45,70]*TMaxMotor/100</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="1-D Lookup&#xA;Table2" SID="7583">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[360, 358, 425, 402]</P>
+    <P Name="ZOrder">49046</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">[0,112,114,116,119,120,120.5,121,150]</P>
+    <P Name="Table">[0,0,0,2,15,25,35,45,70]*TMaxMotor/100</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="1-D Lookup&#xA;Table4" SID="7584">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[360, 503, 425, 547]</P>
+    <P Name="ZOrder">49049</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">[0,137,139,142,144,145,145.5,146,170]</P>
+    <P Name="Table">[0,0,0,0,10,21,28,34,100]*TMaxMotor/100</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="1-D Lookup&#xA;Table6" SID="7585">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[360, 648, 425, 692]</P>
+    <P Name="ZOrder">49052</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">[0,177,179,181,183,184,185,185.5,186,200]</P>
+    <P Name="Table">[0,0,0,0,0,0,2,5,10,20]*TMaxMotor/100</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="1-D Lookup&#xA;Table8" SID="7586">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[360, 793, 425, 837]</P>
+    <P Name="ZOrder">49068</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">[0,137,139,142,144,145,145.5,146,170]</P>
+    <P Name="Table">[0,0,0,0,10,21,28,34,100]*TMaxMotor/100</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="MultiPortSwitch" Name="Multiport&#xA;Switch" SID="7587">
+    <P Name="Ports">[6, 1]</P>
+    <P Name="Position">[505, 18, 555, 887]</P>
+    <P Name="ZOrder">48975</P>
+    <P Name="Inputs">4</P>
+    <P Name="DataPortForDefault">Additional data port</P>
+    <P Name="DiagnosticForDefault">None</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Outport" Name="TqMod" SID="7588">
+    <P Name="Position">[770, 448, 800, 462]</P>
+    <P Name="ZOrder">49062</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7586#out:1</P>
+    <P Name="Dst">7587#in:6</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7585#out:1</P>
+    <P Name="Dst">7587#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">7581#out:1</P>
+    <P Name="Points">[229, 0]</P>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, 145]</P>
+      <Branch>
+        <P Name="ZOrder">5</P>
+        <P Name="Points">[0, 145]</P>
+        <Branch>
+          <P Name="ZOrder">6</P>
+          <P Name="Points">[0, 145]</P>
+          <Branch>
+            <P Name="ZOrder">7</P>
+            <P Name="Points">[0, 145]</P>
+            <P Name="Dst">7586#in:1</P>
+          </Branch>
+          <Branch>
+            <P Name="ZOrder">8</P>
+            <P Name="Dst">7585#in:1</P>
+          </Branch>
+        </Branch>
+        <Branch>
+          <P Name="ZOrder">9</P>
+          <P Name="Dst">7584#in:1</P>
+        </Branch>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">10</P>
+        <P Name="Dst">7583#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Dst">7582#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">7582#out:1</P>
+    <P Name="Dst">7587#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">7583#out:1</P>
+    <P Name="Dst">7587#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">7584#out:1</P>
+    <P Name="Dst">7587#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">7580#out:1</P>
+    <P Name="Dst">7587#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">7587#out:1</P>
+    <P Name="Dst">7588#in:1</P>
+  </Line>
+  <Annotation SID="7593">
+    <P Name="Name">RAIN</P>
+    <P Name="Position">[343, 163, 478, 288]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">16</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7592">
+    <P Name="Name">ECO</P>
+    <P Name="Position">[343, 308, 478, 433]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">17</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7591">
+    <P Name="Name">NORMAL</P>
+    <P Name="Position">[343, 453, 478, 578]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">18</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7590">
+    <P Name="Name">SPORT</P>
+    <P Name="Position">[343, 598, 478, 723]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">19</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7589">
+    <P Name="Name">NORMAL (Default)</P>
+    <P Name="Position">[343, 743, 478, 868]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">20</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+</System>

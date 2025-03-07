@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GraphicalInterface>
+  <P Name="NumRootInports">0</P>
+  <P Name="NumRootOutports">0</P>
+  <P Name="ParameterArgumentNames"/>
+  <P Name="NumModelReferences">0</P>
+  <P Name="NumTestPointedSignals">11</P>
+  <TestPointedSignal>
+    <P Name="SignalName">TyreSlipFr</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/PS-Simulink Converter1</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">TyreSlipRr</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/PS-Simulink Converter2</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">OutShaftTq</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">OutShaftSpd(rpm)</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter1</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">OutShaftAcc</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter2</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">WheelRrTq</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/Subsystem1/PS-Simulink Converter</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">RWSpd [rpm]</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/Subsystem1/PS-Simulink Converter1</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">WheelRrAcc</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/Subsystem1/PS-Simulink Converter2</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">WheelFrTq</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/Subsystem2/PS-Simulink Converter</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">FWSpd [rpm]</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/Subsystem2/PS-Simulink Converter1</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">WheelFrAcc</P>
+    <P Name="FullBlockPath">$bdroot/Chassis/Subsystem2/PS-Simulink Converter2</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <P Name="NumProvidedFunctions">0</P>
+  <P Name="NumRequiredFunctions">0</P>
+  <P Name="NumResetEvents">0</P>
+  <P Name="HasInitializeEvent">0</P>
+  <P Name="HasTerminateEvent">0</P>
+  <P Name="PreCompExecutionDomainType">Unset</P>
+  <P Name="IsExportFunctionModel">0</P>
+  <P Name="SimulinkSubDomainType">Simulink</P>
+  <P Name="NumParameterArguments">0</P>
+  <P Name="NumExternalFileReferences">49</P>
+  <ExternalFileReference>
+    <P Name="Reference">autolibrcnetworksystem/Equivalent Circuit Battery</P>
+    <P Name="Path">$bdroot/Battery Pack/Single Cell Model/Equivalent Circuit Battery</P>
+    <P Name="SID">7138</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">simulink/Lookup
+Tables/Lookup
+Table
+Dynamic</P>
+    <P Name="Path">$bdroot/Battery Pack/Single Cell Model/Lookup Table Dynamic</P>
+    <P Name="SID">7147</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Rotational Elements/Inertia</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Inertia3</P>
+    <P Name="SID">7477</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Simulink-PS Converter1</P>
+    <P Name="SID">7479</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sensors/Ideal Rotational
+Motion Sensor</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Subsystem1/Ideal Rotational Motion Sensor</P>
+    <P Name="SID">7481</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sensors/Ideal Torque Sensor</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Subsystem1/Ideal Torque Sensor</P>
+    <P Name="SID">7482</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Rotational Elements/Mechanical
+Rotational Reference</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Subsystem1/Mechanical Rotational Reference1</P>
+    <P Name="SID">7483</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter</P>
+    <P Name="SID">7484</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter1</P>
+    <P Name="SID">7485</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter2</P>
+    <P Name="SID">7486</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Couplings &amp; Drives/Variable Ratio
+Transmission</P>
+    <P Name="Path">$bdroot/Chassis/2-Speeds CVT/Variable Ratio Transmission</P>
+    <P Name="SID">7495</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Couplings &amp; Drives/Chain Drive</P>
+    <P Name="Path">$bdroot/Chassis/Chain Drive</P>
+    <P Name="SID">7499</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Brakes &amp; Detents/Rotational/Disc Brake</P>
+    <P Name="Path">$bdroot/Chassis/Disc Brake1</P>
+    <P Name="SID">7332</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Brakes &amp; Detents/Rotational/Disc Brake</P>
+    <P Name="Path">$bdroot/Chassis/Disc Brake2</P>
+    <P Name="SID">7333</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Tires &amp; Vehicles/Tire (Magic Formula)</P>
+    <P Name="Path">$bdroot/Chassis/Front Tire</P>
+    <P Name="SID">7345</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sensors/Ideal Force Sensor</P>
+    <P Name="Path">$bdroot/Chassis/Ideal Force Sensor</P>
+    <P Name="SID">7359</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sources/Ideal Torque Source</P>
+    <P Name="Path">$bdroot/Chassis/Ideal Torque Source2</P>
+    <P Name="SID">7501</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Gears/Simple Gear</P>
+    <P Name="Path">$bdroot/Chassis/Idler Gear</P>
+    <P Name="SID">7502</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Rotational Elements/Mechanical
+Rotational Reference</P>
+    <P Name="Path">$bdroot/Chassis/Mechanical Rotational Reference2</P>
+    <P Name="SID">7503</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/PS-Simulink Converter</P>
+    <P Name="SID">7365</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/PS-Simulink Converter1</P>
+    <P Name="SID">7366</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/PS-Simulink Converter2</P>
+    <P Name="SID">7367</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/PS-Simulink Converter5</P>
+    <P Name="SID">7370</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Tires &amp; Vehicles/Tire (Magic Formula)</P>
+    <P Name="Path">$bdroot/Chassis/Rear Tire</P>
+    <P Name="SID">7424</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Rotational Elements/Rotational Free End</P>
+    <P Name="Path">$bdroot/Chassis/Rotational Free End</P>
+    <P Name="SID">7426</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Simulink-PS Converter</P>
+    <P Name="SID">7429</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Simulink-PS Converter1</P>
+    <P Name="SID">7430</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Simulink-PS Converter2</P>
+    <P Name="SID">7431</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Simulink-PS Converter3</P>
+    <P Name="SID">7432</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Simulink-PS Converter4</P>
+    <P Name="SID">7504</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Simulink-PS
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Simulink-PS Converter6</P>
+    <P Name="SID">7433</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/Solver
+Configuration</P>
+    <P Name="Path">$bdroot/Chassis/Solver Configuration</P>
+    <P Name="SID">7505</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sensors/Ideal Rotational
+Motion Sensor</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem1/Ideal Rotational Motion Sensor</P>
+    <P Name="SID">7437</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sensors/Ideal Torque Sensor</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem1/Ideal Torque Sensor</P>
+    <P Name="SID">7438</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Rotational Elements/Mechanical
+Rotational Reference</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem1/Mechanical Rotational Reference1</P>
+    <P Name="SID">7439</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem1/PS-Simulink Converter</P>
+    <P Name="SID">7440</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem1/PS-Simulink Converter1</P>
+    <P Name="SID">7441</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem1/PS-Simulink Converter2</P>
+    <P Name="SID">7442</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sensors/Ideal Rotational
+Motion Sensor</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem2/Ideal Rotational Motion Sensor</P>
+    <P Name="SID">7454</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Mechanical Sensors/Ideal Torque Sensor</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem2/Ideal Torque Sensor</P>
+    <P Name="SID">7455</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">fl_lib/Mechanical/Rotational Elements/Mechanical
+Rotational Reference</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem2/Mechanical Rotational Reference1</P>
+    <P Name="SID">7456</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem2/PS-Simulink Converter</P>
+    <P Name="SID">7457</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem2/PS-Simulink Converter1</P>
+    <P Name="SID">7458</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="Path">$bdroot/Chassis/Subsystem2/PS-Simulink Converter2</P>
+    <P Name="SID">7459</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">sdl_lib/Tires &amp; Vehicles/Vehicle Body</P>
+    <P Name="Path">$bdroot/Chassis/Vehicle body</P>
+    <P Name="SID">7509</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">autolibmappedmotorcommon/Electrical Current</P>
+    <P Name="Path">$bdroot/Motor/Battery Current</P>
+    <P Name="SID">3732</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">autolibshared/Longitudinal Driver</P>
+    <P Name="Path">$bdroot/Rider/Longitudinal Driver</P>
+    <P Name="SID">1961</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">simulink/Discontinuities/Saturation
+Dynamic</P>
+    <P Name="Path">$bdroot/VSC/Main VSC/Speed Limiter/Saturation Dynamic</P>
+    <P Name="SID">7595</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <ExternalFileReference>
+    <P Name="Reference">simulink/Lookup
+Tables/Lookup
+Table
+Dynamic</P>
+    <P Name="Path">$bdroot/VSC/Main VSC/Torque Management/Linear interpolation</P>
+    <P Name="SID">7064</P>
+    <P Name="Type">LIBRARY_BLOCK</P>
+  </ExternalFileReference>
+  <P Name="OrderedModelArguments">0</P>
+</GraphicalInterface>

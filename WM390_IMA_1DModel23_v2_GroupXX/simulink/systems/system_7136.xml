@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[2875, -966, 4833, 433]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SIDHighWatermark">147</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Ign_switch" SID="7136::101">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">81</P>
+  </Block>
+  <Block BlockType="Inport" Name="Brake_switch" SID="7136::111">
+    <P Name="Position">[20, 136, 40, 154]</P>
+    <P Name="ZOrder">91</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="AccPed_pc" SID="7136::112">
+    <P Name="Position">[20, 171, 40, 189]</P>
+    <P Name="ZOrder">92</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="ChargerConnect" SID="7136::106">
+    <P Name="Position">[20, 206, 40, 224]</P>
+    <P Name="ZOrder">86</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Inport" Name="HVBattContactorStatus" SID="7136::116">
+    <P Name="Position">[20, 246, 40, 264]</P>
+    <P Name="ZOrder">96</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="Inport" Name="VehSpd_kph" SID="7136::114">
+    <P Name="Position">[20, 281, 40, 299]</P>
+    <P Name="ZOrder">94</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Inport" Name="Start_switch" SID="7136::146">
+    <P Name="Position">[20, 316, 40, 334]</P>
+    <P Name="ZOrder">126</P>
+    <P Name="Port">7</P>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="7136::144">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[270, 245, 320, 285]</P>
+    <P Name="ZOrder">124</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="7136::143">
+    <P Name="Tag">Stateflow S-Function 5</P>
+    <P Name="Ports">[7, 4]</P>
+    <P Name="Position">[180, 100, 230, 260]</P>
+    <P Name="ZOrder">123</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="PortCounts">[7 4]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">on</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">HVBattContactorReq</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">Torque_enable</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">4</P>
+      <P Name="Name">CurrentState</P>
+    </Port>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="7136::145">
+    <P Name="Position">[460, 256, 480, 274]</P>
+    <P Name="ZOrder">125</P>
+  </Block>
+  <Block BlockType="Outport" Name="HVBattContactorReq" SID="7136::115">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">95</P>
+  </Block>
+  <Block BlockType="Outport" Name="Torque_enable" SID="7136::120">
+    <P Name="Position">[460, 136, 480, 154]</P>
+    <P Name="ZOrder">100</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="CurrentState" SID="7136::147">
+    <P Name="Position">[460, 171, 480, 189]</P>
+    <P Name="ZOrder">127</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7136::101#out:1</P>
+    <P Name="Dst">7136::143#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7136::111#out:1</P>
+    <P Name="Dst">7136::143#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">7136::112#out:1</P>
+    <P Name="Dst">7136::143#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">7136::106#out:1</P>
+    <P Name="Dst">7136::143#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">7136::116#out:1</P>
+    <P Name="Dst">7136::143#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">7136::114#out:1</P>
+    <P Name="Dst">7136::143#in:6</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">7136::146#out:1</P>
+    <P Name="Dst">7136::143#in:7</P>
+  </Line>
+  <Line>
+    <P Name="Name">HVBattContactorReq</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7136::143#out:2</P>
+    <P Name="Dst">7136::115#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Torque_enable</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7136::143#out:3</P>
+    <P Name="Dst">7136::120#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">CurrentState</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7136::143#out:4</P>
+    <P Name="Dst">7136::147#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">7136::144#out:1</P>
+    <P Name="Dst">7136::145#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">7136::143#out:1</P>
+    <P Name="Dst">7136::144#in:1</P>
+  </Line>
+</System>

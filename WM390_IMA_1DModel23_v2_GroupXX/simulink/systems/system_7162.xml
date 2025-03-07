@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">125</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="BrakePedalPos" SID="7163">
+    <P Name="Position">[-135, 113, -105, 127]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Inport" Name="BikeSpd" SID="7628">
+    <P Name="Position">[-135, 168, -105, 182]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="ForegroundColor">red</P>
+    <P Name="Port">2</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="FrontWheelSpd" SID="7629">
+    <P Name="Position">[-135, 223, -105, 237]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="RearWheelSpd" SID="7630">
+    <P Name="Position">[-135, 278, -105, 292]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="7573">
+    <P Name="Position">[260, 35, 280, 55]</P>
+    <P Name="ZOrder">3</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="7694">
+    <P Name="Position">[45, 165, 65, 185]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ForegroundColor">red</P>
+  </Block>
+  <Block BlockType="Gain" Name="km/h 2 rpm" SID="7632">
+    <P Name="Position">[-45, 160, -15, 190]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ForegroundColor">red</P>
+    <P Name="Gain">25/3/pi/0.32</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="BrakeEnable" SID="7570">
+    <P Name="Position">[350, 38, 380, 52]</P>
+    <P Name="ZOrder">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="FrontBrkCmd" SID="7164">
+    <P Name="Position">[350, 153, 380, 167]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="RearBrkCmd" SID="7166">
+    <P Name="Position">[350, 263, 380, 277]</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7573#out:1</P>
+    <P Name="Dst">7570#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7628#out:1</P>
+    <P Name="Dst">7632#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7632#out:1</P>
+    <P Name="Dst">7694#in:1</P>
+  </Line>
+  <Annotation SID="7627">
+    <P Name="Name">BrakeEnable = 0: use default values defined from the model (Front/Rear = 20%/80% by default)
+BrakeEnable = 1: use your own brake torque distribution </P>
+    <P Name="Position">[419, 38, 854, 71]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="7165">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Develop a controller to distribute the brake torque applied to the front and rear wheels (already added in the Chassis model) when applying Brake&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Note:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;use any input from the Bus or elsewhere&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Example: some ideas about brake torque distribution from this link:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;https://www.drivingtests.co.nz/roadcode-questions/motorbike/motorbike-specific-questions/how-much-braking-comes-from-the-front-wh/&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;https://www.lazymotorbike.eu/tips/braking/&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[-201, -117, 199, 103]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

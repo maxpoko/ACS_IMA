@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[223, 338, 826, 833]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SIDHighWatermark">48</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="clock" SID="1956::1">
+    <P Name="Position">[20, 101, 40, 119]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Demux" Name=" Demux " SID="1956::47">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[270, 390, 320, 430]</P>
+    <P Name="ZOrder">38</P>
+    <P Name="Outputs">1</P>
+  </Block>
+  <Block BlockType="S-Function" Name=" SFunction " SID="1956::46">
+    <P Name="Tag">Stateflow S-Function 4</P>
+    <P Name="Ports">[1, 8]</P>
+    <P Name="Position">[180, 100, 230, 280]</P>
+    <P Name="ZOrder">37</P>
+    <P Name="FunctionName">sf_sfun</P>
+    <P Name="PortCounts">[1 8]</P>
+    <P Name="SFunctionDeploymentMode">off</P>
+    <P Name="EnableBusSupport">on</P>
+    <P Name="SFcnIsStateOwnerBlock">off</P>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">Ignition_sw</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">SideStand_sw</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">4</P>
+      <P Name="Name">Brake_sw</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">5</P>
+      <P Name="Name">AccPed_pc</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">6</P>
+      <P Name="Name">Run_sw</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">7</P>
+      <P Name="Name">ChargerCnnt</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">8</P>
+      <P Name="Name">Start_sw</P>
+    </Port>
+  </Block>
+  <Block BlockType="Terminator" Name=" Terminator " SID="1956::48">
+    <P Name="Position">[460, 401, 480, 419]</P>
+    <P Name="ZOrder">39</P>
+  </Block>
+  <Block BlockType="Outport" Name="Ignition_sw" SID="1956::5">
+    <P Name="Position">[460, 101, 480, 119]</P>
+    <P Name="ZOrder">-5</P>
+  </Block>
+  <Block BlockType="Outport" Name="SideStand_sw" SID="1956::22">
+    <P Name="Position">[460, 136, 480, 154]</P>
+    <P Name="ZOrder">13</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="Brake_sw" SID="1956::23">
+    <P Name="Position">[460, 171, 480, 189]</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Outport" Name="AccPed_pc" SID="1956::24">
+    <P Name="Position">[460, 206, 480, 224]</P>
+    <P Name="ZOrder">15</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Outport" Name="Run_sw" SID="1956::25">
+    <P Name="Position">[460, 246, 480, 264]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="Outport" Name="ChargerCnnt" SID="1956::26">
+    <P Name="Position">[460, 281, 480, 299]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Outport" Name="Start_sw" SID="1956::27">
+    <P Name="Position">[460, 316, 480, 334]</P>
+    <P Name="ZOrder">18</P>
+    <P Name="Port">7</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">114</P>
+    <P Name="Src">1956::1#out:1</P>
+    <P Name="Dst">1956::46#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Ignition_sw</P>
+    <P Name="ZOrder">115</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1956::46#out:2</P>
+    <P Name="Points">[0, -30]</P>
+    <P Name="Dst">1956::5#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">SideStand_sw</P>
+    <P Name="ZOrder">116</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1956::46#out:3</P>
+    <P Name="Dst">1956::22#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Brake_sw</P>
+    <P Name="ZOrder">117</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1956::46#out:4</P>
+    <P Name="Dst">1956::23#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">AccPed_pc</P>
+    <P Name="ZOrder">118</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1956::46#out:5</P>
+    <P Name="Dst">1956::24#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Run_sw</P>
+    <P Name="ZOrder">119</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1956::46#out:6</P>
+    <P Name="Dst">1956::25#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">ChargerCnnt</P>
+    <P Name="ZOrder">120</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1956::46#out:7</P>
+    <P Name="Dst">1956::26#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Start_sw</P>
+    <P Name="ZOrder">121</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">1956::46#out:8</P>
+    <P Name="Dst">1956::27#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">122</P>
+    <P Name="Src">1956::47#out:1</P>
+    <P Name="Dst">1956::48#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">123</P>
+    <P Name="Src">1956::46#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <P Name="Dst">1956::47#in:1</P>
+  </Line>
+</System>

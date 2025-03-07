@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">104</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Temp" SID="618">
+    <P Name="Position">[170, 348, 200, 362]</P>
+    <P Name="ZOrder">291</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">degC</P>
+      <P Name="PropagatedSignals">AmbientTemps</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="BatteryCellCurrent" SID="619">
+    <P Name="Position">[170, 288, 200, 302]</P>
+    <P Name="ZOrder">292</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="Initial SoC" SID="620">
+    <P Name="Position">[170, 208, 200, 222]</P>
+    <P Name="ZOrder">293</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="621">
+    <P Name="Ports">[5, 1]</P>
+    <P Name="Position">[980, 181, 1000, 409]</P>
+    <P Name="ZOrder">288</P>
+    <P Name="ShowName">off</P>
+    <P Name="Inputs">5</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="OutDataTypeStr">Bus: CellStateBus</P>
+    <P Name="InheritFromInputs">off</P>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector" SID="7142">
+    <P Name="Ports">[1, 2]</P>
+    <P Name="Position">[705, 160, 720, 340]</P>
+    <P Name="ZOrder">48935</P>
+    <P Name="OutputSignals">BattVolt,BattSoc</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">&lt;BattVolt&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">&lt;BattSoc&gt;</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="7145">
+    <P Name="Position">[315, 377, 355, 413]</P>
+    <P Name="ZOrder">48938</P>
+    <P Name="Value">273.15</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="7146">
+    <P Name="Position">[285, 227, 340, 243]</P>
+    <P Name="ZOrder">48939</P>
+    <P Name="Value">[0 100]</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="7148">
+    <P Name="Position">[285, 247, 340, 263]</P>
+    <P Name="ZOrder">48941</P>
+    <P Name="Value">[0 5]</P>
+  </Block>
+  <Block BlockType="Reference" Name="Equivalent Circuit Battery" SID="7138">
+    <P Name="Ports">[3, 2]</P>
+    <P Name="Position">[470, 207, 630, 383]</P>
+    <P Name="ZOrder">48932</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="LibraryVersion">3.0</P>
+    <P Name="SourceBlock">autolibrcnetworksystem/Equivalent Circuit Battery</P>
+    <P Name="SourceType">Equivalent Circuit Battery</P>
+    <P Name="SourceProductBaseCode">PW</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="CapacityCtrl">External Input</P>
+      <P Name="OutputVlt">Unfiltered</P>
+      <P Name="NumRC">1</P>
+      <P Name="Em">[3.5042 3.5136;
+3.5573 3.5646;
+3.6009 3.6153;
+3.6393 3.6565;
+3.6742 3.6889;
+3.7121 3.7214;
+3.7937 3.8078;
+3.8753 3.8945;
+3.97 3.9859;
+4.0764 4.0821;
+4.1924 4.193]</P>
+      <P Name="R0">[0.011448 0.0090006;
+0.011038 0.0089655;
+0.011281 0.0091261;
+0.011236 0.0091099;
+0.010959 0.008957;
+0.010714 0.0087969;
+0.010698 0.0089126;
+0.010712 0.0090517;
+0.010917 0.0090444;
+0.011304 0.0088992;
+0.011603 0.0089015]</P>
+      <P Name="SOC_BP">[0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1]</P>
+      <P Name="Temperature_BP">[293.15 313.15]</P>
+      <P Name="BattCap">[5 5]</P>
+      <P Name="BattCapInit">28</P>
+      <P Name="InitialCapVoltage">0</P>
+      <P Name="Tc">1/1000</P>
+      <P Name="Vinit">4.193</P>
+      <P Name="R1">[0.010342 0.0012244;
+0.0067316 0.0011396;
+0.0051156 0.0012661;
+0.0043447 0.0012265;
+0.0038826 0.0011163;
+0.0034226 0.0009968;
+0.003346 0.0011458;
+0.0033222 0.001345;
+0.0033201 0.0013091;
+0.0032886 0.0010986;
+0.0028114 0.0010309]</P>
+      <P Name="C1">[2287.7 11897;
+6122 24515;
+18460 42098;
+20975 44453;
+15254 33098;
+10440 24492;
+13903 32975;
+16694 40007;
+15784 35937;
+12165 26430;
+9118 24795]</P>
+      <P Name="R2">[0.010342 0.0012244;
+0.0067316 0.0011396;
+0.0051156 0.0012661;
+0.0043447 0.0012265;
+0.0038826 0.0011163;
+0.0034226 0.0009968;
+0.003346 0.0011458;
+0.0033222 0.001345;
+0.0033201 0.0013091;
+0.0032886 0.0010986;
+0.0028114 0.0010309]</P>
+      <P Name="C2">[2287.7 11897;
+6122 24515;
+18460 42098;
+20975 44453;
+15254 33098;
+10440 24492;
+13903 32975;
+16694 40007;
+15784 35937;
+12165 26430;
+9118 24795]</P>
+      <P Name="R3">[0.010342 0.0012244;
+0.0067316 0.0011396;
+0.0051156 0.0012661;
+0.0043447 0.0012265;
+0.0038826 0.0011163;
+0.0034226 0.0009968;
+0.003346 0.0011458;
+0.0033222 0.001345;
+0.0033201 0.0013091;
+0.0032886 0.0010986;
+0.0028114 0.0010309]</P>
+      <P Name="C3">[2287.7 11897;
+6122 24515;
+18460 42098;
+20975 44453;
+15254 33098;
+10440 24492;
+13903 32975;
+16694 40007;
+15784 35937;
+12165 26430;
+9118 24795]</P>
+      <P Name="R4">[0.010342 0.0012244;
+0.0067316 0.0011396;
+0.0051156 0.0012661;
+0.0043447 0.0012265;
+0.0038826 0.0011163;
+0.0034226 0.0009968;
+0.003346 0.0011458;
+0.0033222 0.001345;
+0.0033201 0.0013091;
+0.0032886 0.0010986;
+0.0028114 0.0010309]</P>
+      <P Name="C4">[2287.7 11897;
+6122 24515;
+18460 42098;
+20975 44453;
+15254 33098;
+10440 24492;
+13903 32975;
+16694 40007;
+15784 35937;
+12165 26430;
+9118 24795]</P>
+      <P Name="R5">[0.010342 0.0012244;
+0.0067316 0.0011396;
+0.0051156 0.0012661;
+0.0043447 0.0012265;
+0.0038826 0.0011163;
+0.0034226 0.0009968;
+0.003346 0.0011458;
+0.0033222 0.001345;
+0.0033201 0.0013091;
+0.0032886 0.0010986;
+0.0028114 0.0010309]</P>
+      <P Name="C5">[2287.7 11897;
+6122 24515;
+18460 42098;
+20975 44453;
+15254 33098;
+10440 24492;
+13903 32975;
+16694 40007;
+15784 35937;
+12165 26430;
+9118 24795]</P>
+      <P Name="Vu">Inf</P>
+      <P Name="Vl">-Inf</P>
+      <P Name="RefBlkName">&apos;autolibrcnetworksystem/Equivalent Circuit Battery&apos;</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="7151">
+    <P Name="Position">[905, 330, 925, 350]</P>
+    <P Name="ZOrder">48944</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">OCV</P>
+    </Port>
+  </Block>
+  <Block BlockType="Ground" Name="Ground1" SID="7152">
+    <P Name="Position">[905, 375, 925, 395]</P>
+    <P Name="ZOrder">48945</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">R</P>
+    </Port>
+  </Block>
+  <Block BlockType="Ground" Name="Ground2" SID="7153">
+    <P Name="Position">[905, 240, 925, 260]</P>
+    <P Name="ZOrder">48946</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Temp</P>
+    </Port>
+  </Block>
+  <Block BlockType="Reference" Name="Lookup&#xA;Table&#xA;Dynamic" SID="7147">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[365, 202, 415, 268]</P>
+    <P Name="ZOrder">48940</P>
+    <P Name="LibraryVersion">1.488</P>
+    <P Name="SourceBlock">simulink/Lookup
+Tables/Lookup
+Table
+Dynamic</P>
+    <P Name="SourceType">Lookup Table Dynamic</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="MultithreadedSim">auto</P>
+      <P Name="LookUpMeth">Interpolation-Use End Values</P>
+      <P Name="OutDataType">fixdt(&apos;double&apos;)</P>
+      <P Name="OutScaling">[]</P>
+      <P Name="OutputDataTypeScalingMode">Specify via dialog</P>
+      <P Name="OutDataTypeStr">double</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="DoSatur">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="7144">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[385, 345, 405, 365]</P>
+    <P Name="ZOrder">48937</P>
+    <P Name="Inputs">|++</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">degK</P>
+    </Port>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="7154">
+    <P Name="Position">[675, 330, 695, 350]</P>
+    <P Name="ZOrder">48947</P>
+  </Block>
+  <Block BlockType="Goto" Name="V, T, SoC, OCV" SID="1610">
+    <P Name="Position">[1060, 232, 1195, 258]</P>
+    <P Name="ZOrder">48925</P>
+    <P Name="BackgroundColor">[0.000000, 0.666667, 0.498039]</P>
+    <P Name="GotoTag">BatteryCellStates</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Gain" Name="to%" SID="7149">
+    <P Name="Position">[825, 280, 855, 310]</P>
+    <P Name="ZOrder">48942</P>
+    <P Name="Gain">100</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">SoC</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="Cell State" SID="881">
+    <P Name="Position">[1085, 288, 1115, 302]</P>
+    <P Name="ZOrder">277</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">621#out:1</P>
+    <P Name="Points">[23, 0]</P>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Points">[0, -50]</P>
+      <P Name="Dst">1610#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">10</P>
+      <P Name="Dst">881#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">Temp</P>
+    <P Name="ZOrder">86</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7153#out:1</P>
+    <P Name="Dst">621#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">degC</P>
+    <P Name="ZOrder">32</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">618#out:1</P>
+    <P Name="Dst">7144#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">58</P>
+    <P Name="Src">7138#out:1</P>
+    <P Name="Dst">7142#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BattVolt&gt;</P>
+    <P Name="ZOrder">59</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7142#out:1</P>
+    <P Name="Dst">621#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BattSoc&gt;</P>
+    <P Name="ZOrder">60</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7142#out:2</P>
+    <P Name="Dst">7149#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">103</P>
+    <P Name="Src">619#out:1</P>
+    <P Name="Dst">7138#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">64</P>
+    <P Name="Src">7145#out:1</P>
+    <P Name="Points">[35, 0]</P>
+    <P Name="Dst">7144#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">degK</P>
+    <P Name="ZOrder">65</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7144#out:1</P>
+    <P Name="Dst">7138#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">67</P>
+    <P Name="Src">7146#out:1</P>
+    <P Name="Dst">7147#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">68</P>
+    <P Name="Src">7148#out:1</P>
+    <P Name="Dst">7147#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">69</P>
+    <P Name="Src">7147#out:1</P>
+    <P Name="Dst">7138#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">34</P>
+    <P Name="Src">620#out:1</P>
+    <P Name="Dst">7147#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">SoC</P>
+    <P Name="ZOrder">75</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7149#out:1</P>
+    <P Name="Dst">621#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">OCV</P>
+    <P Name="ZOrder">83</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7151#out:1</P>
+    <P Name="Dst">621#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">R</P>
+    <P Name="ZOrder">84</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7152#out:1</P>
+    <P Name="Dst">621#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">97</P>
+    <P Name="Src">7138#out:2</P>
+    <P Name="Dst">7154#in:1</P>
+  </Line>
+  <Annotation SID="6679">
+    <P Name="Name">Simscape battery??</P>
+    <P Name="Position">[502, -25, 592, -11]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

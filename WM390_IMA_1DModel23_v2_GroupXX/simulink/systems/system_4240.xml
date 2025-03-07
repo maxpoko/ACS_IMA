@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">85</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Road Inclined (deg)" SID="4241">
+    <P Name="Position">[-40, 53, -10, 67]</P>
+    <P Name="ZOrder">50103</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="1976">
+    <P Name="Position">[120, 75, 230, 105]</P>
+    <P Name="ZOrder">49973</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="4221">
+    <P Name="Position">[315, 100, 345, 130]</P>
+    <P Name="ZOrder">50099</P>
+  </Block>
+  <Block BlockType="Display" Name="Display" SID="4224">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[230, 0, 320, 30]</P>
+    <P Name="ZOrder">50102</P>
+    <P Name="Decimation">1</P>
+  </Block>
+  <Block BlockType="ManualSwitch" Name="Manual Switch" SID="4218">
+    <P Name="Position">[295, 47, 320, 103]</P>
+    <P Name="ZOrder">50096</P>
+  </Block>
+  <Block BlockType="Goto" Name="Road Inclined (rad)" SID="4217">
+    <P Name="Position">[450, 103, 530, 127]</P>
+    <P Name="ZOrder">50095</P>
+    <P Name="GotoTag">RoadInclined</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="4220">
+    <P Name="Position">[375, 57, 405, 173]</P>
+    <P Name="ZOrder">50098</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Gain" Name="deg2rad" SID="4223">
+    <P Name="Position">[65, 45, 120, 75]</P>
+    <P Name="ZOrder">50101</P>
+    <P Name="Gain">pi/180</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rad</P>
+    </Port>
+  </Block>
+  <Line>
+    <P Name="ZOrder">600</P>
+    <P Name="Src">4218#out:1</P>
+    <P Name="Points">[50, 0]</P>
+    <P Name="Dst">4220#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">529</P>
+    <P Name="Src">1976#out:1</P>
+    <P Name="Points">[29, 0]</P>
+    <Branch>
+      <P Name="ZOrder">602</P>
+      <P Name="Dst">4218#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">537</P>
+      <P Name="Points">[0, 65; 111, 0]</P>
+      <P Name="Dst">4220#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">533</P>
+    <P Name="Src">4220#out:1</P>
+    <P Name="Dst">4217#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">rad</P>
+    <P Name="ZOrder">540</P>
+    <P Name="Labels">[1, 0]</P>
+    <P Name="Src">4223#out:1</P>
+    <P Name="Points">[53, 0]</P>
+    <Branch>
+      <P Name="ZOrder">544</P>
+      <P Name="Points">[0, -45]</P>
+      <P Name="Dst">4224#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">543</P>
+      <P Name="Dst">4218#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">535</P>
+    <P Name="Src">4221#out:1</P>
+    <P Name="Dst">4220#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">603</P>
+    <P Name="Src">4241#out:1</P>
+    <P Name="Dst">4223#in:1</P>
+  </Line>
+</System>

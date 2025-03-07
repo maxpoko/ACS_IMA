@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[2875, -966, 4833, 433]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">119</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Torque_enable" SID="5217">
+    <P Name="Position">[20, 258, 50, 272]</P>
+    <P Name="ZOrder">1747</P>
+  </Block>
+  <Block BlockType="Inport" Name="CurrentState" SID="5216">
+    <P Name="Position">[20, 18, 50, 32]</P>
+    <P Name="ZOrder">1746</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Constant" Name="Driving State" SID="5218">
+    <P Name="Position">[75, 45, 105, 75]</P>
+    <P Name="ZOrder">1743</P>
+    <P Name="Value">3</P>
+  </Block>
+  <Block BlockType="Constant" Name="Ignition State" SID="5219">
+    <P Name="Position">[75, 210, 105, 240]</P>
+    <P Name="ZOrder">1744</P>
+  </Block>
+  <Block BlockType="Logic" Name="Logical&#xA;Operator" SID="5220">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[130, 17, 160, 48]</P>
+    <P Name="ZOrder">1741</P>
+    <P Name="AllPortsSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+  </Block>
+  <Block BlockType="Logic" Name="Logical&#xA;Operator1" SID="5221">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[130, 242, 160, 273]</P>
+    <P Name="ZOrder">1742</P>
+    <P Name="AllPortsSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+  </Block>
+  <Block BlockType="Logic" Name="Logical&#xA;Operator2" SID="5222">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[195, 127, 225, 158]</P>
+    <P Name="ZOrder">1745</P>
+    <P Name="AllPortsSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="5223">
+    <P Name="Position">[285, 138, 315, 152]</P>
+    <P Name="ZOrder">1748</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">5217#out:1</P>
+    <P Name="Dst">5221#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">5222#out:1</P>
+    <P Name="Dst">5223#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">5219#out:1</P>
+    <P Name="Points">[5, 0]</P>
+    <P Name="Dst">5221#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">5216#out:1</P>
+    <P Name="Dst">5220#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">5220#out:1</P>
+    <P Name="Points">[8, 0; 0, 100]</P>
+    <P Name="Dst">5222#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">5221#out:1</P>
+    <P Name="Points">[13, 0; 0, -110]</P>
+    <P Name="Dst">5222#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">5218#out:1</P>
+    <P Name="Points">[5, 0]</P>
+    <P Name="Dst">5220#in:2</P>
+  </Line>
+</System>

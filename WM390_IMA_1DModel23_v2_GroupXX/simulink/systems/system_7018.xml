@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">231</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="RideMode" SID="7026">
+    <P Name="Position">[-65, 8, -35, 22]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Block BlockType="Inport" Name="ThrottlePos" SID="7025">
+    <P Name="Position">[-65, -22, -35, -8]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotorTorque" SID="7105">
+    <P Name="Position">[-65, 303, -35, 317]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="7053">
+    <P Name="Position">[285, 32, 355, 58]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">ThrottleBP</P>
+    <P Name="VectorParams1D">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Eco" SID="7055">
+    <P Name="Position">[40, 72, 110, 98]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">[0 0 0 4 8 13 16 20 25 30 35 40 45 48 50 55 60 65 70 75 80]&apos;</P>
+    <P Name="VectorParams1D">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Eco</P>
+    </Port>
+  </Block>
+  <Block BlockType="Reference" Name="Linear interpolation" SID="7064">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[430, -49, 535, 139]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="LibraryVersion">1.488</P>
+    <P Name="SourceBlock">simulink/Lookup
+Tables/Lookup
+Table
+Dynamic</P>
+    <P Name="SourceType">Lookup Table Dynamic</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="MultithreadedSim">auto</P>
+      <P Name="LookUpMeth">Interpolation-Use End Values</P>
+      <P Name="OutDataType">fixdt(&apos;double&apos;)</P>
+      <P Name="OutScaling">[]</P>
+      <P Name="OutputDataTypeScalingMode">Specify via dialog</P>
+      <P Name="OutDataTypeStr">double</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="DoSatur">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="MultiPortSwitch" Name="Multiport&#xA;Switch" SID="7063">
+    <P Name="Ports">[6, 1]</P>
+    <P Name="Position">[205, 3, 265, 202]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Inputs">4</P>
+    <P Name="DataPortForDefault">Additional data port</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Norm" SID="7056">
+    <P Name="Position">[40, 107, 110, 133]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">[0 0 0 5 10 15 20 28 35 40 45 50 55 60 65 70 80 85 90 95 100]&apos;</P>
+    <P Name="VectorParams1D">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Norm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Rain" SID="7054">
+    <P Name="Position">[40, 37, 110, 63]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">[0 0 0 3 8 13 18 22 28 32 36 40 44 48 52 56 60 64 66 68 70]&apos;</P>
+    <P Name="VectorParams1D">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Rain</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Sport" SID="7057">
+    <P Name="Position">[40, 142, 110, 168]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="Value">[0 0 0 5 15 20 25 30 40 50 55 60 65 75 80 90 95 100 100 100 100]&apos;</P>
+    <P Name="VectorParams1D">off</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Sport</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="DrivingTorqueCommand" SID="7067">
+    <P Name="Position">[875, 38, 905, 52]</P>
+    <P Name="ZOrder">100000</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7026#out:1</P>
+    <P Name="Points">[235, 0]</P>
+    <P Name="Dst">7063#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7053#out:1</P>
+    <P Name="Dst">7064#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">7063#out:1</P>
+    <P Name="Dst">7064#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">Rain</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">7054#out:1</P>
+    <P Name="Dst">7063#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">Eco</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">7055#out:1</P>
+    <P Name="Dst">7063#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">Norm</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">7056#out:1</P>
+    <P Name="Points">[43, 0]</P>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Points">[0, 70]</P>
+      <P Name="Dst">7063#in:6</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Labels">[-1, 1]</P>
+      <P Name="Dst">7063#in:4</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">7025#out:1</P>
+    <P Name="Dst">7064#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Sport</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">7057#out:1</P>
+    <P Name="Dst">7063#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">7064#out:1</P>
+    <P Name="Dst">7067#in:1</P>
+  </Line>
+  <Annotation SID="7620">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff0000;&quot;&gt;y is the Reference Torque for your closed-loop controller&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[552, 4, 802, 18]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="7619">
+    <P Name="Name">Fixed Open-loop Torque Map - DO NOT CHANGE or DELETE</P>
+    <P Name="Position">[10, -81, 645, 214]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">17</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7111">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Create a closed-loop controller to control the torque demand (TqDemand) to follow the desired torque (y) interpolated based on ThrottleBP position&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;- Use MotorTorque input as the actual torque feedback of the motor&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Note: in here we have an open-loop torque demand (y), which is linear interpolated based on the ThrottleBP and RideMode&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[10, -210, 410, -98]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

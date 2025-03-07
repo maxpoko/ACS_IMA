@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">80</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="T2" SID="6746">
+    <P Name="Position">[240, 438, 270, 452]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattSoC" SID="6747">
+    <P Name="Position">[240, 148, 270, 162]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotorTemp" SID="6748">
+    <P Name="Position">[240, 193, 270, 207]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattPwrLim" SID="6749">
+    <P Name="Position">[240, 283, 270, 297]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotSpd" SID="6750">
+    <P Name="Position">[240, 368, 270, 382]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="Inport" Name="BatteryTemp" SID="6751">
+    <P Name="Position">[240, 238, 270, 252]</P>
+    <P Name="ZOrder">50824</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotorPwrLim" SID="6752">
+    <P Name="Position">[240, 328, 270, 342]</P>
+    <P Name="ZOrder">50825</P>
+    <P Name="Port">7</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="7160">
+    <P Name="Position">[775, 300, 795, 320]</P>
+    <P Name="ZOrder">50827</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">T2d (Nm)</P>
+    </Port>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="7159">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[890, 435, 910, 455]</P>
+    <P Name="ZOrder">50826</P>
+    <P Name="Inputs">-+|</P>
+  </Block>
+  <Block BlockType="Outport" Name="T3" SID="6792">
+    <P Name="Position">[1105, 438, 1135, 452]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">6746#out:1</P>
+    <P Name="Dst">7159#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">7159#out:1</P>
+    <P Name="Dst">6792#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">T2d (Nm)</P>
+    <P Name="ZOrder">25</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7160#out:1</P>
+    <P Name="Points">[100, 0]</P>
+    <P Name="Dst">7159#in:1</P>
+  </Line>
+  <Annotation SID="7158">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Develop the following logics:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Battery power limit (using BattSoC, BattPwrLim)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Motor power limit (using MotorPwrLim)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Thermal derating (using MotorTemp and BatteryTemp)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Note: T3 = T2 - T2d&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px; color:#ff0000;&quot;&gt;BattPwrLim and MotorPwrLim are the maximum power available on Battery and Motor, respectively&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Example: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;when high MotorTemp or BatteryTemp, Torque output will be derated&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[382, 39, 782, 223]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-2</P>
+  </Annotation>
+</System>

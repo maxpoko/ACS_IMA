@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModelInformation Version="1.0">
+  <Model>
+    <P Name="ModelUUID">ca4361af-06bc-407d-96a4-60fc743fcefd</P>
+    <Object PropName="HDLParams" ObjectID="1" ClassName="slprops.hdlmdlprops">
+      <Array PropName="mdlProps" Type="Cell" Dimension="1*2">
+        <Cell Class="char">HDLSubsystem</Cell>
+        <Cell Class="char">$bdroot</Cell>
+      </Array>
+    </Object>
+    <P Name="PreLoadFcn">load(&apos;ACS_1DModel23_Parameters_v2.mat&apos;);</P>
+    <P Name="SLXCompressionType">Normal</P>
+    <P Name="LastSavedArchitecture">win64</P>
+    <UserParameters>
+      <P Name="PhysicalModelingChecksum">2607442200</P>
+      <P Name="PhysicalModelingParameterChecksum">2176898382</P>
+      <P Name="PhysicalModelingProducts">SimDriveline|Simscape</P>
+    </UserParameters>
+    <ConfigManagerSettings>
+      <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
+      <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
+      <P Name="RTWModifiedTimeStamp">617925344</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:8.439&gt;</P>
+    </ConfigManagerSettings>
+    <EditorSettings>
+      <P Name="BlockVariantConditionDataTip">on</P>
+      <P Name="ScheduleConnectors">off</P>
+      <P Name="MultithreadedSim">on</P>
+    </EditorSettings>
+    <SimulationSettings>
+      <P Name="SimulationMode">normal</P>
+      <P Name="PauseTimes">2</P>
+      <P Name="NumberOfSteps">200000</P>
+      <Object PropName="DataLoggingOverride" ObjectID="2" ClassName="Simulink.SimulationData.ModelLoggingInfo">
+        <P Name="model_" Class="char">$bdroot</P>
+        <P Name="overrideMode_" Class="uint32">0U</P>
+        <Array PropName="logAsSpecifiedByModels_" Type="Cell" Dimension="1*1">
+          <Cell Class="char">$bdroot</Cell>
+        </Array>
+        <Array PropName="logAsSpecifiedByModelsSSIDs_" Type="Cell" Dimension="1*1">
+          <Cell Class="double">[]</Cell>
+        </Array>
+      </Object>
+      <Object PropName="InstrumentedSignals" ObjectID="3" ClassName="Simulink.HMI.InstrumentedSignals">
+        <Array PropName="Persistence" Type="Struct" Dimension="11*1">
+          <MATStruct>
+            <Field Name="UUID" Class="char">6bafb3b8-c63f-4709-a9a3-040ec59d7549</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/Subsystem2/PS-Simulink Converter1</Field>
+            <Field Name="SID_" Class="char">977</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">cff63bf7-862d-424e-9c35-f770c6713398</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/Subsystem2/PS-Simulink Converter</Field>
+            <Field Name="SID_" Class="char">976</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">e9e9dfd5-183c-4a14-8741-e6338b7ebda4</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/Subsystem1/PS-Simulink Converter</Field>
+            <Field Name="SID_" Class="char">958</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">757b08d6-c2e3-42fd-9364-591b66168f0b</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/Subsystem2/PS-Simulink Converter2</Field>
+            <Field Name="SID_" Class="char">978</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">7523a259-680b-486d-9686-16db8baa7d3a</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/Subsystem1/PS-Simulink Converter2</Field>
+            <Field Name="SID_" Class="char">960</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">6ee34397-fca7-46d3-a804-c7a5a9b17b23</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/Subsystem1/PS-Simulink Converter1</Field>
+            <Field Name="SID_" Class="char">959</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">bc48d0aa-14ff-4c29-8fd8-6d244fc40711</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/PS-Simulink Converter1</Field>
+            <Field Name="SID_" Class="char">1113</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">41f1696f-6d74-4f5f-9e29-20cdb0770b96</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/PS-Simulink Converter2</Field>
+            <Field Name="SID_" Class="char">1114</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">6553d525-5514-4c1f-b7e7-979433be0ff0</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter</Field>
+            <Field Name="SID_" Class="char">7484</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">1023ed0e-3316-4475-99ba-fbfc03089a6e</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter1</Field>
+            <Field Name="SID_" Class="char">7485</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">548e93d9-b29d-42bd-8de1-9c9d0f3b080d</Field>
+            <Field Name="BlockPath_" Class="char">Chassis/2-Speeds CVT/Subsystem1/PS-Simulink Converter2</Field>
+            <Field Name="SID_" Class="char">7486</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+        </Array>
+      </Object>
+    </SimulationSettings>
+    <EngineSettings>
+      <P Name="ConfigurableSubsystemUsage">warning</P>
+    </EngineSettings>
+    <ModelReferenceSettings>
+      <P Name="OrderedModelArguments">off</P>
+    </ModelReferenceSettings>
+    <ConcurrentExecutionSettings>
+      <Object PropName="DataTransfer" ObjectID="4" ClassName="Simulink.GlobalDataTransfer">
+        <P Name="DefaultTransitionBetweenSyncTasks" Class="char">Ensure deterministic transfer (maximum delay)</P>
+        <P Name="DefaultTransitionBetweenAsyncTasks" Class="char">Ensure data integrity only</P>
+        <P Name="DefaultTransitionBetweenContTasks" Class="char">Ensure deterministic transfer (minimum delay)</P>
+        <P Name="DefaultExtrapolationMethodBetweenContTasks" Class="char">None</P>
+      </Object>
+      <Object PropName="ModelMappings" ObjectID="5" ClassName="Simulink.CoderDictionary.ModelMappingSLC">
+        <P Name="DummyName" Class="char"/>
+        <P Name="Inports" Class="double">[]</P>
+        <P Name="Outports" Class="double">[]</P>
+        <P Name="ModelScopedParameters" Class="double">[]</P>
+        <P Name="Parameters" Class="double">[]</P>
+        <P Name="Signals" Class="double">[]</P>
+        <P Name="DataStores" Class="double">[]</P>
+        <Array PropName="States" Type="Simulink.CoderDictionary.StateMapping" Dimension="1*4">
+          <Object ObjectID="6">
+            <P Name="StateIdentifier" Class="int32">0</P>
+            <P Name="Identifier" Class="int32">0</P>
+            <Object Reference="true" PropName="ParentMapping" ObjectID="5"/>
+            <Object PropName="MappedTo" ObjectID="7" ClassName="Simulink.DataReferenceClass">
+              <P Name="MappedTo" Class="char">StorageClass</P>
+              <P Name="StorageClass" Class="double">[]</P>
+              <P Name="CSCAttributes" Class="char"/>
+              <P Name="MemorySection" Class="double">[]</P>
+              <P Name="Identifier" Class="char"/>
+            </Object>
+            <P Name="BlockSID" Class="char">6619:5899</P>
+            <P Name="StereotypeProperties" Class="char"/>
+          </Object>
+          <Object ObjectID="8">
+            <P Name="StateIdentifier" Class="int32">0</P>
+            <P Name="Identifier" Class="int32">0</P>
+            <Object Reference="true" PropName="ParentMapping" ObjectID="5"/>
+            <Object PropName="MappedTo" ObjectID="9" ClassName="Simulink.DataReferenceClass">
+              <P Name="MappedTo" Class="char">StorageClass</P>
+              <P Name="StorageClass" Class="double">[]</P>
+              <P Name="CSCAttributes" Class="char"/>
+              <P Name="MemorySection" Class="double">[]</P>
+              <P Name="Identifier" Class="char"/>
+            </Object>
+            <P Name="BlockSID" Class="char">6619:5900</P>
+            <P Name="StereotypeProperties" Class="char"/>
+          </Object>
+          <Object ObjectID="10">
+            <P Name="StateIdentifier" Class="int32">0</P>
+            <P Name="Identifier" Class="int32">0</P>
+            <Object Reference="true" PropName="ParentMapping" ObjectID="5"/>
+            <Object PropName="MappedTo" ObjectID="11" ClassName="Simulink.DataReferenceClass">
+              <P Name="MappedTo" Class="char">StorageClass</P>
+              <P Name="StorageClass" Class="double">[]</P>
+              <P Name="CSCAttributes" Class="char"/>
+              <P Name="MemorySection" Class="double">[]</P>
+              <P Name="Identifier" Class="char"/>
+            </Object>
+            <P Name="BlockSID" Class="char">7104</P>
+            <P Name="StereotypeProperties" Class="char"/>
+          </Object>
+          <Object ObjectID="12">
+            <P Name="StateIdentifier" Class="int32">0</P>
+            <P Name="Identifier" Class="int32">0</P>
+            <Object Reference="true" PropName="ParentMapping" ObjectID="5"/>
+            <Object PropName="MappedTo" ObjectID="13" ClassName="Simulink.DataReferenceClass">
+              <P Name="MappedTo" Class="char">StorageClass</P>
+              <P Name="StorageClass" Class="double">[]</P>
+              <P Name="CSCAttributes" Class="char"/>
+              <P Name="MemorySection" Class="double">[]</P>
+              <P Name="Identifier" Class="char"/>
+            </Object>
+            <P Name="BlockSID" Class="char">7132</P>
+            <P Name="StereotypeProperties" Class="char"/>
+          </Object>
+        </Array>
+        <Object PropName="DefaultsMapping" ObjectID="14" ClassName="Simulink.CoderDictionary.DefaultsMapping">
+          <Object Reference="true" PropName="ParentMapping" ObjectID="5"/>
+          <Object PropName="Inports" ObjectID="15" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="Outports" ObjectID="16" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="GlobalParameters" ObjectID="17" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="SharedParameters" ObjectID="18" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="PerInstanceParameters" ObjectID="19" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="SharedLocalDataStores" ObjectID="20" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="GlobalDataStores" ObjectID="21" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="InternalData" ObjectID="22" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="Constants" ObjectID="23" ClassName="Simulink.DataReferenceClass">
+            <P Name="MappedTo" Class="char">StorageClass</P>
+            <P Name="StorageClass" Class="double">[]</P>
+            <P Name="CSCAttributes" Class="char"/>
+            <P Name="MemorySection" Class="double">[]</P>
+            <P Name="Identifier" Class="char"/>
+          </Object>
+          <Object PropName="InitTermFunctions" ObjectID="24" ClassName="Simulink.FunctionReferenceClass">
+            <P Name="FunctionClass" Class="double">[]</P>
+            <P Name="MemorySection" Class="double">[]</P>
+          </Object>
+          <Object PropName="ExecutionFunctions" ObjectID="25" ClassName="Simulink.FunctionReferenceClass">
+            <P Name="FunctionClass" Class="double">[]</P>
+            <P Name="MemorySection" Class="double">[]</P>
+          </Object>
+          <Object PropName="SharedUtilityFunctions" ObjectID="26" ClassName="Simulink.FunctionReferenceClass">
+            <P Name="FunctionClass" Class="double">[]</P>
+            <P Name="MemorySection" Class="double">[]</P>
+          </Object>
+        </Object>
+        <P Name="Name" Class="char">PTB_BatteryElectricVehicle_SLC</P>
+        <P Name="Active" Class="logical">1</P>
+      </Object>
+    </ConcurrentExecutionSettings>
+    <System Ref="system_root"/>
+  </Model>
+</ModelInformation>

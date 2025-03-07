@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">175</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="2010">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[1025, 174, 1030, 276]</P>
+    <P Name="ZOrder">48935</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="OutDataTypeStr">Bus: BattStateBus</P>
+    <P Name="InheritFromInputs">off</P>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector1" SID="605">
+    <P Name="Ports">[1, 2]</P>
+    <P Name="Position">[265, 173, 270, 242]</P>
+    <P Name="ZOrder">48925</P>
+    <P Name="OutputSignals">AmbCond.AmbientTemps,BMSCtrlBattCurr</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">&lt;AmbientTemps&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">&lt;BMSCtrlBattCurr&gt;</P>
+    </Port>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector2" SID="888">
+    <P Name="Ports">[1, 3]</P>
+    <P Name="Position">[805, 171, 810, 279]</P>
+    <P Name="ZOrder">48931</P>
+    <P Name="ShowName">off</P>
+    <P Name="OutputSignals">CellVolt,CellSOC,CellTemp</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">&lt;CellVolt&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">&lt;CellSOC&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">&lt;CellTemp&gt;</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From14" SID="608">
+    <P Name="Position">[185, 203, 225, 217]</P>
+    <P Name="ZOrder">48926</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="GotoTag">BUS</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="609">
+    <P Name="Position">[1080, 212, 1215, 238]</P>
+    <P Name="ZOrder">48924</P>
+    <P Name="BackgroundColor">[0.000000, 0.666667, 0.498039]</P>
+    <P Name="GotoTag">BatteryStates</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Constant" Name="IntialSoC" SID="885">
+    <P Name="Position">[265, 249, 335, 271]</P>
+    <P Name="ZOrder">48929</P>
+    <P Name="Value">Init_SoC</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Single Cell Model" SID="617">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[580, 173, 755, 277]</P>
+    <P Name="ZOrder">48927</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <System Ref="system_617"/>
+  </Block>
+  <Block BlockType="Gain" Name="batt2cellCurrent" SID="884">
+    <P Name="Position">[430, 210, 470, 240]</P>
+    <P Name="ZOrder">48928</P>
+    <P Name="Gain">1/nP</P>
+  </Block>
+  <Block BlockType="Gain" Name="cell2batVolt" SID="886">
+    <P Name="Position">[920, 175, 950, 205]</P>
+    <P Name="ZOrder">48930</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="Gain">nS</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">BattVolt</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="V" SID="7558">
+    <P Name="Position">[1025, 323, 1055, 337]</P>
+    <P Name="ZOrder">48937</P>
+  </Block>
+  <Block BlockType="Outport" Name="SoC" SID="7559">
+    <P Name="Position">[1025, 358, 1055, 372]</P>
+    <P Name="ZOrder">48938</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="I" SID="7560">
+    <P Name="Position">[1025, 393, 1055, 407]</P>
+    <P Name="ZOrder">48939</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">885#out:1</P>
+    <P Name="Dst">617#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">884#out:1</P>
+    <P Name="Points">[72, 0]</P>
+    <Branch>
+      <P Name="ZOrder">63</P>
+      <P Name="Points">[0, 175]</P>
+      <P Name="Dst">7560#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">53</P>
+      <P Name="Dst">617#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">BattVolt</P>
+    <P Name="ZOrder">20</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">886#out:1</P>
+    <P Name="Dst">2010#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BMSCtrlBattCurr&gt;</P>
+    <P Name="ZOrder">78</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">605#out:2</P>
+    <P Name="Dst">884#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;CellVolt&gt;</P>
+    <P Name="ZOrder">13</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">888#out:1</P>
+    <P Name="Points">[75, 0]</P>
+    <Branch>
+      <P Name="ZOrder">61</P>
+      <P Name="Points">[0, 140]</P>
+      <P Name="Dst">7558#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">51</P>
+      <P Name="Dst">886#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;AmbientTemps&gt;</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">605#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">617#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">617#out:1</P>
+    <P Name="Dst">888#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">608#out:1</P>
+    <P Name="Dst">605#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;CellSOC&gt;</P>
+    <P Name="ZOrder">48</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">888#out:2</P>
+    <P Name="Points">[55, 0]</P>
+    <Branch>
+      <P Name="ZOrder">62</P>
+      <P Name="Points">[0, 140]</P>
+      <P Name="Dst">7559#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">58</P>
+      <P Name="Labels">[-1, 0]</P>
+      <P Name="Dst">2010#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">2010#out:1</P>
+    <P Name="Dst">609#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;CellTemp&gt;</P>
+    <P Name="ZOrder">47</P>
+    <P Name="Labels">[0, 0; -1, 0]</P>
+    <P Name="Src">888#out:3</P>
+    <P Name="Dst">2010#in:3</P>
+  </Line>
+</System>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">150</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="MotorSpd" SID="7551">
+    <P Name="Position">[-160, 98, -130, 112]</P>
+    <P Name="ZOrder">12</P>
+  </Block>
+  <Block BlockType="Inport" Name="BrakePedalPos" SID="7172">
+    <P Name="Position">[-160, 208, -130, 222]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="ThrottlePos" SID="7180">
+    <P Name="Position">[-160, 38, -130, 52]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoC" SID="7635">
+    <P Name="Position">[-160, 288, -130, 302]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Inport" Name="AmbTemp" SID="7636">
+    <P Name="Position">[-160, 348, -130, 362]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="Inport" Name="BikeSpd" SID="7637">
+    <P Name="Position">[-160, 408, -130, 422]</P>
+    <P Name="ZOrder">18</P>
+    <P Name="ForegroundColor">red</P>
+    <P Name="Port">6</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="7545">
+    <P Name="Position">[165, 75, 195, 105]</P>
+    <P Name="ZOrder">7</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="7546">
+    <P Name="Position">[165, 25, 195, 55]</P>
+    <P Name="ZOrder">8</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="7548">
+    <P Name="Position">[-110, 45, -80, 75]</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Value">10</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant5" SID="7553">
+    <P Name="Position">[-110, 105, -80, 135]</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Value">50</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Example&#xA;(Nm)" SID="7543">
+    <P Name="Position">[240, 260, 270, 290]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Value">-5</P>
+  </Block>
+  <Block BlockType="Logic" Name="Logical&#xA;Operator" SID="7554">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[110, 47, 140, 78]</P>
+    <P Name="ZOrder">15</P>
+    <P Name="AllPortsSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+  </Block>
+  <Block BlockType="RelationalOperator" Name="Relational&#xA;Operator" SID="7547">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[-35, 37, -5, 68]</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Operator">&lt;=</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="RelationalOperator" Name="Relational&#xA;Operator1" SID="7552">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[-35, 97, -5, 128]</P>
+    <P Name="ZOrder">13</P>
+    <P Name="Operator">&gt;</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="7544">
+    <P Name="Position">[230, 30, 280, 100]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="7695">
+    <P Name="Position">[15, 405, 35, 425]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ForegroundColor">red</P>
+  </Block>
+  <Block BlockType="Gain" Name="km/h 2 rpm" SID="7696">
+    <P Name="Position">[-75, 400, -45, 430]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ForegroundColor">red</P>
+    <P Name="Gain">25/3/pi/0.32</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="RegenEn [0 1]" SID="7534">
+    <P Name="Position">[360, 58, 390, 72]</P>
+    <P Name="ZOrder">3</P>
+  </Block>
+  <Block BlockType="Outport" Name="Generator Torque [-30 ~ 0Nm]" SID="7535">
+    <P Name="Position">[360, 268, 390, 282]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7543#out:1</P>
+    <P Name="Dst">7535#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7544#out:1</P>
+    <P Name="Dst">7534#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">7545#out:1</P>
+    <P Name="Dst">7544#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">7546#out:1</P>
+    <P Name="Dst">7544#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">7554#out:1</P>
+    <P Name="Dst">7544#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">7180#out:1</P>
+    <P Name="Dst">7547#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">7548#out:1</P>
+    <P Name="Dst">7547#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">7551#out:1</P>
+    <P Name="Dst">7552#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7553#out:1</P>
+    <P Name="Dst">7552#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">7547#out:1</P>
+    <P Name="Dst">7554#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">7552#out:1</P>
+    <P Name="Points">[53, 0; 0, -45]</P>
+    <P Name="Dst">7554#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">19</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7696#out:1</P>
+    <P Name="Dst">7695#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">20</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7637#out:1</P>
+    <P Name="Dst">7696#in:1</P>
+  </Line>
+  <Annotation SID="7608">
+    <P Name="Name">Examble: logic to enable/disable Regen function - Can be improved by your own logic</P>
+    <P Name="Position">[-185, -3, 415, 141]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">35</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7542">
+    <P Name="Name">(To enable the regen function)</P>
+    <P Name="Position">[428, 63, 562, 77]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="7541">
+    <P Name="Name">(Negative value - To regenerative charge the battery)</P>
+    <P Name="Position">[435, 269, 670, 283]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ZOrder">-2</P>
+  </Annotation>
+  <Annotation SID="7175">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Develop a controller to generate the regen torque for regenerative purposes when applying Brake and/or releasing the Throttle (e.g. Throttle &amp;lt; 10% and/or MotorSpd &amp;gt; 50rpm)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Note:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- You may need to change the kP = [0.1 ~ 0.2] (in Workspace) to allow the ThrottlePos drops to &amp;lt;10% when deceleration&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- The model requires 02 outputs for regen function to be able to work which are: RegenEn, Generator Torque&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- use any input from the Bus or elsewhere&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- TrqRegen should be negative value&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- RearWheelTrq should be limited to 0-100% (only apply to the rear wheel)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[-143, -208, 372, -20]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="7716">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px; font-weight:600; color:#ff0000;&quot;&gt;Note: Assume the Regen torque is smaller than Maximum Inverter Torque&lt;br /&gt;depending on maximum allowable charging power of the battery&lt;br /&gt;(-30 ~ 0Nm)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[214, 322, 564, 360]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">30</P>
+  </Annotation>
+</System>

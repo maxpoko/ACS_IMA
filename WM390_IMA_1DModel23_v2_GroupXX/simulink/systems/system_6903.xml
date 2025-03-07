@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">175</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="BikeSpeed" SID="6904">
+    <P Name="Position">[-270, 248, -240, 262]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="ForegroundColor">red</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="T1" SID="6905">
+    <P Name="Position">[-270, 503, -240, 517]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
+    <P Name="OutDataTypeStr">double</P>
+  </Block>
+  <Block BlockType="Inport" Name="R Wheel Spd" SID="6906">
+    <P Name="Position">[-270, 298, -240, 312]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Port">3</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="7112">
+    <P Name="Position">[340, 270, 360, 290]</P>
+    <P Name="ZOrder">49165</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="6908">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[235, 500, 255, 520]</P>
+    <P Name="ZOrder">49067</P>
+    <P Name="Inputs">-+|</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="7113">
+    <P Name="Position">[-85, 295, -65, 315]</P>
+    <P Name="ZOrder">49166</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator1" SID="7114">
+    <P Name="Position">[-85, 245, -65, 265]</P>
+    <P Name="ZOrder">49167</P>
+    <P Name="ForegroundColor">red</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Traction Control Derater" SID="6909">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[30, 324, 185, 386]</P>
+    <P Name="ZOrder">49164</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Nm</P>
+    </Port>
+    <System Ref="system_6909"/>
+  </Block>
+  <Block BlockType="Gain" Name="km/h2rpm" SID="7623">
+    <P Name="Position">[-180, 240, -150, 270]</P>
+    <P Name="ZOrder">100000</P>
+    <P Name="ForegroundColor">red</P>
+    <P Name="Gain">25/3/pi/0.32</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">rpm</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="T2" SID="6916">
+    <P Name="Position">[525, 503, 555, 517]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="Outport" Name="SlipRatio" SID="6917">
+    <P Name="Position">[445, 273, 475, 287]</P>
+    <P Name="ZOrder">49099</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="Name">Nm</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6909#out:1</P>
+    <P Name="Points">[55, 0]</P>
+    <P Name="Dst">6908#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">6905#out:1</P>
+    <P Name="Points">[181, 0]</P>
+    <Branch>
+      <P Name="ZOrder">14</P>
+      <P Name="Dst">6908#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, -155]</P>
+      <P Name="Dst">6909#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">6908#out:1</P>
+    <P Name="Points">[265, 0]</P>
+    <P Name="Dst">6916#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">11</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6906#out:1</P>
+    <P Name="Dst">7113#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">16</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6904#out:1</P>
+    <P Name="Dst">7623#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">7112#out:1</P>
+    <P Name="Dst">6917#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">rpm</P>
+    <P Name="ZOrder">20</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7623#out:1</P>
+    <P Name="Dst">7114#in:1</P>
+  </Line>
+  <Annotation SID="7157">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Develop a logic for Traction control derater&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Calculate SlipRatio using Front and Rear wheel speeds&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- A logic to define the Traction control derater for T1d (to reduce the wheel slip when operating at different road conditions)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Note: T2 = T1 - T1d&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[-10, 103, 390, 215]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

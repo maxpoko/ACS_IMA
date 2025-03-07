@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">7716</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="SubSystem" Name="Accelerator" SID="1171">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[920, 476, 1080, 564]</P>
+    <P Name="ZOrder">48939</P>
+    <P Name="BackgroundColor">[0.666667, 0.333333, 0.000000]</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <System Ref="system_1171"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Ambient" SID="1291">
+    <P Name="Ports">[]</P>
+    <P Name="Position">[920, 595, 1075, 675]</P>
+    <P Name="ZOrder">48954</P>
+    <P Name="BackgroundColor">[0.333333, 1.000000, 0.498039]</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <System Ref="system_1291"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Battery Pack" SID="1597">
+    <P Name="Ports">[0, 3]</P>
+    <P Name="Position">[1240, 365, 1400, 445]</P>
+    <P Name="ZOrder">48962</P>
+    <P Name="BackgroundColor">[0.333333, 0.666667, 0.498039]</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Voltage (V)</P>
+      <P Name="PropagatedSignals">CellVolt</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">SoC (%)</P>
+      <P Name="PropagatedSignals">CellSOC</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">Current (A)</P>
+    </Port>
+    <System Ref="system_1597"/>
+  </Block>
+  <Block BlockType="Scope" Name="Battery Scope" SID="7557">
+    <P Name="Ports">[3]</P>
+    <P Name="Position">[1465, 368, 1500, 442]</P>
+    <P Name="ZOrder">50037</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData1&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;3.95513&apos;,&apos;MaxYLimReal&apos;,&apos;4.22257&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;3.95513&apos;,&apos;MaxYLimMag&apos;,&apos;4.22257&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),struct(&apos;MinYLimReal&apos;,&apos;83.73506&apos;,&apos;MaxYLimReal&apos;,&apos;101.80722&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,2),struct(&apos;MinYLimReal&apos;,&apos;-2.67265&apos;,&apos;MaxYLimReal&apos;,&apos;5.41308&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,3)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;YLabelReal&apos;,&apos;&apos;,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),&apos;DisplayLayoutDimensions&apos;,[3 1],&apos;DisplayContentCache&apos;,[]),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;OnceAtStop&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2021b&apos;)),&apos;Version&apos;,&apos;2021b&apos;,&apos;Position&apos;,[49 1135 665 478],&apos;VisibleAtModelOpen&apos;,&apos;on&apos;)</P>
+    <P Name="NumInputPorts">3</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator1" SID="465">
+    <P Name="Ports">[16, 1]</P>
+    <P Name="Position">[2155, 291, 2175, 704]</P>
+    <P Name="ZOrder">17474</P>
+    <P Name="BackgroundColor">black</P>
+    <P Name="Inputs">16</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="OutDataTypeStr">Bus: ModelBus</P>
+    <P Name="InheritFromInputs">off</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Chassis" SID="7297">
+    <P Name="Ports">[1, 4]</P>
+    <P Name="Position">[1575, 366, 1715, 444]</P>
+    <P Name="ZOrder">50036</P>
+    <P Name="BackgroundColor">[0.666667, 0.666667, 1.000000]</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display PortRotate="physical"/>
+    </Mask>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">F Slip</P>
+      <P Name="PropagatedSignals">TyreSlipFr</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">R Slip</P>
+      <P Name="PropagatedSignals">TyreSlipRr</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">Dist (km)</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">4</P>
+      <P Name="Name">Accel (m/s2)</P>
+      <P Name="PropagatedSignals">BikeAcceleration</P>
+    </Port>
+    <System Ref="system_7297"/>
+  </Block>
+  <Block BlockType="Scope" Name="ChassisScope" SID="7296">
+    <P Name="Ports">[4]</P>
+    <P Name="Position">[1795, 360, 1825, 450]</P>
+    <P Name="ZOrder">50034</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingSaveFormat&apos;,&apos;Array&apos;,&apos;DataLoggingDecimation&apos;,&apos;1&apos;,&apos;DataLoggingVariableName&apos;,&apos;ScopeData1&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-0.00072&apos;,&apos;MaxYLimReal&apos;,&apos;0.00008&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;0.00072&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),struct(&apos;MinYLimReal&apos;,&apos;-0.0451&apos;,&apos;MaxYLimReal&apos;,&apos;0.02986&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,2),struct(&apos;MinYLimReal&apos;,&apos;-3.59345&apos;,&apos;MaxYLimReal&apos;,&apos;32.34102&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,3),struct(&apos;MinYLimReal&apos;,&apos;-0.29169&apos;,&apos;MaxYLimReal&apos;,&apos;0.33685&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,4)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;YLabelReal&apos;,&apos;&apos;,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),&apos;DisplayLayoutDimensions&apos;,[4 1],&apos;DisplayContentCache&apos;,[]),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2021b&apos;)),&apos;Version&apos;,&apos;2021b&apos;,&apos;Location&apos;,[728 -1250 1310 -642],&apos;VisibleAtModelOpen&apos;,&apos;on&apos;)</P>
+    <P Name="NumInputPorts">4</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Delay" Name="Delay" SID="7104">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[2200, 483, 2235, 517]</P>
+    <P Name="ZOrder">50033</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="DelayLength">1</P>
+  </Block>
+  <Block BlockType="From" Name="From" SID="2090">
+    <P Name="Position">[1895, 649, 2060, 671]</P>
+    <P Name="ZOrder">48982</P>
+    <P Name="BackgroundColor">[1.000000, 0.333333, 1.000000]</P>
+    <P Name="GotoTag">VSCOutput</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">VSCBus</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From1" SID="467">
+    <P Name="Position">[1895, 374, 2060, 396]</P>
+    <P Name="ZOrder">17476</P>
+    <P Name="BackgroundColor">orange</P>
+    <P Name="GotoTag">BrakePedalPosition</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[%] BrakePedalPosition</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From10" SID="6625">
+    <P Name="Position">[1895, 524, 2050, 546]</P>
+    <P Name="ZOrder">50031</P>
+    <P Name="BackgroundColor">cyan</P>
+    <P Name="GotoTag">MotSpd</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[rpm] MotorSpeed</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From12" SID="1269">
+    <P Name="Position">[1175, 513, 1215, 527]</P>
+    <P Name="ZOrder">48950</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="GotoTag">BUS</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="From" Name="From13" SID="1296">
+    <P Name="Position">[1895, 574, 2060, 596]</P>
+    <P Name="ZOrder">48955</P>
+    <P Name="BackgroundColor">[0.333333, 1.000000, 0.498039]</P>
+    <P Name="GotoTag">AmbientConditions</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">AmbientConditions</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From15" SID="1595">
+    <P Name="Position">[1895, 599, 2060, 621]</P>
+    <P Name="ZOrder">48961</P>
+    <P Name="BackgroundColor">[0.666667, 0.666667, 0.000000]</P>
+    <P Name="GotoTag">TMSOutput</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">TMSOutput</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From18" SID="6627">
+    <P Name="Position">[1895, 299, 2050, 321]</P>
+    <P Name="ZOrder">50032</P>
+    <P Name="BackgroundColor">gray</P>
+    <P Name="GotoTag">FWSpd</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[rpm] FWheelSpd</P>
+      <P Name="PropagatedSignals">FWSpd [rpm]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From19" SID="1613">
+    <P Name="Position">[1895, 499, 2050, 521]</P>
+    <P Name="ZOrder">48967</P>
+    <P Name="BackgroundColor">[0.000000, 0.666667, 0.498039]</P>
+    <P Name="GotoTag">BatteryCellStates</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">BatteryCellStates</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From2" SID="470">
+    <P Name="Position">[1895, 399, 2060, 421]</P>
+    <P Name="ZOrder">48904</P>
+    <P Name="BackgroundColor">orange</P>
+    <P Name="GotoTag">AcceleratorPedalPosition</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[%] AcceleratorPedalPosition</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From20" SID="1617">
+    <P Name="Position">[1895, 624, 2060, 646]</P>
+    <P Name="ZOrder">48968</P>
+    <P Name="BackgroundColor">[0.000000, 0.666667, 0.498039]</P>
+    <P Name="GotoTag">BMSControlledBatteryCurent</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[A] BMSControlledBatteryCurent</P>
+      <P Name="PropagatedSignals">Battery Current [A]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From21" SID="2101">
+    <P Name="Position">[1895, 674, 2060, 696]</P>
+    <P Name="ZOrder">48983</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">InverterOutput</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">InvBus</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From22" SID="5767">
+    <P Name="Position">[1510, 628, 1550, 642]</P>
+    <P Name="ZOrder">50027</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="GotoTag">BUS</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="From" Name="From23" SID="3764">
+    <P Name="Position">[1175, 628, 1215, 642]</P>
+    <P Name="ZOrder">48990</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="GotoTag">BUS</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="From" Name="From24" SID="3927">
+    <P Name="Position">[1895, 324, 2050, 346]</P>
+    <P Name="ZOrder">50024</P>
+    <P Name="BackgroundColor">gray</P>
+    <P Name="GotoTag">RWSpd</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[rpm] RWheelSpd</P>
+      <P Name="PropagatedSignals">RWSpd [rpm]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From3" SID="473">
+    <P Name="Position">[1895, 424, 2060, 446]</P>
+    <P Name="ZOrder">48905</P>
+    <P Name="BackgroundColor">[0.666667, 0.666667, 1.000000]</P>
+    <P Name="GotoTag">BikeSpeed</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[kph] BikeSpeed</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From4" SID="482">
+    <P Name="Position">[1895, 449, 2060, 471]</P>
+    <P Name="ZOrder">48906</P>
+    <P Name="BackgroundColor">[0.000000, 0.666667, 0.498039]</P>
+    <P Name="GotoTag">BatteryStates</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">BatteryStates</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="487">
+    <P Name="Position">[1895, 474, 2060, 496]</P>
+    <P Name="ZOrder">48907</P>
+    <P Name="BackgroundColor">[0.000000, 0.666667, 0.498039]</P>
+    <P Name="GotoTag">BatteryCurrentDemand</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[A] BatteryCurrentDemand</P>
+      <P Name="PropagatedSignals">Battery Current [A]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From6" SID="494">
+    <P Name="Position">[1895, 549, 2050, 571]</P>
+    <P Name="ZOrder">48908</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="GotoTag">MotorTorque</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">[Nm] MotorTorque</P>
+      <P Name="PropagatedSignals">Motor Torque [Nm]</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From7" SID="1179">
+    <P Name="Position">[1895, 349, 2050, 371]</P>
+    <P Name="ZOrder">48940</P>
+    <P Name="BackgroundColor">orange</P>
+    <P Name="GotoTag">RiderCommand</P>
+    <P Name="TagVisibility">global</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">RiderCommand</P>
+    </Port>
+  </Block>
+  <Block BlockType="From" Name="From8" SID="1180">
+    <P Name="Position">[855, 513, 895, 527]</P>
+    <P Name="ZOrder">48941</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="GotoTag">BUS</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="From" Name="From9" SID="7523">
+    <P Name="Position">[1510, 398, 1550, 412]</P>
+    <P Name="ZOrder">50035</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="GotoTag">BUS</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto1" SID="466">
+    <P Name="Position">[2260, 489, 2300, 511]</P>
+    <P Name="ZOrder">17475</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="GotoTag">BUS</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Inverter" SID="1270">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1240, 478, 1400, 562]</P>
+    <P Name="ZOrder">48949</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <System Ref="system_1270"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Motor" SID="3730">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1240, 596, 1400, 674]</P>
+    <P Name="ZOrder">48989</P>
+    <P Name="BackgroundColor">yellow</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <System Ref="system_3730"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Rider" SID="1297">
+    <P Name="Ports">[0, 4]</P>
+    <P Name="Position">[920, 364, 1080, 446]</P>
+    <P Name="ZOrder">48956</P>
+    <P Name="BackgroundColor">orange</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">BikeSpd (km/h)</P>
+      <P Name="PropagatedSignals">Bike Speed [kph]</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">MotorSpd (rpm)</P>
+      <P Name="PropagatedSignals">Motor Speed [rpm]</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">InverterTrq (Nm)</P>
+      <P Name="PropagatedSignals">Inverter Torque [Nm]</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">4</P>
+      <P Name="Name">Throttle/Brake Pos (%)</P>
+      <P Name="PropagatedSignals">Throttle/Brake Pos[%]</P>
+    </Port>
+    <System Ref="system_1297"/>
+  </Block>
+  <Block BlockType="Scope" Name="Speed" SID="2042">
+    <P Name="Ports">[4]</P>
+    <P Name="Position">[1175, 361, 1210, 449]</P>
+    <P Name="ZOrder">50038</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData2&apos;,&apos;DataLoggingSaveFormat&apos;,&apos;StructureWithTime&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-15.5716&apos;,&apos;MaxYLimReal&apos;,&apos;140.14441&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;140.14441&apos;,&apos;LegendVisibility&apos;,&apos;On&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{struct(&apos;Visible&apos;,&apos;on&apos;),struct(&apos;Visible&apos;,&apos;on&apos;)}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),struct(&apos;MinYLimReal&apos;,&apos;-104.05219&apos;,&apos;MaxYLimReal&apos;,&apos;936.4697&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;140.14441&apos;,&apos;LegendVisibility&apos;,&apos;On&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,2),struct(&apos;MinYLimReal&apos;,&apos;-10.59771&apos;,&apos;MaxYLimReal&apos;,&apos;95.37936&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;140.14441&apos;,&apos;LegendVisibility&apos;,&apos;On&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,3),struct(&apos;MinYLimReal&apos;,&apos;-9.41571&apos;,&apos;MaxYLimReal&apos;,&apos;84.7414&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;140.14441&apos;,&apos;LegendVisibility&apos;,&apos;On&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,4)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;YLabelReal&apos;,&apos;&apos;,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),&apos;DisplayLayoutDimensions&apos;,[4 1],&apos;DisplayContentCache&apos;,[]),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;OnceAtStop&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2021b&apos;)),&apos;Version&apos;,&apos;2021b&apos;,&apos;Position&apos;,[44 1724 675 606],&apos;VisibleAtModelOpen&apos;,&apos;on&apos;)</P>
+    <P Name="NumInputPorts">4</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="VSC" SID="5209">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1575, 598, 1715, 672]</P>
+    <P Name="ZOrder">50026</P>
+    <P Name="BackgroundColor">[1.000000, 0.666667, 1.000000]</P>
+    <P Name="NameLocation">top</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display/>
+    </Mask>
+    <System Ref="system_5209"/>
+  </Block>
+  <Block BlockType="Scope" Name="Battery" SID="896">
+    <P Name="Ports">[]</P>
+    <P Name="Position">[185, 14, 215, 46]</P>
+    <P Name="ZOrder">48913</P>
+    <P Name="IOType">viewer</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData2&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;98.43042&apos;,&apos;MaxYLimReal&apos;,&apos;100.1744&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;98.43042&apos;,&apos;MaxYLimMag&apos;,&apos;100.1744&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,0,&apos;LineNames&apos;,{{[]}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;MinYLimReal&apos;,&apos;98.43042&apos;,&apos;MaxYLimReal&apos;,&apos;100.1744&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;98.43042&apos;,&apos;MaxYLimMag&apos;,&apos;100.1744&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;)),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2021a&apos;)),&apos;Version&apos;,&apos;2021b&apos;,&apos;Position&apos;,[679 383 563 314])</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope1" SID="1904">
+    <P Name="Ports">[]</P>
+    <P Name="Position">[185, 14, 215, 46]</P>
+    <P Name="ZOrder">48981</P>
+    <P Name="IOType">viewer</P>
+    <List ListType="IOSignalStrings">
+      <P Name="set0ParseKeys">8</P>
+      <P Name="set0Sigs">From3:o1</P>
+    </List>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData1&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-15.24104&apos;,&apos;MaxYLimReal&apos;,&apos;137.16939&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;137.16939&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;[kph] BikeSpeed&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;MinYLimReal&apos;,&apos;-15.24104&apos;,&apos;MaxYLimReal&apos;,&apos;137.16939&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;137.16939&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;PreviousAutoscale&apos;,&apos;XY&apos;),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2021a&apos;)),&apos;Version&apos;,&apos;2021a&apos;,&apos;Position&apos;,[1189 378 560 420])</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Line>
+    <P Name="Name">[%] BrakePedalPosition</P>
+    <P Name="ZOrder">613</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">467#out:1</P>
+    <P Name="Dst">465#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">[%] AcceleratorPedalPosition</P>
+    <P Name="ZOrder">618</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">470#out:1</P>
+    <P Name="Dst">465#in:5</P>
+  </Line>
+  <Line>
+    <P Name="Name">[kph] BikeSpeed</P>
+    <P Name="ZOrder">620</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">473#out:1</P>
+    <P Name="Dst">465#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">BatteryStates</P>
+    <P Name="ZOrder">622</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">482#out:1</P>
+    <P Name="Dst">465#in:7</P>
+  </Line>
+  <Line>
+    <P Name="Name">[A] BatteryCurrentDemand</P>
+    <P Name="ZOrder">623</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">487#out:1</P>
+    <P Name="Dst">465#in:8</P>
+  </Line>
+  <Line>
+    <P Name="Name">[Nm] MotorTorque</P>
+    <P Name="ZOrder">624</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">494#out:1</P>
+    <P Name="Dst">465#in:11</P>
+  </Line>
+  <Line>
+    <P Name="Name">RiderCommand</P>
+    <P Name="ZOrder">673</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">1179#out:1</P>
+    <P Name="Dst">465#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">AmbientConditions</P>
+    <P Name="ZOrder">680</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">1296#out:1</P>
+    <P Name="Dst">465#in:12</P>
+  </Line>
+  <Line>
+    <P Name="Name">TMSOutput</P>
+    <P Name="ZOrder">686</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">1595#out:1</P>
+    <P Name="Dst">465#in:13</P>
+  </Line>
+  <Line>
+    <P Name="Name">BatteryCellStates</P>
+    <P Name="ZOrder">688</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">1613#out:1</P>
+    <P Name="Dst">465#in:9</P>
+  </Line>
+  <Line>
+    <P Name="Name">[A] BMSControlledBatteryCurent</P>
+    <P Name="ZOrder">689</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">1617#out:1</P>
+    <P Name="Dst">465#in:14</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">713</P>
+    <P Name="Src">1180#out:1</P>
+    <P Name="Dst">1171#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">719</P>
+    <P Name="Src">1269#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">1270#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">728</P>
+    <P Name="Src">465#out:1</P>
+    <P Name="Dst">7104#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">VSCBus</P>
+    <P Name="ZOrder">734</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">2090#out:1</P>
+    <P Name="Dst">465#in:15</P>
+  </Line>
+  <Line>
+    <P Name="Name">InvBus</P>
+    <P Name="ZOrder">735</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">2101#out:1</P>
+    <P Name="Dst">465#in:16</P>
+  </Line>
+  <Line>
+    <P Name="Name">[rpm] RWheelSpd</P>
+    <P Name="ZOrder">765</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">3927#out:1</P>
+    <P Name="Dst">465#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">761</P>
+    <P Name="Src">3764#out:1</P>
+    <P Name="Points">[-5, 0]</P>
+    <P Name="Dst">3730#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">772</P>
+    <P Name="Src">5767#out:1</P>
+    <P Name="Dst">5209#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">[rpm] MotorSpeed</P>
+    <P Name="ZOrder">778</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6625#out:1</P>
+    <P Name="Dst">465#in:10</P>
+  </Line>
+  <Line>
+    <P Name="Name">[rpm] FWheelSpd</P>
+    <P Name="ZOrder">779</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">6627#out:1</P>
+    <P Name="Dst">465#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">803</P>
+    <P Name="Src">7104#out:1</P>
+    <P Name="Dst">466#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Dist (km)</P>
+    <P Name="ZOrder">811</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7297#out:3</P>
+    <P Name="Dst">7296#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">812</P>
+    <P Name="Src">7523#out:1</P>
+    <P Name="Dst">7297#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">F Slip</P>
+    <P Name="ZOrder">813</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7297#out:1</P>
+    <P Name="Dst">7296#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">R Slip</P>
+    <P Name="ZOrder">814</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7297#out:2</P>
+    <P Name="Dst">7296#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">Accel (m/s2)</P>
+    <P Name="ZOrder">815</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7297#out:4</P>
+    <P Name="Dst">7296#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">Current (A)</P>
+    <P Name="ZOrder">816</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1597#out:3</P>
+    <P Name="Dst">7557#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">SoC (%)</P>
+    <P Name="ZOrder">817</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1597#out:2</P>
+    <P Name="Dst">7557#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">Voltage (V)</P>
+    <P Name="ZOrder">818</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1597#out:1</P>
+    <P Name="Dst">7557#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">InverterTrq (Nm)</P>
+    <P Name="ZOrder">819</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1297#out:3</P>
+    <P Name="Dst">2042#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">MotorSpd (rpm)</P>
+    <P Name="ZOrder">820</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1297#out:2</P>
+    <P Name="Dst">2042#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">BikeSpd (km/h)</P>
+    <P Name="ZOrder">821</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1297#out:1</P>
+    <P Name="Dst">2042#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Throttle/Brake Pos (%)</P>
+    <P Name="ZOrder">822</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">1297#out:4</P>
+    <P Name="Dst">2042#in:4</P>
+  </Line>
+  <Annotation SID="7644">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Important note: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Design your controller only within VSC block&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Do not change anything outside VSC block&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1416, 474, 1906, 591]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="4740">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18px; font-weight:600;&quot;&gt;1D Model for Electric Motorcycle (VSC development)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Symbol&apos;; font-size:17px; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Vehicle dynamic control (different modes can be considered)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Auto-mode selection strategy (normal, eco, sport, rain)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Torque management&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Traction control&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Speed limiter&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Gear-shift strategy&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Brake torque distribution strategy (front-rear)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Symbol&apos;; font-size:17px; color:#000000;&quot;&gt;·&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;        &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Vehicle energy management (different modes can be considered)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Power management (battery and motor power limit, thermal derating)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Range estimation&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Regen-braking via brake blending (rear only)&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New&apos;; font-size:17px; color:#000000;&quot;&gt;		o&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Times New Roman&apos;; font-size:9px; color:#000000;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:17px; color:#000000;&quot;&gt;Battery State-of-Charge Estimation&lt;/span&gt;&lt;span style=&quot; font-size:10px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:22px; color:#c00000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[1057, 24, 1667, 316]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

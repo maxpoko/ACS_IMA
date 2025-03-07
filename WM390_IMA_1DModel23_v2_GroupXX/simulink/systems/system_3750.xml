@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">94</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="MaxT" SID="3751">
+    <P Name="Position">[265, 133, 295, 147]</P>
+    <P Name="ZOrder">48953</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotorTrqCmd" SID="3752">
+    <P Name="Position">[265, 178, 295, 192]</P>
+    <P Name="ZOrder">48954</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Product" Name="Divide2" SID="3753">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[665, 76, 685, 194]</P>
+    <P Name="ZOrder">48952</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain" SID="3754">
+    <P Name="Position">[435, 170, 490, 200]</P>
+    <P Name="ZOrder">48949</P>
+    <P Name="ShowName">off</P>
+    <P Name="Gain">1/0.02</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="3755">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[375, 170, 405, 200]</P>
+    <P Name="ZOrder">48948</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Lookup_n-D" Name="Interpolated&#xA;Zero-crossing" SID="3756">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[580, 143, 635, 187]</P>
+    <P Name="ZOrder">48951</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">[-1 1]</P>
+    <P Name="Table">[-1 1]</P>
+    <P Name="ExtrapMethod">Clip</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Product" Name="Product1" SID="3757">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[530, 116, 550, 209]</P>
+    <P Name="ZOrder">48950</P>
+    <P Name="ShowName">off</P>
+    <P Name="Inputs">/*</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="3758">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[325, 175, 345, 195]</P>
+    <P Name="ZOrder">48947</P>
+    <P Name="ShowName">off</P>
+    <P Name="Inputs">|+-</P>
+  </Block>
+  <Block BlockType="Outport" Name="MotorTrq" SID="3759">
+    <P Name="Position">[715, 128, 745, 142]</P>
+    <P Name="ZOrder">48955</P>
+    <P Name="InitialOutput">0</P>
+    <P Name="VectorParamsAs1DForOutWhenUnconnected">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">3758#out:1</P>
+    <P Name="Dst">3755#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">3754#out:1</P>
+    <P Name="Points">[13, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Dst">3757#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">4</P>
+      <P Name="Points">[0, 39; -173, 0]</P>
+      <P Name="Dst">3758#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3756#out:1</P>
+    <P Name="Dst">3753#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3755#out:1</P>
+    <P Name="Dst">3754#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">3753#out:1</P>
+    <P Name="Dst">3759#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">3752#out:1</P>
+    <P Name="Dst">3758#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">3757#out:1</P>
+    <P Name="Dst">3756#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">3751#out:1</P>
+    <P Name="Points">[207, 0]</P>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Dst">3757#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">12</P>
+      <P Name="Points">[0, -35]</P>
+      <P Name="Dst">3753#in:1</P>
+    </Branch>
+  </Line>
+</System>

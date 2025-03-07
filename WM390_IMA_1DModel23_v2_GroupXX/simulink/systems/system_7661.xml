@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">125</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="BikeSpd" SID="7664">
+    <P Name="Position">[-80, 388, -50, 402]</P>
+    <P Name="ZOrder">51073</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="SoC" SID="7665">
+    <P Name="Position">[-85, 608, -55, 622]</P>
+    <P Name="ZOrder">51074</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattCurr" SID="7666">
+    <P Name="Position">[-90, 718, -60, 732]</P>
+    <P Name="ZOrder">51075</P>
+    <P Name="Port">3</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">A</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="WakeUp" SID="7667">
+    <P Name="Position">[-90, 828, -60, 842]</P>
+    <P Name="ZOrder">51076</P>
+    <P Name="Port">4</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">on/off</P>
+      <P Name="PropagatedSignals">[-]</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="AmbTemp" SID="7668">
+    <P Name="Position">[-90, 765, -40, 795]</P>
+    <P Name="ZOrder">51067</P>
+    <P Name="Value">AmbTemp</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">oC</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Minimum Allowable&#xA;Battery SoC [%]" SID="7670">
+    <P Name="Position">[-90, 550, -45, 570]</P>
+    <P Name="ZOrder">51049</P>
+    <P Name="Value">SoCmin</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Model Discrete&#xA;Sample Time [s]" SID="7671">
+    <P Name="Position">[-85, 440, -50, 460]</P>
+    <P Name="ZOrder">51046</P>
+    <P Name="Value">0.01</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">s</P>
+    </Port>
+  </Block>
+  <Block BlockType="SubSystem" Name="Range estimation" SID="7672">
+    <P Name="Ports">[9, 1]</P>
+    <P Name="Position">[200, 374, 400, 856]</P>
+    <P Name="ZOrder">51071</P>
+    <P Name="BackgroundColor">darkGreen</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km</P>
+    </Port>
+    <System Ref="system_7672"/>
+  </Block>
+  <Block BlockType="Fcn" Name="SoCcheck" SID="7685">
+    <P Name="Position">[5, 600, 65, 630]</P>
+    <P Name="ZOrder">51070</P>
+    <P Name="Expr">(u&lt;=0)*Init_SoC + (u&gt;0)*u</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Theoretical&#xA;Max. Range [km]" SID="7687">
+    <P Name="Position">[-90, 497, -45, 513]</P>
+    <P Name="ZOrder">51047</P>
+    <P Name="Value">150</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Typical Consumption&#xA;Rate [%/km]" SID="7688">
+    <P Name="Position">[-85, 659, -55, 681]</P>
+    <P Name="ZOrder">51051</P>
+    <P Name="Value">0.625</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">%SoC/km</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="Remain Range" SID="7690">
+    <P Name="Position">[650, 608, 680, 622]</P>
+    <P Name="ZOrder">51072</P>
+  </Block>
+  <Line>
+    <P Name="Name">km</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7672#out:1</P>
+    <P Name="Dst">7690#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7670#out:1</P>
+    <P Name="Dst">7672#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">oC</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7668#out:1</P>
+    <P Name="Dst">7672#in:8</P>
+  </Line>
+  <Line>
+    <P Name="Name">%</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7685#out:1</P>
+    <P Name="Dst">7672#in:5</P>
+  </Line>
+  <Line>
+    <P Name="Name">A</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7666#out:1</P>
+    <P Name="Dst">7672#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">7665#out:1</P>
+    <P Name="Dst">7685#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">%SoC/km</P>
+    <P Name="ZOrder">7</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7688#out:1</P>
+    <P Name="Dst">7672#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">s</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7671#out:1</P>
+    <P Name="Dst">7672#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7664#out:1</P>
+    <P Name="Dst">7672#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">on/off</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7667#out:1</P>
+    <P Name="Dst">7672#in:9</P>
+  </Line>
+  <Line>
+    <P Name="Name">km</P>
+    <P Name="ZOrder">11</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7687#out:1</P>
+    <P Name="Dst">7672#in:3</P>
+  </Line>
+</System>

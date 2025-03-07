@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">114</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="DrivingTorqueCommand" SID="7577">
+    <P Name="Position">[-75, 443, -45, 457]</P>
+    <P Name="ZOrder">49064</P>
+  </Block>
+  <Block BlockType="Inport" Name="RideMode" SID="7575">
+    <P Name="Position">[-75, 513, -45, 527]</P>
+    <P Name="ZOrder">49035</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="BikeSpeed" SID="7576">
+    <P Name="Position">[-75, 573, -45, 587]</P>
+    <P Name="ZOrder">49037</P>
+    <P Name="Port">3</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+      <P Name="PropagatedSignals">BikeSpd</P>
+    </Port>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="7578">
+    <P Name="Position">[325, 619, 360, 641]</P>
+    <P Name="ZOrder">49066</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Forward Torque Derater" SID="7579">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[100, 490, 205, 610]</P>
+    <P Name="ZOrder">49062</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_7579"/>
+  </Block>
+  <Block BlockType="Saturate" Name="Saturation" SID="7594">
+    <P Name="Position">[325, 435, 355, 465]</P>
+    <P Name="ZOrder">49080</P>
+    <P Name="UpperLimit">TMaxMotor</P>
+    <P Name="LowerLimit">0</P>
+  </Block>
+  <Block BlockType="Reference" Name="Saturation&#xA;Dynamic" SID="7595">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[415, 482, 480, 618]</P>
+    <P Name="ZOrder">49065</P>
+    <P Name="LibraryVersion">1.488</P>
+    <P Name="SourceBlock">simulink/Discontinuities/Saturation
+Dynamic</P>
+    <P Name="SourceType">Saturation Dynamic</P>
+    <P Name="SourceProductBaseCode">SL</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Same as second input</P>
+      <P Name="OutputDataTypeScalingMode">Same as second input</P>
+      <P Name="OutDataType">fixdt(1, 16)</P>
+      <P Name="OutScaling">2^-10</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="DoSatur">off</P>
+    </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">T0d</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="TorqueDerate " SID="7596">
+    <P Name="Position">[610, 543, 640, 557]</P>
+    <P Name="ZOrder">49036</P>
+  </Block>
+  <Line>
+    <P Name="Name">T0d</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7595#out:1</P>
+    <P Name="Dst">7596#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7575#out:1</P>
+    <P Name="Dst">7579#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">7576#out:1</P>
+    <P Name="Dst">7579#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">7578#out:1</P>
+    <P Name="Points">[23, 0; 0, -35]</P>
+    <P Name="Dst">7595#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">7579#out:1</P>
+    <P Name="Dst">7595#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">7577#out:1</P>
+    <P Name="Dst">7594#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">7594#out:1</P>
+    <P Name="Points">[27, 0; 0, 55]</P>
+    <P Name="Dst">7595#in:1</P>
+  </Line>
+  <Annotation SID="7621">
+    <P Name="Name">Fixed saturation - DO NOT CHANGE</P>
+    <P Name="Position">[277, 365, 522, 670]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">9</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7597">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Create a closed-loop controller inside &amp;quot;Forward Torque Derater&amp;quot; block to&lt;/span&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt; ensure that the bike speed does not come out of range within its current operation mode, by considering:&lt;/span&gt;&lt;/p&gt;
+&lt;ol style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot; align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px; -qt-user-state:107;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Input: (you can use all or some of these available inputs: BikeSpeed, RideMode, TorqueDemand), more inputs can be collected from the Bus&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot; align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:12px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Output: controlled TorqueDerate &lt;/span&gt;&lt;/li&gt;&lt;/ol&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Note: the logic inside &lt;/span&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;&amp;quot;Forward Torque Derater&amp;quot; block is an example using open-loop control &lt;/span&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;to generate the TorqueDerate&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[-170, 258, 230, 416]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">114</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Reference" Name="Ideal Rotational&#xA;Motion Sensor" SID="7481">
+    <P Name="Ports">[0, 0, 0, 0, 0, 1, 3]</P>
+    <P Name="Position">[295, 55, 370, 135]</P>
+    <P Name="ZOrder">15</P>
+    <P Name="BlockRotation">180</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="LibraryVersion">10004000.1</P>
+    <P Name="SourceBlock">fl_lib/Mechanical/Mechanical Sensors/Ideal Rotational
+Motion Sensor</P>
+    <P Name="SourceType">Ideal Rotational
+Motion Sensor</P>
+    <P Name="SourceProductBaseCode">SS</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SourceFile">foundation.mechanical.sensors.angular_velocity</P>
+      <P Name="InternalSimscapePortConfiguration">{&quot;Bottom&quot;:[],&quot;Left&quot;:[{&quot;id&quot;:&quot;R&quot;,&quot;label&quot;:&quot;R&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;}],&quot;Right&quot;:[{&quot;id&quot;:&quot;C&quot;,&quot;label&quot;:&quot;C&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;},{&quot;id&quot;:&quot;W&quot;,&quot;label&quot;:&quot;W&quot;,&quot;type&quot;:&quot;output&quot;},{&quot;id&quot;:&quot;A&quot;,&quot;label&quot;:&quot;A&quot;,&quot;type&quot;:&quot;output&quot;}],&quot;Top&quot;:[]}</P>
+      <P Name="ComponentPath">foundation.mechanical.sensors.angular_velocity</P>
+      <P Name="ComponentVariants">foundation.mechanical.sensors.angular_velocity</P>
+      <P Name="ComponentVariantNames">angular_velocity</P>
+      <P Name="ClassName">angular_velocity</P>
+      <P Name="SchemaVersion">1</P>
+      <P Name="wrap_angle">simscape.enum.onoff.off</P>
+      <P Name="wrap_angle_unit">1</P>
+      <P Name="wrap_angle_conf">compiletime</P>
+      <P Name="offset">0</P>
+      <P Name="offset_unit">rev</P>
+      <P Name="offset_conf">compiletime</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Ideal Torque Sensor" SID="7482">
+    <P Name="Ports">[0, 0, 0, 0, 0, 1, 2]</P>
+    <P Name="Position">[95, 20, 135, 60]</P>
+    <P Name="ZOrder">16</P>
+    <P Name="LibraryVersion">10004000.1</P>
+    <P Name="SourceBlock">fl_lib/Mechanical/Mechanical Sensors/Ideal Torque Sensor</P>
+    <P Name="SourceType">Ideal Torque Sensor</P>
+    <P Name="SourceProductBaseCode">SS</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SourceFile">foundation.mechanical.sensors.torque</P>
+      <P Name="InternalSimscapePortConfiguration">{&quot;Bottom&quot;:[],&quot;Left&quot;:[{&quot;id&quot;:&quot;R&quot;,&quot;label&quot;:&quot;R&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;}],&quot;Right&quot;:[{&quot;id&quot;:&quot;C&quot;,&quot;label&quot;:&quot;C&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;},{&quot;id&quot;:&quot;T&quot;,&quot;label&quot;:&quot;T&quot;,&quot;type&quot;:&quot;output&quot;}],&quot;Top&quot;:[]}</P>
+      <P Name="ComponentPath">foundation.mechanical.sensors.torque</P>
+      <P Name="ComponentVariants">foundation.mechanical.sensors.torque</P>
+      <P Name="ComponentVariantNames">torque</P>
+      <P Name="ClassName">torque</P>
+      <P Name="SchemaVersion">1</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Mechanical&#xA;Rotational Reference1" SID="7483">
+    <P Name="Ports">[0, 0, 0, 0, 0, 1]</P>
+    <P Name="Position">[390, 140, 410, 160]</P>
+    <P Name="ZOrder">21</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">right</P>
+    <P Name="LibraryVersion">10004000.1</P>
+    <P Name="SourceBlock">fl_lib/Mechanical/Rotational Elements/Mechanical
+Rotational Reference</P>
+    <P Name="SourceType">Mechanical
+Rotational Reference</P>
+    <P Name="SourceProductBaseCode">SS</P>
+    <InstanceData>
+      <P Name="LogSimulationData">off</P>
+      <P Name="SourceFile">foundation.mechanical.rotational.reference</P>
+      <P Name="InternalSimscapePortConfiguration">{&quot;Bottom&quot;:[],&quot;Left&quot;:[{&quot;id&quot;:&quot;W&quot;,&quot;label&quot;:&quot;&quot;,&quot;type&quot;:&quot;foundation.mechanical.rotational.rotational&quot;}],&quot;Right&quot;:[],&quot;Top&quot;:[]}</P>
+      <P Name="ComponentPath">foundation.mechanical.rotational.reference</P>
+      <P Name="ComponentVariants">foundation.mechanical.rotational.reference</P>
+      <P Name="ComponentVariantNames">reference</P>
+      <P Name="ClassName">reference</P>
+      <P Name="SchemaVersion">1</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter" SID="7484">
+    <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
+    <P Name="Position">[170, 42, 185, 58]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="LibraryVersion">5.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <P Name="SourceProductBaseCode">PW,SS</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="Unit">N*m</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">OutShaftTq</P>
+      <P Name="DataLogging">on</P>
+    </Port>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter1" SID="7485">
+    <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
+    <P Name="Position">[410, 87, 425, 103]</P>
+    <P Name="ZOrder">18</P>
+    <P Name="LibraryVersion">5.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <P Name="SourceProductBaseCode">PW,SS</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="Unit">rpm</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">OutShaftSpd(rpm)</P>
+      <P Name="DataLogging">on</P>
+    </Port>
+  </Block>
+  <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter2" SID="7486">
+    <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
+    <P Name="Position">[410, 62, 425, 78]</P>
+    <P Name="ZOrder">25</P>
+    <P Name="LibraryVersion">5.0</P>
+    <P Name="SourceBlock">nesl_utility/PS-Simulink
+Converter</P>
+    <P Name="SourceType">PS-Simulink
+Converter</P>
+    <P Name="SourceProductBaseCode">PW,SS</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="PhysicalDomain">network_engine_domain</P>
+      <P Name="SubClassName">ps_output</P>
+      <P Name="LeftPortType">input</P>
+      <P Name="RightPortType">output</P>
+      <P Name="PseudoPeriodic">off</P>
+      <P Name="Frequencies">[]</P>
+      <P Name="Unit">1</P>
+      <P Name="AffineConversion">off</P>
+    </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">OutShaftAcc</P>
+      <P Name="DataLogging">on</P>
+    </Port>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator2" SID="7487">
+    <P Name="Position">[545, 60, 565, 80]</P>
+    <P Name="ZOrder">26</P>
+  </Block>
+  <Block BlockType="PMIOPort" Name="Conn1" SID="7488">
+    <P Name="Position">[645, 23, 675, 37]</P>
+    <P Name="ZOrder">22</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Side">Right</P>
+  </Block>
+  <Block BlockType="PMIOPort" Name="Conn2" SID="7489">
+    <P Name="Position">[20, 33, 50, 47]</P>
+    <P Name="ZOrder">23</P>
+    <P Name="Port">2</P>
+    <P Name="Side">Left</P>
+  </Block>
+  <Block BlockType="Outport" Name="Spd" SID="7490">
+    <P Name="Position">[540, 88, 570, 102]</P>
+    <P Name="ZOrder">46</P>
+  </Block>
+  <Block BlockType="Outport" Name="Trq" SID="7491">
+    <P Name="Position">[235, 43, 265, 57]</P>
+    <P Name="ZOrder">47</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="Name">OutShaftAcc</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">7486#out:1</P>
+    <P Name="Dst">7487#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">2</P>
+    <P Name="Src">7481#rconn:3</P>
+    <P Name="Dst">7486#lconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">3</P>
+    <P Name="Src">7484#lconn:1</P>
+    <P Name="Dst">7482#rconn:2</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">4</P>
+    <P Name="Src">7485#lconn:1</P>
+    <P Name="Dst">7481#rconn:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">OutShaftTq</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7484#out:1</P>
+    <P Name="Dst">7491#in:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">6</P>
+    <P Name="Src">7483#lconn:1</P>
+    <P Name="Points">[0, -5]</P>
+    <P Name="Dst">7481#rconn:1</P>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">7</P>
+    <P Name="Points">[281, 30; 349, 0]</P>
+    <P Name="Dst">7488#rconn:1</P>
+    <Branch ConnectType="SRC_SRC">
+      <P Name="Points">[0, 65]</P>
+      <P Name="Dst">7481#lconn:1</P>
+    </Branch>
+    <Branch ConnectType="SRC_DEST">
+      <P Name="Src">7482#rconn:1</P>
+      <P Name="Points">[131, 0]</P>
+    </Branch>
+  </Line>
+  <Line LineType="Connection">
+    <P Name="ZOrder">10</P>
+    <P Name="Src">7482#lconn:1</P>
+    <P Name="Dst">7489#rconn:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">OutShaftSpd(rpm)</P>
+    <P Name="ZOrder">11</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7485#out:1</P>
+    <P Name="Dst">7490#in:1</P>
+  </Line>
+</System>

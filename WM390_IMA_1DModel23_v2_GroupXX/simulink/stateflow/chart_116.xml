@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<chart id="116">
+  <P Name="name">VSC/Main VSC/Gear Shift Logic/Gear Shift Logic</P>
+  <P Name="windowPosition">[-8 -8 1936 1048]</P>
+  <P Name="viewLimits">[122.905 971.829 65.148 510.905]</P>
+  <P Name="zoomFactor">0.319</P>
+  <P Name="screen">[1 1 3200 1200 1.25]</P>
+  <P Name="viewObj">116</P>
+  <P Name="ssIdHighWaterMark">8</P>
+  <P Name="decomposition">CLUSTER_CHART</P>
+  <P Name="chartFileNumber">3</P>
+  <P Name="allowGlobalAccessToExportedFunctions">0</P>
+  <P Name="saturateOnIntegerOverflow">1</P>
+  <P Name="userSpecifiedStateTransitionExecutionOrder">1</P>
+  <P Name="disableImplicitCasting">1</P>
+  <P Name="actionLanguage">2</P>
+  <Children>
+    <state SSID="4">
+      <P Name="labelString">Waiting
+entry:
+TqMod = 0;
+during:
+TqMod = 0;</P>
+      <P Name="position">[307 242 90.1429 87.8571]</P>
+      <P Name="fontSize">12</P>
+      <P Name="subviewer">116</P>
+      <P Name="type">OR_STATE</P>
+      <P Name="decomposition">CLUSTER_STATE</P>
+    </state>
+    <state SSID="6">
+      <P Name="labelString">Shifting
+entry:
+TqMod = T3;
+during:
+TqMod = T3;</P>
+      <P Name="position">[536.619 242 82.5714 87.8571]</P>
+      <P Name="fontSize">12</P>
+      <P Name="subviewer">116</P>
+      <P Name="type">OR_STATE</P>
+      <P Name="decomposition">CLUSTER_STATE</P>
+    </state>
+    <data SSID="1" name="TqMod">
+      <P Name="scope">OUTPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+          <P Name="isSigned">1</P>
+          <P Name="wordLength">16</P>
+        </type>
+        <P Name="frame">SF_FRAME_NO</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="2" name="T3">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+          <P Name="isSigned">1</P>
+          <P Name="wordLength">16</P>
+        </type>
+        <P Name="frame">SF_FRAME_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <data SSID="3" name="ShiftInd">
+      <P Name="scope">INPUT_DATA</P>
+      <props>
+        <array>
+          <P Name="size">-1</P>
+        </array>
+        <type>
+          <P Name="method">SF_INHERITED_TYPE</P>
+          <P Name="primitive">SF_DOUBLE_TYPE</P>
+          <P Name="isSigned">1</P>
+          <P Name="wordLength">16</P>
+        </type>
+        <P Name="frame">SF_FRAME_INHERITED</P>
+        <unit>
+          <P Name="name">inherit</P>
+        </unit>
+      </props>
+      <P Name="dataType">Inherit: Same as Simulink</P>
+    </data>
+    <transition SSID="5">
+      <P Name="labelString"/>
+      <P Name="labelPosition">[327.583 227 0 0]</P>
+      <P Name="fontSize">12</P>
+      <src>
+        <P Name="intersection">[0 0 1 0 327.5826 212 0 0]</P>
+      </src>
+      <dst>
+        <P Name="SSID">4</P>
+        <P Name="intersection">[1 0 -1 0.2283 327.5826 242 0 0]</P>
+      </dst>
+      <P Name="midPoint">[327.5826 227]</P>
+      <P Name="dataLimits">[325.183 329.983 212 242]</P>
+      <P Name="subviewer">116</P>
+      <P Name="drawStyle">SMART</P>
+      <slide>
+        <P Name="sticky">BOTH_STICK</P>
+      </slide>
+      <P Name="executionOrder">1</P>
+    </transition>
+    <transition SSID="7">
+      <P Name="labelString">[ShiftInd == 1]</P>
+      <P Name="labelPosition">[423.895 248.762 76.641 16]</P>
+      <P Name="fontSize">12</P>
+      <src>
+        <P Name="SSID">4</P>
+        <P Name="intersection">[2 1 0 0.2851 397.1429 267.0476 0 0]</P>
+      </src>
+      <dst>
+        <P Name="SSID">6</P>
+        <P Name="intersection">[4 -1 -0 0.7149 536.619 267.0476 0 0]</P>
+      </dst>
+      <P Name="midPoint">[462.881 267.0476]</P>
+      <P Name="dataLimits">[397.143 536.619 264.648 269.448]</P>
+      <P Name="subviewer">116</P>
+      <P Name="drawStyle">SMART</P>
+      <slide>
+        <P Name="sticky">BOTH_STICK</P>
+      </slide>
+      <P Name="executionOrder">1</P>
+    </transition>
+    <transition SSID="8">
+      <P Name="labelString">[ShiftInd == 0]</P>
+      <P Name="labelPosition">[430.181 285.905 76.641 16]</P>
+      <P Name="fontSize">12</P>
+      <src>
+        <P Name="SSID">6</P>
+        <P Name="intersection">[4 -1 0 0.2791 536.619 305.3333 0 0]</P>
+      </src>
+      <dst>
+        <P Name="SSID">4</P>
+        <P Name="intersection">[2 1 -0 0.7209 397.1429 305.3333 0 0]</P>
+      </dst>
+      <P Name="midPoint">[470.881 305.3333]</P>
+      <P Name="dataLimits">[397.143 536.619 302.933 307.733]</P>
+      <P Name="subviewer">116</P>
+      <P Name="drawStyle">SMART</P>
+      <slide>
+        <P Name="sticky">BOTH_STICK</P>
+      </slide>
+      <P Name="executionOrder">1</P>
+    </transition>
+  </Children>
+</chart>

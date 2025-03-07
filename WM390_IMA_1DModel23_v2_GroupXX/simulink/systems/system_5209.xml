@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">98</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="VSCInput" SID="5210">
+    <P Name="Position">[330, 533, 360, 547]</P>
+    <P Name="ZOrder">1737</P>
+  </Block>
+  <Block BlockType="Constant" Name=" VSC Ctrl" SID="6631">
+    <P Name="Position">[645, 755, 690, 775]</P>
+    <P Name="ZOrder">50261</P>
+    <P Name="Value">4</P>
+  </Block>
+  <Block BlockType="Constant" Name="Amb Temps" SID="6645">
+    <P Name="Position">[650, 635, 695, 655]</P>
+    <P Name="ZOrder">50270</P>
+    <P Name="Value">25</P>
+  </Block>
+  <Block BlockType="Gain" Name="BattPwrCal" SID="6630">
+    <P Name="Position">[650, 695, 700, 715]</P>
+    <P Name="ZOrder">50260</P>
+    <P Name="ShowName">off</P>
+    <P Name="Gain">CellContCur*nP</P>
+  </Block>
+  <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="5211">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[1055, 383, 1070, 492]</P>
+    <P Name="ZOrder">48949</P>
+    <P Name="Inputs">2</P>
+    <P Name="DisplayOption">bar</P>
+    <P Name="OutDataTypeStr">Bus: VSCBus</P>
+    <P Name="InheritFromInputs">off</P>
+  </Block>
+  <Block BlockType="BusSelector" Name="Bus&#xA;Selector3" SID="6626">
+    <P Name="Ports">[1, 10]</P>
+    <P Name="Position">[455, 391, 460, 689]</P>
+    <P Name="ZOrder">50257</P>
+    <P Name="OutputSignals">RiderCmd.RiderMode,AccPedPos,BikeSpd,MotorSpeed,MotorTorque,RWheelSpd,FWheelSpd,BatteryStates.BattSOC,BatteryStates.BattVolt,BattCurrDmd</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">&lt;RiderMode&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">&lt;AccPedPos&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">&lt;BikeSpd&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">4</P>
+      <P Name="Name">&lt;MotorSpeed&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">5</P>
+      <P Name="Name">&lt;MotorTorque&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">6</P>
+      <P Name="Name">&lt;RWheelSpd&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">7</P>
+      <P Name="Name">&lt;FWheelSpd&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">8</P>
+      <P Name="Name">&lt;BattSOC&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">9</P>
+      <P Name="Name">&lt;BattVolt&gt;</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">10</P>
+      <P Name="Name">&lt;BattCurrDmd&gt;</P>
+    </Port>
+  </Block>
+  <Block BlockType="SubSystem" Name="Checksum" SID="5215">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[965, -195, 1005, -135]</P>
+    <P Name="ZOrder">1758</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <System Ref="system_5215"/>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="7127">
+    <P Name="Position">[385, -225, 415, -195]</P>
+    <P Name="ZOrder">50827</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant1" SID="5225">
+    <P Name="Position">[1025, -125, 1055, -95]</P>
+    <P Name="ZOrder">50240</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant2" SID="7128">
+    <P Name="Position">[385, -170, 415, -140]</P>
+    <P Name="ZOrder">50828</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant3" SID="7129">
+    <P Name="Position">[385, -115, 415, -85]</P>
+    <P Name="ZOrder">50829</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant4" SID="7130">
+    <P Name="Position">[385, -60, 415, -30]</P>
+    <P Name="ZOrder">50830</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant5" SID="7131">
+    <P Name="Position">[385, 50, 415, 80]</P>
+    <P Name="ZOrder">50831</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Delay" Name="Delay" SID="7132">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[630, 188, 665, 222]</P>
+    <P Name="ZOrder">50834</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">top</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="DelayLength">1</P>
+  </Block>
+  <Block BlockType="From" Name="From5" SID="6620">
+    <P Name="Position">[635, 817, 700, 833]</P>
+    <P Name="ZOrder">50252</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">READY</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Constant" Name="GearShift" SID="6675">
+    <P Name="Position">[650, 847, 685, 863]</P>
+    <P Name="ZOrder">50821</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Goto" Name="Goto2" SID="5245">
+    <P Name="Position">[1105, 424, 1210, 456]</P>
+    <P Name="ZOrder">50269</P>
+    <P Name="BackgroundColor">[1.000000, 0.333333, 1.000000]</P>
+    <P Name="GotoTag">VSCOutput</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Scope" Name="HL VSC" SID="7134">
+    <P Name="Ports">[3]</P>
+    <P Name="Position">[900, -111, 965, 131]</P>
+    <P Name="ZOrder">50832</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData1&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-0.125&apos;,&apos;MaxYLimReal&apos;,&apos;1.125&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;1.125&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;VSC High Level StateMachine/Torque_enable&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),struct(&apos;MinYLimReal&apos;,&apos;-0.375&apos;,&apos;MaxYLimReal&apos;,&apos;3.375&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;VSC High Level StateMachine/CurrentState&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,2),struct(&apos;MinYLimReal&apos;,&apos;-0.125&apos;,&apos;MaxYLimReal&apos;,&apos;1.125&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;VSC High Level StateMachine/HVBattContactorReq&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,3)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;YLabelReal&apos;,&apos;&apos;,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),&apos;DisplayLayoutDimensions&apos;,[3 1],&apos;DisplayContentCache&apos;,[]),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;OnceAtStop&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2021b&apos;)),&apos;Version&apos;,&apos;2021b&apos;,&apos;Position&apos;,[1281 551 560 420])</P>
+    <P Name="NumInputPorts">3</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Main VSC" SID="6686">
+    <P Name="Ports">[16, 9]</P>
+    <P Name="Position">[760, 371, 965, 889]</P>
+    <P Name="ZOrder">50824</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Port>
+      <P Name="PortNumber">2</P>
+      <P Name="Name">VSCtorque</P>
+      <P Name="PropagatedSignals">Tf (Nm)</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">3</P>
+      <P Name="Name">PMSout</P>
+      <P Name="PropagatedSignals">Nm</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">4</P>
+      <P Name="Name">TCSout</P>
+      <P Name="PropagatedSignals">Nm</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">5</P>
+      <P Name="Name">SlipRatio</P>
+      <P Name="PropagatedSignals">Estimated Slip Ratio</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">6</P>
+      <P Name="Name">TrqMSOut</P>
+      <P Name="PropagatedSignals">Nm</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">7</P>
+      <P Name="Name">EstRange</P>
+      <P Name="PropagatedSignals">km</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">8</P>
+      <P Name="Name">Torque Derate</P>
+      <P Name="PropagatedSignals">T0d (%)</P>
+    </Port>
+    <Port>
+      <P Name="PortNumber">9</P>
+      <P Name="Name">Estimated SoC</P>
+      <P Name="PropagatedSignals">%</P>
+    </Port>
+    <System Ref="system_6686"/>
+  </Block>
+  <Block BlockType="Scope" Name="Main_VSC" SID="5249">
+    <P Name="Ports">[8]</P>
+    <P Name="Position">[1175, 441, 1240, 874]</P>
+    <P Name="ZOrder">50225</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;Log_WMGout&apos;,&apos;DataLoggingSaveFormat&apos;,&apos;StructureWithTime&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-10.39277&apos;,&apos;MaxYLimReal&apos;,&apos;93.53495&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;93.53495&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;VSCtorque&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),struct(&apos;MinYLimReal&apos;,&apos;-10.39277&apos;,&apos;MaxYLimReal&apos;,&apos;93.53495&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;PMSout&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,2),struct(&apos;MinYLimReal&apos;,&apos;-10.39277&apos;,&apos;MaxYLimReal&apos;,&apos;93.53495&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;TCSout&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,3),struct(&apos;MinYLimReal&apos;,&apos;-1.00000&apos;,&apos;MaxYLimReal&apos;,&apos;1.00000&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;SlipRatio&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,4),struct(&apos;MinYLimReal&apos;,&apos;-10.39277&apos;,&apos;MaxYLimReal&apos;,&apos;93.53495&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;TrqMSOut&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,5),struct(&apos;MinYLimReal&apos;,&apos;-1.00000&apos;,&apos;MaxYLimReal&apos;,&apos;1.00000&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;EstRange&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,6),struct(&apos;MinYLimReal&apos;,&apos;-1.00000&apos;,&apos;MaxYLimReal&apos;,&apos;1.00000&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Torque Derate&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,7),struct(&apos;MinYLimReal&apos;,&apos;-1.00000&apos;,&apos;MaxYLimReal&apos;,&apos;1.00000&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Estimated SoC&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,8)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;YLabelReal&apos;,&apos;&apos;,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),&apos;DisplayLayoutDimensions&apos;,[4 2],&apos;DisplayContentCache&apos;,[]),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;OnceAtStop&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2021b&apos;)),&apos;Version&apos;,&apos;2021b&apos;,&apos;Position&apos;,[384 286 1152 509])</P>
+    <P Name="NumInputPorts">8</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="ManualSwitch" Name="Manual Switch1" SID="6578">
+    <P Name="Position">[1090, -193, 1115, -82]</P>
+    <P Name="ZOrder">50250</P>
+    <P Name="CurrentSetting">0</P>
+  </Block>
+  <Block BlockType="Constant" Name="MotPwrLim" SID="6676">
+    <P Name="Position">[645, 725, 690, 745]</P>
+    <P Name="ZOrder">50822</P>
+    <P Name="Value">45000</P>
+  </Block>
+  <Block BlockType="Relay" Name="Relay" SID="7133">
+    <P Name="Position">[385, -5, 415, 25]</P>
+    <P Name="ZOrder">50835</P>
+    <P Name="OnSwitchValue">1</P>
+    <P Name="OffSwitchValue">-1</P>
+  </Block>
+  <Block BlockType="Step" Name="Step" SID="7135">
+    <P Name="Position">[385, 105, 415, 135]</P>
+    <P Name="ZOrder">50833</P>
+    <P Name="Time">5</P>
+    <P Name="Before">1</P>
+    <P Name="After">0</P>
+    <P Name="SampleTime">0</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="VSC High Level StateMachine" SID="7136">
+    <P Name="Ports">[7, 3]</P>
+    <P Name="Position">[505, -247, 790, 157]</P>
+    <P Name="ZOrder">50826</P>
+    <P Name="ErrorFcn">Stateflow.Translate.translate</P>
+    <P Name="PermitHierarchicalResolution">ExplicitOnly</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="SFBlockType">Chart</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;,&quot;In2&quot;,&quot;In3&quot;,&quot;In4&quot;,&quot;In5&quot;,&quot;In6&quot;,&quot;In7&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;94b31f0f-cb33-4f9e-a39f-e19ad949fd84&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out2&quot;,&quot;Out3&quot;,&quot;Out1&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;4fdac656-a6cd-488b-a850-0c9ed1c2a5fd&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;e7f633f9-4978-4bbb-80bf-32c0a2ef8aca&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;fa31f8e0-2942-414f-ad5d-d1693d30d12c&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <System Ref="system_7136"/>
+  </Block>
+  <Block BlockType="Goto" Name="WakeUp Signal" SID="5248">
+    <P Name="Position">[1155, -148, 1240, -122]</P>
+    <P Name="ZOrder">1746</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="GotoTag">READY</P>
+    <P Name="TagVisibility">global</P>
+  </Block>
+  <Block BlockType="Gain" Name="rpm2kphF" SID="6643">
+    <P Name="Position">[595, 575, 640, 595]</P>
+    <P Name="ZOrder">50267</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="Gain">3*pi*0.312/25</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km /h</P>
+    </Port>
+  </Block>
+  <Block BlockType="Gain" Name="rpm2kphR" SID="6642">
+    <P Name="Position">[595, 545, 640, 565]</P>
+    <P Name="ZOrder">50266</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="Gain">3*pi*0.315/25</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">km/h</P>
+    </Port>
+  </Block>
+  <Line>
+    <P Name="Name">Torque Derate</P>
+    <P Name="ZOrder">526</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">6686#out:8</P>
+    <P Name="Dst">5249#in:7</P>
+  </Line>
+  <Line>
+    <P Name="Name">SlipRatio</P>
+    <P Name="ZOrder">523</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">6686#out:5</P>
+    <P Name="Dst">5249#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">EstRange</P>
+    <P Name="ZOrder">525</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">6686#out:7</P>
+    <P Name="Dst">5249#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">TrqMSOut</P>
+    <P Name="ZOrder">524</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">6686#out:6</P>
+    <P Name="Dst">5249#in:5</P>
+  </Line>
+  <Line>
+    <P Name="Name">PMSout</P>
+    <P Name="ZOrder">521</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">6686#out:3</P>
+    <P Name="Dst">5249#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">TCSout</P>
+    <P Name="ZOrder">522</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">6686#out:4</P>
+    <P Name="Dst">5249#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">39</P>
+    <P Name="Src">5211#out:1</P>
+    <P Name="Dst">5245#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">68</P>
+    <P Name="Src">6578#out:1</P>
+    <P Name="Dst">5248#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">57</P>
+    <P Name="Src">5210#out:1</P>
+    <P Name="Dst">6626#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">VSCtorque</P>
+    <P Name="ZOrder">528</P>
+    <P Name="Src">6686#out:2</P>
+    <P Name="Points">[55, 0]</P>
+    <Branch>
+      <P Name="ZOrder">635</P>
+      <P Name="Labels">[4, 0]</P>
+      <P Name="Points">[0, 42; 98, 0; 0, -42]</P>
+      <P Name="Dst">5249#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">533</P>
+      <P Name="Dst">5211#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">66</P>
+    <P Name="Src">5215#out:1</P>
+    <P Name="Dst">6578#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">67</P>
+    <P Name="Src">5225#out:1</P>
+    <P Name="Dst">6578#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">519</P>
+    <P Name="Src">6675#out:1</P>
+    <P Name="Dst">6686#in:16</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;MotorSpeed&gt;</P>
+    <P Name="ZOrder">509</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:4</P>
+    <P Name="Dst">6686#in:4</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;RiderMode&gt;</P>
+    <P Name="ZOrder">499</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:1</P>
+    <P Name="Dst">6686#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;AccPedPos&gt;</P>
+    <P Name="ZOrder">505</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:2</P>
+    <P Name="Dst">6686#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BikeSpd&gt;</P>
+    <P Name="ZOrder">155</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:3</P>
+    <P Name="Dst">6686#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;RWheelSpd&gt;</P>
+    <P Name="ZOrder">157</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:6</P>
+    <P Name="Dst">6642#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;FWheelSpd&gt;</P>
+    <P Name="ZOrder">161</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:7</P>
+    <P Name="Dst">6643#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">234</P>
+    <P Name="Src">6645#out:1</P>
+    <P Name="Points">[28, 0]</P>
+    <Branch>
+      <P Name="ZOrder">542</P>
+      <P Name="Points">[0, 30]</P>
+      <P Name="Dst">6686#in:10</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">537</P>
+      <P Name="Dst">6686#in:9</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">514</P>
+    <P Name="Src">6630#out:1</P>
+    <P Name="Dst">6686#in:11</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BattVolt&gt;</P>
+    <P Name="ZOrder">165</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:9</P>
+    <P Name="Points">[130, 0; 0, 60]</P>
+    <P Name="Dst">6630#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">516</P>
+    <P Name="Src">6631#out:1</P>
+    <P Name="Dst">6686#in:13</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BattCurrDmd&gt;</P>
+    <P Name="ZOrder">504</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:10</P>
+    <P Name="Points">[110, 0; 0, 120]</P>
+    <P Name="Dst">6686#in:14</P>
+  </Line>
+  <Line>
+    <P Name="Name">km/h</P>
+    <P Name="ZOrder">508</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6642#out:1</P>
+    <P Name="Dst">6686#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">km /h</P>
+    <P Name="ZOrder">510</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">6643#out:1</P>
+    <P Name="Dst">6686#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">527</P>
+    <P Name="Src">6686#out:1</P>
+    <P Name="Dst">5211#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;BattSOC&gt;</P>
+    <P Name="ZOrder">158</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:8</P>
+    <P Name="Dst">6686#in:8</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">518</P>
+    <P Name="Src">6620#out:1</P>
+    <P Name="Dst">6686#in:15</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">515</P>
+    <P Name="Src">6676#out:1</P>
+    <P Name="Dst">6686#in:12</P>
+  </Line>
+  <Line>
+    <P Name="Name">Estimated SoC</P>
+    <P Name="ZOrder">581</P>
+    <P Name="Labels">[-1, 1]</P>
+    <P Name="Src">6686#out:9</P>
+    <P Name="Dst">5249#in:8</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;MotorTorque&gt;</P>
+    <P Name="ZOrder">582</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">6626#out:5</P>
+    <P Name="Dst">6686#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">602</P>
+    <P Name="Src">7132#out:1</P>
+    <P Name="Points">[-296, 0; 0, -195]</P>
+    <P Name="Dst">7133#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">603</P>
+    <P Name="Src">7129#out:1</P>
+    <P Name="Dst">7136#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">604</P>
+    <P Name="Src">7136#out:3</P>
+    <P Name="Points">[28, 0]</P>
+    <Branch>
+      <P Name="ZOrder">620</P>
+      <P Name="Points">[0, -105]</P>
+      <P Name="Dst">5215#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">619</P>
+      <P Name="Points">[0, 55]</P>
+      <P Name="Dst">7134#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">605</P>
+    <P Name="Src">7131#out:1</P>
+    <P Name="Dst">7136#in:6</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">606</P>
+    <P Name="Src">7128#out:1</P>
+    <P Name="Dst">7136#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">607</P>
+    <P Name="Src">7135#out:1</P>
+    <P Name="Dst">7136#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">608</P>
+    <P Name="Src">7136#out:2</P>
+    <P Name="Points">[57, 0]</P>
+    <Branch>
+      <P Name="ZOrder">618</P>
+      <P Name="Dst">5215#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">617</P>
+      <P Name="Points">[0, 110]</P>
+      <P Name="Dst">7134#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">609</P>
+    <P Name="Src">7133#out:1</P>
+    <P Name="Dst">7136#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">612</P>
+    <P Name="Src">7136#out:1</P>
+    <P Name="Points">[40, 0]</P>
+    <Branch>
+      <P Name="ZOrder">616</P>
+      <P Name="Points">[0, 115]</P>
+      <P Name="Dst">7132#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">610</P>
+      <P Name="Dst">7134#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">613</P>
+    <P Name="Src">7130#out:1</P>
+    <P Name="Dst">7136#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">614</P>
+    <P Name="Src">7127#out:1</P>
+    <P Name="Dst">7136#in:1</P>
+  </Line>
+  <Annotation SID="7659">
+    <P Name="Name">Double click the switch to set the Ready = 1 
+assuming the VSC High level StateMachine
+ is always ready to run the simulation</P>
+    <P Name="Position">[1013, -66, 1211, -28]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="6652">
+    <P Name="Name">Main VSC Portion</P>
+    <P Name="Position">[281, 356, 1291, 1031]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">507</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="5766">
+    <P Name="Name">HL VSC Portion</P>
+    <P Name="Position">[281, -274, 1291, 241]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">506</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7645">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Important note: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Design your controller only within &amp;quot;Main VSC&amp;quot; block&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:24px; color:#ff0000;&quot;&gt;Do not change anything outside &amp;quot;Main VSC&amp;quot; block&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[455, 255, 1035, 342]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-13</P>
+  </Annotation>
+</System>

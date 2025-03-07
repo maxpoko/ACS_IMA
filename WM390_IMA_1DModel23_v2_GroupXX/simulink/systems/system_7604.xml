@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="Open">on</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">284</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="Ride Mode [Manual]" SID="7605">
+    <P Name="Position">[40, 333, 70, 347]</P>
+    <P Name="ZOrder">-1</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">Manual</P>
+      <P Name="PropagatedSignals">RiderMode</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="BikeSpd" SID="7612">
+    <P Name="Position">[40, 48, 70, 62]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="FWSpd" SID="7613">
+    <P Name="Position">[40, 93, 70, 107]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="RWSpd" SID="7614">
+    <P Name="Position">[40, 138, 70, 152]</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoC" SID="7647">
+    <P Name="Position">[40, 183, 70, 197]</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="Inport" Name="AccelCmd" SID="7648">
+    <P Name="Position">[40, 228, 70, 242]</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Inport" Name="MotorTrq" SID="7649">
+    <P Name="Position">[40, 273, 70, 287]</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Port">7</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="7616">
+    <P Name="Position">[265, 270, 295, 300]</P>
+    <P Name="ZOrder">6</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="7617">
+    <P Name="Position">[180, 220, 200, 240]</P>
+    <P Name="ZOrder">7</P>
+  </Block>
+  <Block BlockType="Switch" Name="Switch" SID="7615">
+    <P Name="Position">[350, 202, 405, 368]</P>
+    <P Name="ZOrder">5</P>
+    <P Name="Criteria">u2 &gt; Threshold</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Outport" Name="RideMode" SID="7606">
+    <P Name="Position">[445, 278, 475, 292]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="Name">Manual</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">7605#out:1</P>
+    <P Name="Dst">7615#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">7615#out:1</P>
+    <P Name="Dst">7606#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">7616#out:1</P>
+    <P Name="Dst">7615#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">7617#out:1</P>
+    <P Name="Dst">7615#in:1</P>
+  </Line>
+  <Annotation SID="7618">
+    <P Name="Name">To be replaced by your logic</P>
+    <P Name="Position">[140, 188, 320, 248]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedHeight">on</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ForegroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
+    <P Name="DropShadow">on</P>
+    <P Name="AnnotationType">area_annotation</P>
+    <P Name="ZOrder">20</P>
+    <P Name="FontSize">12</P>
+  </Annotation>
+  <Annotation SID="7611">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px;&quot;&gt;Ride Mode definition: 1 = Rain ; 2 = Eco ; 3 = Normal ; 4 = Sport&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px; color:#ff0000;&quot;&gt;Requirement:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px; color:#ff0000;&quot;&gt;- Develop a logic in Stateflow to decide the bike operational mode according to the update of system state (inputs available for this function)&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px; color:#ff0000;&quot;&gt;Example: Switch to Sport mode when having high AccelCmd&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px; color:#ff0000;&quot;&gt;Inputs:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10px; color:#ff0000;&quot;&gt;- BikeSpd, FWSpd, RWSpd, SoC, AccelCmd, MotorTrq&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[76, -103, 476, 31]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-2</P>
+  </Annotation>
+</System>

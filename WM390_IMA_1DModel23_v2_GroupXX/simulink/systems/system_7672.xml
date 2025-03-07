@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="BSpd" SID="7673">
+    <P Name="Position">[50, 93, 80, 107]</P>
+    <P Name="ZOrder">50426</P>
+  </Block>
+  <Block BlockType="Inport" Name="dT" SID="7674">
+    <P Name="Position">[50, 143, 80, 157]</P>
+    <P Name="ZOrder">50427</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="RMax" SID="7675">
+    <P Name="Position">[50, 193, 80, 207]</P>
+    <P Name="ZOrder">50428</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoCmin" SID="7676">
+    <P Name="Position">[50, 293, 80, 307]</P>
+    <P Name="ZOrder">50429</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Inport" Name="SoC" SID="7677">
+    <P Name="Position">[50, 343, 80, 357]</P>
+    <P Name="ZOrder">50430</P>
+    <P Name="Port">5</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">SoC</P>
+      <P Name="PropagatedSignals">%</P>
+    </Port>
+  </Block>
+  <Block BlockType="Inport" Name="AvgConR" SID="7678">
+    <P Name="Position">[50, 393, 80, 407]</P>
+    <P Name="ZOrder">50431</P>
+    <P Name="Port">6</P>
+  </Block>
+  <Block BlockType="Inport" Name="BattCurr" SID="7679">
+    <P Name="Position">[50, 443, 80, 457]</P>
+    <P Name="ZOrder">50432</P>
+    <P Name="Port">7</P>
+  </Block>
+  <Block BlockType="Inport" Name="AmbTemp" SID="7680">
+    <P Name="Position">[50, 228, 80, 242]</P>
+    <P Name="ZOrder">50451</P>
+    <P Name="Port">8</P>
+  </Block>
+  <Block BlockType="Inport" Name="WakeUp" SID="7681">
+    <P Name="Position">[50, -67, 80, -53]</P>
+    <P Name="ZOrder">50452</P>
+    <P Name="Port">9</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant" SID="7682">
+    <P Name="Position">[690, 100, 720, 130]</P>
+    <P Name="ZOrder">50464</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="Outport" Name="Ro" SID="7683">
+    <P Name="Position">[775, 108, 805, 122]</P>
+    <P Name="ZOrder">50433</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">7682#out:1</P>
+    <P Name="Dst">7683#in:1</P>
+  </Line>
+  <Annotation SID="7684">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#ff0000;&quot;&gt;Requirement: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Develop a logic to estimate the remaining range of the bike&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- Use any inputs provided here&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- other inputs can be collected from Bus&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;Note: &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- initial remaining range could be interpolated based on current SoC&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;estimated range should be then derived based on several inputs, such as SOC, actual travel distance (integration of bikespeed), actual SOC drop rate&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;-apple-system,BlinkMacSystemFont,Segoe UI,system-ui,Apple Color Emoji,Segoe UI Emoji,Segoe UI Web,sans-serif&apos;; font-size:12px; color:#ff0000;&quot;&gt;- WakeUp signal is to start the process/update&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[213, -237, 613, -65]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="FixedWidth">on</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+</System>

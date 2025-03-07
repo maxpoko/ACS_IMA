@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LogicAnalyzerPlugin>
+  <P Name="LogicAnalyzerGraphicalSettings">{
+  &quot;cursors&quot; : {
+    &quot;activeCursor&quot; : 0,
+    &quot;lockedCursors&quot; : [
+
+    ],
+    &quot;startingCursor&quot; : 0,
+    &quot;times&quot; : [
+      0
+    ]
+  },
+  &quot;global&quot; : {
+  },
+  &quot;panels&quot; : [
+    {
+      &quot;height&quot; : 100,
+      &quot;startingTrace&quot; : 0,
+      &quot;traces&quot; : [
+
+      ],
+      &quot;yOffset&quot; : 0
+    }
+  ],
+  &quot;timeAxis&quot; : {
+    &quot;pixelsPerSecond&quot; : 1.4748322147651007
+  }
+}</P>
+</LogicAnalyzerPlugin>

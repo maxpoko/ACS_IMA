@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1040]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="T1" SID="6910">
+    <P Name="Position">[110, 103, 140, 117]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Ground" Name="Ground" SID="6911">
+    <P Name="Position">[290, 100, 310, 120]</P>
+    <P Name="ZOrder">1</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="6912">
+    <P Name="Position">[205, 100, 225, 120]</P>
+    <P Name="ZOrder">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="T1d" SID="6913">
+    <P Name="Position">[360, 103, 390, 117]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">6911#out:1</P>
+    <P Name="Dst">6913#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">6910#out:1</P>
+    <P Name="Dst">6912#in:1</P>
+  </Line>
+</System>
